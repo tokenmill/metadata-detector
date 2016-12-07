@@ -17,7 +17,9 @@ In REPL type in:
 
 ```clojure
 (require '[metadata-detector.core :refer [detect]])
+; => nil
 (detect "moo" (slurp "test/data/en/abcnews.html"))
+; => {:title "Galaxy May Be Full of 'Second Earths'", :date "2013-02-06"}
 ```
 
 ## Java
@@ -61,7 +63,15 @@ public static void main(String[] args) {
 
 Note that metadata-detector depends on org.clojure/clojure which must be provided.
 
+To add clojure dependency add this snippet to your `pom.xml`:
+```xml
+<dependency>
+    <groupId>org.clojure</groupId>
+    <artifactId>clojure</artifactId>
+    <version>1.8.0</version>
+</dependency>
+```
+
 # TODO
 
 - [] detect author of the document.
-- [] WikiLeaks is not supported. 

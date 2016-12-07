@@ -282,10 +282,4 @@
   (testing "geektime.com"
     (is (= {:title       "Geektime"
             :date        "32 mins ago"}
-           (get-byline "en/geektime" "http://www.geektime.com/"))))
-
-  #_(testing "WikiLeaks"
-    (is (= {:title       "NSA Targets World Leaders for US Geopolitical Interests"
-            :date        "2016-02-23"}
-           (get-byline "en/wikileaks" "https://wikileaks.org/nsa-201602/"))))
-  )
+           (get-byline "en/geektime" "http://www.geektime.com/")))))
