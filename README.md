@@ -22,6 +22,16 @@ In REPL type in:
 
 ## Java
 
+As of now the JAR is stored in Clojars, therefore maven is not going to find the artifact.
+You need to add the repository information to your `pom.xml`:
+```xml
+<repositories>
+    <repository>
+        <id>clojars.org</id>
+        <url>http://clojars.org/repo</url>
+    </repository>
+</repositories>
+
 Add a dependency to your `pom.xml`.
 
 ```xml
