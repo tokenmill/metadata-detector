@@ -10,6 +10,7 @@
    #"(?m)As of closing*"
    #"(?m)Source:.*"
    #"(?im)(published at|published|updated|posted)\:?"
+   #"--$"
    ])
 
 
@@ -17,7 +18,7 @@
   (assert (or (nil? string) (string? string)) "Only strings can be cleaned")
   (if cleaners
     (when-not (s/blank? string)
-      (s/trim (reduce #(s/replace %1 %2 " ") string cleaners)))
+      (s/trim (reduce #(s/replace %1 %2 " ") (s/trim string) cleaners)))
     string))
 
 (defn clean-date [^String string] (clean-string string date-cleaners))

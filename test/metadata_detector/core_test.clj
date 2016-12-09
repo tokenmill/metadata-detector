@@ -286,5 +286,5 @@
 
   (testing "itbusinessnet.com"
     (is (= {:title       "FileFacets Announces $4 Million in Series A Funding"
-            :date        nil}                               ; todo
-           (get-byline "en/itbusinessnet" "http://www.geektime.com/")))))
+            :date        "November 29, 2016"}
+           (get-byline "en/itbusinessnet" "http://www.itbusinessnet.com/article/FileFacets-Announces-4-Million-in-Series-A-Funding-4715928")))))

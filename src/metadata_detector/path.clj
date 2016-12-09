@@ -25,6 +25,7 @@
     [:* (e/attr-contains :class "article-timestamp")]
     [:.time-bar] [:span.time] [:time]
     [:* :div.articletext-holder :div.channel-date-container.sport :span]
+    [:div#content :span.prdata]
     })
 
 (def title-selectors
