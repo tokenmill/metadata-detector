@@ -13,7 +13,7 @@ Currently detects a title and a publish date of the html.
 Add a dependency to your `project.clj`:
 
 ```clojure
-[lt.tokenmill/metadata-detector "0.1.0" ]
+[lt.tokenmill/metadata-detector "0.1.1" ]
 ```
 
 In REPL type in:
