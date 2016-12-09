@@ -200,7 +200,7 @@
            (get-byline "en/commodityonline" "www.commodityonline.com/news/four-reasons-why-gold-may-recover-from-recent-low-prices-68351-3-68352.html"))))
 
   (testing "Platts"
-    (is (= {:title       nil
+    (is (= {:title       "Chicago gasoline prices fall to all-time low on abundant supply -  Oil"
             :date        "Houston (Platts)--16 Nov 2015 517 pm EST/2217 GMT"}
            (get-byline "en/platts" "http://www.platts.com/latest-news/oil/houston/chicago-gasoline-prices-fall-to-all-time-low-21479938"))))
 
@@ -235,7 +235,7 @@
            (get-byline "en/benzinga" "http://www.benzinga.com/trading-ideas/long-ideas/15/11/5974869/traders-nail-the-silver-etf-trade"))))
 
   (testing "BankOfEngland"
-    (is (= {:title       nil
+    (is (= {:title       "News Release - Publication of the PRA and FCA review into the failure of HBOS"
             :date        "19 November 2015"}
            (get-byline "en/bankofengland" "http://www.bankofengland.co.uk/publications/Pages/news/2015/086.aspx"))))
 
@@ -250,7 +250,7 @@
            (get-byline "en/expressandstar" "http://www.expressandstar.com/news/2016/01/12/two-arrested-on-suspicion-of-syria-related-terrorism-offences-at-walsall-home/"))))
 
   (testing "Metal"
-    (is (= {:title       nil
+    (is (= {:title       "Silver Going On 3rd Consecutive Annual Shortfall, Should Be Price Supportive:Thomson Reuters GFMS - Shanghai Metals Market"
             :date        "Nov 19, 2015 09:23 GMT"}
            (get-byline "en/metal" "http://www.metal.com/newscontent/81737_silver-going-on-3rd-consecutive-annual-shortfall-should-be-price-supportivethomson-reuters-gfms"))))
 
@@ -282,4 +282,9 @@
   (testing "geektime.com"
     (is (= {:title       "Geektime"
             :date        "32 mins ago"}
-           (get-byline "en/geektime" "http://www.geektime.com/")))))
+           (get-byline "en/geektime" "http://www.geektime.com/"))))
+
+  (testing "itbusinessnet.com"
+    (is (= {:title       "FileFacets Announces $4 Million in Series A Funding"
+            :date        nil}                               ; todo
+           (get-byline "en/itbusinessnet" "http://www.geektime.com/")))))
