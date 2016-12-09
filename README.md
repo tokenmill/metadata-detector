@@ -1,7 +1,7 @@
 # metadata-detector
 Library to detect metadata from html files.
 
-Currently detects title and publish date.
+Currently detects a title and a publish date of the html.
 
 # Usage
 
