@@ -1,4 +1,7 @@
 # metadata-detector
+
+[![Clojars Project](https://img.shields.io/clojars/v/lt.tokenmill/metadata-detector.svg)](https://clojars.org/lt.tokenmill/metadata-detector)
+
 Library to detect metadata from html files.
 
 Currently detects a title and a publish date of the html.
