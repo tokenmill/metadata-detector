@@ -1,0 +1,1039 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://ogp.me/ns/fb#" xml:lang="en"
+      lang="en" dir="ltr">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>An MSP's Guide to Lambda Functions on the AWS Public Cloud | IaaS content from Talkin&#039; Cloud</title>
+    <meta http-equiv="content-language" content="en"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[(new Date).getTime()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var s=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit"],l="api-",p=l+"ixn-";a(s,function(e,t){f[t]=o(l+t,!0,"api")}),f.addPageAction=o(l+"addPageAction",!0),f.setCurrentRouteName=o(l+"routeName",!0),t.exports=newrelic,f.interaction=function(){return(new r).get()};var d=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(p+"tracer",[Date.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return t.apply(this,arguments)}finally{c.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){d[t]=o(p+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,(new Date).getTime()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o){if(!p.aborted){e&&e(n,r,o);for(var i=t(o),a=v(n),u=a.length,c=0;c<u;c++)a[c].apply(i,r);var f=s[w[n]];return f&&f.push([y,n,r,i]),i}}function d(e,t){b[e]=v(e).concat(t)}function v(e){return b[e]||[]}function g(e){return l[e]=l[e]||o(n)}function m(e,t){f(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var b={},w={},y={on:d,emit:n,get:g,listeners:v,context:t,buffer:m,abort:a,aborted:!1};return y}function i(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},l={},p=t.exports=o();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!h++){var e=y.info=NREUM.info,t=l.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return f.abort();c(b,function(t,n){e[t]||(e[t]=n)}),u("mark",["onload",a()],null,"api");var n=l.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===l.readyState&&i()}function i(){u("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var u=e("handle"),c=e(2),f=e("ee"),s=window,l=s.document,p="addEventListener",d="attachEvent",v=s.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:v,REQ:s.Request,EV:s.Event,PR:s.Promise,MO:s.MutationObserver},e(1);var m=""+location,b={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-998.min.js"},w=v&&g&&g[p]&&!/CriOS/.test(navigator.userAgent),y=t.exports={offset:a(),origin:m,features:{},xhrWrappable:w};l[p]?(l[p]("DOMContentLoaded",i,!1),s[p]("load",r,!1)):(l[d]("onreadystatechange",o),s[d]("onload",r)),u("mark",["firstbyte",a()],null,"api");var h=0},{}]},{},["loader"]);</script>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="canonical" href="http://mspmentor.net/technologies/msps-guide-lambda-functions-aws-public-cloud" />
+    <meta name="keywords" content="IaaS" />
+    <meta name="description" content="AWS Lambda functions are emerging as one of the most popular instances on Amazon&#039;s public cloud platform." />
+    <meta name="revisit-after" content="1 day" />
+    <script type="text/javascript">var _sf_startpt=(new Date()).getTime()</script>
+    <link href="http://talkincloud.com/opensearch/apachesolr_search" title="Search search for Talkin&amp;#039; Cloud" rel="search" type="application/opensearchdescription+xml" />
+    <script>
+        (function() {
+            var d=document,h=d.getElementsByTagName('head')[0],s=d.createElement('script'),sc = 'https:' == document.location.protocol ? 'https://' : 'http://';
+            s.type='text/javascript';
+            s.async=true;
+            s.src=sc+'s.dpmsrv.com/dpm_8effee409c625e1a2d8f5033631840e6ce1dcb64.min.js';
+            h.appendChild(s);
+        })();
+    </script><script src="http://tags.crwdcntrl.net/c/7499/cc_af.js"></script>
+    <script type="text/javascript">
+        <!--//--><![CDATA[//><!--
+        function roadblock(){}
+        roadblock.page = "/iaas/msps-guide-lambda-functions-aws-public-cloud";
+        roadblock.demographic_data = [];
+        roadblock.roadblockswitch = 1;
+        roadblock.roadblockdisplay = 6;
+        roadblock.roadblocktime = 15;
+        roadblock.roadblocktimedelay = 0;
+        roadblock.roadblockposition = "interstitial";
+        roadblock.roadblocksize = "640x480";
+        roadblock.roadblocktransparent = 1;
+        roadblock.roadblocksitewide = 1;
+        roadblock.ad_full_sitename = "Talkin&#039; Cloud";
+        roadblock.adsense_ad_channel = "";
+        roadblock.adsense_search_ad_channel = 8765808811;
+        roadblock.adsense_max_links = 3;
+        roadblock.adsense_ad_type = "text";
+        roadblock.google_ui_version = 1;
+        roadblock.adsense_switch = 0;
+        roadblock.adsense_search_switch = 0;
+        roadblock.adsense_pubid = "pub-0083033482235071";
+        roadblock.adsense_adslot = "";
+        roadblock.google_color_link = "";
+        roadblock.adsense_adslot_width = 585;
+        roadblock.adsense_adslot_height = 200;
+        roadblock.ad_dart_site = "tcloud.home";
+        roadblock.ad_dart_zone = "iaas";
+        roadblock.ad_dart_ptype = "article";
+        roadblock.ad_dart_blog = "";
+        roadblock.ad_dart_level = "";
+        //--><!]]></script>
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="title" content="An MSP's Guide to Lambda Functions on the AWS Public Cloud" />
+    <link rel="image_src" href="/site-files/talkincloud.com/files/uploads/2016/12/thinkstockphotos-cloud2.jpg" alt="" / >
+    <link rel="shortcut icon" href="/sites/all/themes/talkincloud/favicon.ico" type="image/x-icon" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://talkincloud.com/iaas/msps-guide-lambda-functions-aws-public-cloud" />
+    <meta property="og:title" content="An MSP's Guide to Lambda Functions on the AWS Public Cloud" />
+    <meta property="og:description" content="AWS Lambda functions are emerging as one of the most popular instances on Amazon's public cloud platform." />
+    <meta property="og:image" content="http://talkincloud.com/site-files/talkincloud.com/files/uploads/2016/12/thinkstockphotos-cloud2.jpg" />
+    <link rel="alternate" type="application/rss+xml" title="Talkin' Cloud RSS" href="http://talkincloud.com/rss.xml" />
+    <script type="text/javascript" src="//platform.linkedin.com/in.js"></script>
+    <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+    <script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
+    <link type="text/css" rel="stylesheet" media="all" href="/sites/all/modules/custom/penton_follow_user/theme/penton_follow_user.css?6" />
+    <link type="text/css" rel="stylesheet" media="all" href="/site-files/talkincloud.com/files/ctools/css/19a2b72cdd0fc15bf64ed261883b423d_0.css?6" />
+    <link type="text/css" rel="stylesheet" media="all" href="/site-files/talkincloud.com/files/advagg_css/css_91da04be79ef7d9839461bb5c024ee9a_0.css" />
+    <link type="text/css" rel="stylesheet" media="all" href="/site-files/talkincloud.com/files/advagg_css/css_b720b1890e21971a7b070764665a6a7f_0.css" />
+    <link type="text/css" rel="stylesheet" media="all" href="/site-files/talkincloud.com/files/advagg_css/css_aafc563987cd2f1e4a244b8c30935401_0.css" />
+    <link type="text/css" rel="stylesheet" media="all" href="/site-files/talkincloud.com/files/advagg_css/css_3f385c6798bba01a528bc37e3b4e9f0a_0.css" />
+    <link type="text/css" rel="stylesheet" media="print" href="/site-files/talkincloud.com/files/advagg_css/css_7d8f0be34e2eec60aeb767133812bec2_2.css" />
+    <script type="text/javascript" src="/site-files/talkincloud.com/files/advagg_js/js_80890545b839e8f35e528bd7a81b0dd8_1.js"></script>
+    <script type="text/javascript" src="/site-files/talkincloud.com/files/advagg_js/js_15f92fd106358d677d7d293a4975ec29_0.js"></script>
+    <script type="text/javascript" src="/site-files/talkincloud.com/files/advagg_js/js_a1faf7e86af5944f10d434d7b615967b_1.js"></script>
+    <script type="text/javascript" src="/site-files/talkincloud.com/files/advagg_js/js_1c5b57d63102b79d73d1421ff2747fa2_0.js"></script>
+    <script type="text/javascript">
+        <!--//--><![CDATA[//><!--
+        jQuery.extend(Drupal.settings, {"basePath":"\/","penton_omniture":{"penton_omniture_suite_name":"pentontalkincloud,pentonpisces","penton_omniture_visitornamespace":"pentonmedia","penton_omniture_trackingserver":"pentonmedia.122.2o7.net","penton_omniture_secure_trackingserver":"","penton_omniture_linkinternalfilters":"Javascript,talkincloud.com,ninelivesmediainc.com","penton_omniture_affiliates":"mspmentor.net,thevarguy.com"},"apachesolr_autocomplete":{"path":"\/apachesolr_autocomplete"},"colorbox":{"transition":"elastic","speed":350,"opacity":"0.85","slideshow":false,"slideshowAuto":false,"slideshowSpeed":2500,"slideshowStart":"","slideshowStop":"","current":"{current} of {total}","previous":"\u00ab Prev","next":"Next \u00bb","close":"Close","overlayClose":true,"maxWidth":"100%","maxHeight":"100%"},"fivestar":{"titleUser":"Your rating: ","titleAverage":"Average: ","feedbackSavingVote":"Saving your vote...","feedbackVoteSaved":"Your vote has been saved.","feedbackDeletingVote":"Deleting your vote...","feedbackVoteDeleted":"Your vote has been deleted."},"user_relationships_ui":{"loadingimage":"\/sites\/all\/modules\/contrib\/user_relationships\/user_relationships_ui\/images\/loadingAnimation.gif","savingimage":"\/sites\/all\/modules\/contrib\/user_relationships\/user_relationships_ui\/images\/savingimage.gif","position":{"position":"absolute","left":"0","top":"0"}},"penton_registration":{"flyover_page_number":"3","user_is_loginned":false,"is_flyover_needed":false},"register_flyover":{"animation":"fadeIn","throbber":"\u003Cimg src=\u0022\/sites\/all\/modules\/custom\/penton_registration\/images\/ajax-loader.gif\u0022 alt=\u0022Loading...\u0022 title=\u0022Loading\u0022 width=\u0022220\u0022 height=\u002219\u0022 \/\u003E","modalOptions":{"background-color":"#000000","opacity":0.8},"modalSize":{"contentBottom":60,"contentRight":60,"height":450,"type":"fixed","width":550},"PURModal":{"closeImage":"\u003Cimg src=\u0022\/sites\/all\/modules\/contrib\/ctools\/images\/icon-close-window.png\u0022 alt=\u0022Close Window\u0022 title=\u0022Close Window\u0022 width=\u002216\u0022 height=\u002216\u0022 \/\u003E","closeText":"Close Window","loadingText":"Loading...","throbber":"\u003Cimg src=\u0022\/sites\/all\/modules\/contrib\/ctools\/images\/throbber.gif\u0022 alt=\u0022Loading...\u0022 title=\u0022Loading...\u0022 width=\u002232\u0022 height=\u002232\u0022 \/\u003E"}},"flyover":{"animation":"fadeIn","throbber":"\u003Cimg src=\u0022\/sites\/all\/modules\/custom\/penton_registration\/images\/ajax-loader.gif\u0022 alt=\u0022Loading...\u0022 title=\u0022Loading\u0022 width=\u0022220\u0022 height=\u002219\u0022 \/\u003E","modalOptions":{"background-color":"#000000","opacity":0.8},"modalSize":{"contentBottom":60,"contentRight":60,"height":200,"type":"fixed","width":400},"PURModal":{"closeImage":"\u003Cimg src=\u0022\/sites\/all\/modules\/contrib\/ctools\/images\/icon-close-window.png\u0022 alt=\u0022Close Window\u0022 title=\u0022Close Window\u0022 width=\u002216\u0022 height=\u002216\u0022 \/\u003E","closeText":"Close Window","loadingText":"Loading...","throbber":"\u003Cimg src=\u0022\/sites\/all\/modules\/contrib\/ctools\/images\/throbber.gif\u0022 alt=\u0022Loading...\u0022 title=\u0022Loading...\u0022 width=\u002232\u0022 height=\u002232\u0022 \/\u003E"}},"mollomPathPrefix":"","googleanalytics":{"trackOutbound":1,"trackMailto":1,"trackDownload":1,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls|xml|z|zip","trackDomainMode":"1","trackUrlFragments":1},"register":{"animation":"fadeIn","throbber":"\u003Cimg src=\u0022\/sites\/all\/modules\/custom\/penton_registration\/images\/ajax-loader.gif\u0022 alt=\u0022Loading...\u0022 title=\u0022Loading\u0022 width=\u0022220\u0022 height=\u002219\u0022 \/\u003E","modalOptions":{"background-color":"#000000","opacity":0.8},"modalSize":{"contentBottom":60,"contentRight":60,"height":600,"type":"fixed","width":820},"PURModal":{"closeImage":"\u003Cimg src=\u0022\/sites\/all\/modules\/contrib\/ctools\/images\/icon-close-window.png\u0022 alt=\u0022Close Window\u0022 title=\u0022Close Window\u0022 width=\u002216\u0022 height=\u002216\u0022 \/\u003E","closeText":"Close Window","loadingText":"Loading...","throbber":"\u003Cimg src=\u0022\/sites\/all\/modules\/contrib\/ctools\/images\/throbber.gif\u0022 alt=\u0022Loading...\u0022 title=\u0022Loading...\u0022 width=\u002232\u0022 height=\u002232\u0022 \/\u003E"}},"register_light":{"animation":"fadeIn","throbber":"\u003Cimg src=\u0022\/sites\/all\/modules\/custom\/penton_registration\/images\/ajax-loader.gif\u0022 alt=\u0022Loading...\u0022 title=\u0022Loading\u0022 width=\u0022220\u0022 height=\u002219\u0022 \/\u003E","modalOptions":{"background-color":"#000000","opacity":0.8},"modalSize":{"contentBottom":60,"contentRight":60,"height":600,"type":"fixed","width":820},"PURModal":{"closeImage":"\u003Cimg src=\u0022\/sites\/all\/modules\/contrib\/ctools\/images\/icon-close-window.png\u0022 alt=\u0022Close Window\u0022 title=\u0022Close Window\u0022 width=\u002216\u0022 height=\u002216\u0022 \/\u003E","closeText":"Close Window","loadingText":"Loading...","throbber":"\u003Cimg src=\u0022\/sites\/all\/modules\/contrib\/ctools\/images\/throbber.gif\u0022 alt=\u0022Loading...\u0022 title=\u0022Loading...\u0022 width=\u002232\u0022 height=\u002232\u0022 \/\u003E"}},"log_in":{"animation":"fadeIn","throbber":"\u003Cimg src=\u0022\/sites\/all\/modules\/custom\/penton_registration\/images\/ajax-loader.gif\u0022 alt=\u0022Loading...\u0022 title=\u0022Loading\u0022 width=\u0022220\u0022 height=\u002219\u0022 \/\u003E","modalOptions":{"background-color":"#000000","opacity":0.8},"modalSize":{"contentBottom":60,"contentRight":60,"height":400,"type":"fixed","width":500},"PURModal":{"closeImage":"\u003Cimg src=\u0022\/sites\/all\/modules\/contrib\/ctools\/images\/icon-close-window.png\u0022 alt=\u0022Close Window\u0022 title=\u0022Close Window\u0022 width=\u002216\u0022 height=\u002216\u0022 \/\u003E","closeText":"Close Window","loadingText":"Loading...","throbber":"\u003Cimg src=\u0022\/sites\/all\/modules\/contrib\/ctools\/images\/throbber.gif\u0022 alt=\u0022Loading...\u0022 title=\u0022Loading...\u0022 width=\u002232\u0022 height=\u002232\u0022 \/\u003E"}},"quicktabs":{"qt_11":{"tabs":[0,0]}},"penton_facebook_appid":"499240460092867"});
+        //--><!]]>
+    </script>
+    <script type="text/javascript">
+        <!--//--><![CDATA[//><!--
+        $().ready(function(){var url=$("iframe.query_strings").attr("src");$("iframe.query_strings").attr("src",url+window.location.search)});
+        //--><!]]>
+    </script>
+    <script type="text/javascript">
+        <!--//--><![CDATA[//><!--
+        var _elqQ=_elqQ||[];_elqQ.push(['elqSetSiteId','2978']);_elqQ.push(['elqTrackPageView']);(function(){function async_load(){var s=document.createElement('script');s.type='text/javascript';s.async=true;s.src='//img.en25.com/i/elqCfg.min.js';var x=document.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x)};if(window.addEventListener){window.addEventListener('DOMContentLoaded',async_load,false)}else if(window.attachEvent)window.attachEvent('onload',async_load)})();
+        //--><!]]>
+    </script>
+    <script type="text/javascript">
+        <!--//--><![CDATA[//><!--
+        (function(i,s,o,g,r,a,m){i.GoogleAnalyticsObject=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","//www.google-analytics.com/analytics.js","ga");ga("create","UA-15396830-7",{cookieDomain:".talkincloud.com"});ga("set","anonymizeIp",true);ga("set","page",location.pathname+location.search+location.hash);ga("send","pageview");
+        //--><!]]>
+    </script>
+    <script type="text/javascript">
+        <!--//--><![CDATA[//><!--
+            (function(){var useSSL='https:'==document.location.protocol,src=(useSSL?'https:':'http:')+'//www.googletagservices.com/tag/js/gpt.js';document.write('<script src="'+src+'"></script>')})();
+    //--><!]]>
+    </script>
+    <script type="text/javascript">
+        <!--//--><![CDATA[//><!--
+            googletag.defineSlot('/3834/tcloud.home/iaas',[[180,150]],'gpt-180_1').addService(googletag.pubads()).setTargeting('pos','180_1');googletag.defineSlot('/3834/tcloud.home/iaas',[[970,90],[728,90],[468,60]],'gpt-inarticlevideo_1').addService(googletag.pubads()).setTargeting('pos','inarticlevideo_1');if($(window).width()>=768)googletag.defineSlot('/3834/tcloud.home/iaas',[[970,90],[728,90],[468,60]],'gpt-728_1').addService(googletag.pubads()).setTargeting('pos','728_1');if($(window).width()>=768)googletag.defineSlot('/3834/tcloud.home/iaas',[[728,90],[468,60]],'gpt-728_2').addService(googletag.pubads()).setTargeting('pos','728_2');googletag.defineSlot('/3834/tcloud.home/iaas',[[300,250],[300,600]],'gpt-300_1').addService(googletag.pubads()).setTargeting('pos','300_1');googletag.defineSlot('/3834/tcloud.home/iaas',[[300,100]],'gpt-300_2').addService(googletag.pubads()).setTargeting('pos','300_2');googletag.defineSlot('/3834/tcloud.home/iaas',[[300,100]],'gpt-300_3').addService(googletag.pubads()).setTargeting('pos','300_3');googletag.defineSlot('/3834/tcloud.home/iaas',[[300,250],[300,600]],'gpt-300_4').addService(googletag.pubads()).setTargeting('pos','300_4');googletag.defineSlot('/3834/tcloud.home/iaas',[[300,250]],'gpt-300_5').addService(googletag.pubads()).setTargeting('pos','300_5');googletag.defineSlot('/3834/tcloud.home/iaas',[[1,1]],'gpt-peelback_1').addService(googletag.pubads()).setTargeting('pos','peelback_1');googletag.defineSlot('/3834/tcloud.home/iaas',[[1,1]],'gpt-floor').addService(googletag.pubads()).setTargeting('pos','floor');googletag.defineSlot('/3834/tcloud.home/iaas',[[640,480]],'gpt-interstitial').addService(googletag.pubads()).setTargeting('pos','interstitial');googletag.defineOutOfPageSlot('/3834/tcloud.home/iaas','gpt-pm-oop').addService(googletag.pubads());googletag.defineOutOfPageSlot('/3834/tcloud.home/iaas','gpt-pm-oop-skin').addService(googletag.pubads()).setTargeting('pos','skin');googletag.pubads().setTargeting('page','/iaas/msps-guide-lambda-functions-aws-public-cloud').setTargeting('nid','59301').setTargeting('ptype','article').setTargeting('authors','christopher_tozzi');googletag.pubads().enableSingleRequest();googletag.pubads().collapseEmptyDivs();googletag.pubads().enableSyncRendering();googletag.enableServices();
+    //--><!]]>
+    </script>
+    <link rel="apple-touch-icon" href="/sites/all/themes/talkincloud/apple-touch-icon.png"/>
+</head>
+
+<body class="not-front not-logged-in page-node node-type-article one-sidebar sidebar-right">
+
+
+<div id="pm-pg" class="pm-pg">
+    <div class="pm-hd">
+        <div class="pm-hd-pdg">
+            <div id="top">
+                <a href="#navigation">Skip to Navigation</a>        <a href="#content">Skip to Content</a>      </div>
+            <div class="pm-site-name">
+                <a href="/">Talkin&#039; Cloud</a>                            </div>
+            <div class="pm-search">
+                <form action="/iaas/msps-guide-lambda-functions-aws-public-cloud"  accept-charset="UTF-8" method="post" id="search-theme-form">
+                    <div><div id="search" class="container-inline">
+                        <div class="form-item" id="edit-search-theme-form-1-wrapper">
+                            <label for="edit-search-theme-form-1">Search: </label>
+                            <input type="text" maxlength="128" name="search_theme_form" id="edit-search-theme-form-1" size="15" value="" title="Enter the terms you wish to search for." class="form-text  apachesolr-autocomplete unprocessed" />
+                        </div>
+                        <input type="image" name="op" id="edit-submit-3" value="Go!"  src="/sites/all/themes/pisces_core/images/search-icon.gif" class="form-submit" />
+                        <input type="hidden" name="form_build_id" id="form-udmOhvvXCaMHkNspQtNQvW9assiYt7d3ji1Si59GaME" value="form-udmOhvvXCaMHkNspQtNQvW9assiYt7d3ji1Si59GaME"  />
+                        <input type="hidden" name="form_id" id="edit-search-theme-form" value="search_theme_form"  />
+                    </div>
+
+                    </div></form>
+            </div>
+            <div class="pm-hd-region">
+                <!-- block.tpl.php -->
+                <div id="block-block-111" class="block block-block ">
+                    <div class="block-content">
+                        <script>
+                            (function(){function f(a){var b=a=a.replace(":","");try{for(var e=0;100>e&&(a=decodeURIComponent(a),b!=a)&&!a.match(/^http(s)?\:/);e++)b=a}catch(c){}return a.replace(/(^\s+|\s+$)/g,"")}try{if(!location||!location.hostname||!location.pathname)return!1;var c=document.location.hostname.replace(/^www\./,""),n=function(){for(var a,b=document.getElementsByTagName("meta"),e,c=0,d=b.length;c<d;c++)if(e=b[c],"og:title"===e.getAttribute("property")){a=e.getAttribute("content");break}a||(a=document.title||"Untitled");
+                                return a}(),b={},b=function(a,b,c){a.l1=b;a.l2=c;a.l3="__page__";a.l4="-";return a}(b,c,n),g=(new Date).getTime(),h=Math.floor(Math.random()*Math.pow(10,12));b.t=g;b.de=h;b.zMoatAB_SNPT=!0;var c=[],k=[f(b.l1),f(b.l2),f(b.l3),f(b.l4)].join(":"),p="https://og3i93vzhywk-a.akamaihd.net/z.gif?e=17&d="+encodeURIComponent(k)+"&de="+h+"&t="+g+"&i=PENTONCONTENT1&cm=1&mp=1&ac=1&pl=1&bq=10&cs=0",q="https://px.moatads.com/pixel.gif?e=17&d="+encodeURIComponent(k)+"&de="+h+"&t="+g+"&i=PENTONCONTENT1&cm=1&mp=0&ac=1&pl=1&bq=10&ad_type=img&cs=0",
+                                r="https://px.moatads.com/pixel.gif?e=17&d="+encodeURIComponent(k)+"&de="+h+"&t="+g+"&i=PENTONCONTENT1&cm=1&ku=1&ac=1&pl=1&bq=10&ad_type=img&cs=0";(new Image).src=p;(new Image).src=q;for(var l in b)c.push(l+"="+encodeURIComponent(b[l]));var c=c.join("&"),d=document.createElement("script");d.type="text/javascript";d.async=!0;d.onerror=function(){(new Image).src=r};var m=document.getElementsByTagName("script")[0];m.parentNode.insertBefore(d,m);d.src="https://z.moatads.com/pentoncontent20495821/moatcontent.js#"+
+                                c}catch(a){try{var t="//pixel.moatads.com/pixel.gif?e=24&d=data%3Adata%3Adata%3Adata&i=MOATCONTENTABSNIPPET1&ac=1&k="+encodeURIComponent(a)+"&j="+encodeURIComponent(document.referrer)+"&cs="+(new Date).getTime();(new Image).src=t}catch(u){}}})();
+                        </script></d;c++)if(e=b[c],"og:title"===e.getattribute("property")){a=e.getattribute("content");break}a||(a=document.title||"untitled");></script>    </div>
+                    </div>
+                    <!-- /block.tpl.php -->
+                    <!-- block.tpl.php -->
+                    <div id="block-penton_custom-login_logout" class="block block-penton_custom ">
+                        <div class="block-content">
+                        <!-- login-logout.tpl.php -->
+                        <div class="login-logout">
+                        <!-- remove login/register block from checkout pages -->
+                        <div class="login-cont logged-out">
+                        <div class="user-block">
+                        <a href="/penton_ur/nojs/user/register" class="ctools-use-modal ctools-modal-register" title="Register at this site.">Register</a>      <a href="/penton_ur/nojs/login" class="ctools-use-modal ctools-modal-log_in" title="">Log In</a>    </div>
+                    <div class="user-login-block">
+                        <form action="/iaas/msps-guide-lambda-functions-aws-public-cloud?destination=node%2F59301"  accept-charset="UTF-8" method="post" id="user-login-form">
+                        <div><div class="form-item" id="edit-name-1-wrapper">
+                        <label for="edit-name-1">Display name or email address: <span class="form-required" title="This field is required.">*</span></label>
+                        <input type="text" maxlength="60" name="name" id="edit-name-1" size="15" value="" tabindex="1" class="form-text required" />
+                        </div>
+                        <div class="form-item" id="edit-pass-wrapper">
+                        <label for="edit-pass">Password: <span class="form-required" title="This field is required.">*</span></label>
+                        <input type="password" name="pass" id="edit-pass"  maxlength="60"  size="15"  tabindex="2" class="form-text required" />
+                        </div>
+                        <div class="form-item" id="edit-remember-me-wrapper">
+                        <label class="option" for="edit-remember-me"><input type="checkbox" name="remember_me" id="edit-remember-me" value="1"  checked="checked"  tabindex="3" class="form-checkbox" /> Remember me</label>
+                    </div>
+                    <input type="submit" name="op" id="edit-submit-1" value="Log in"  tabindex="4" class="form-submit" />
+                        <div class="item-list"><ul><li class="first last"><a href="/user/password">Forgot Your Password?</a></li>
+                    </ul></div><input type="hidden" name="form_build_id" id="form-SyzIZYDd_sWQO7LAuDrQ47FTldAyT56siCCh59NZ9xk" value="form-SyzIZYDd_sWQO7LAuDrQ47FTldAyT56siCCh59NZ9xk"  />
+                        <input type="hidden" name="form_id" id="edit-user-login-block" value="user_login_block"  />
+
+                        </div></form>
+                        <div id="close-box"><a href="#">close</a></div>
+                        </div>
+                        </div>
+                        </div>
+                        <!-- / login-logout.tpl.php -->
+                        </div>
+                        </div>
+                        <!-- /block.tpl.php -->
+                        <!-- block.tpl.php -->
+                        <div id="block-menu-menu-utility-nav" class="block block-menu ">
+                        <div class="block-content">
+                        <ul class="menu"><li class="leaf first"><a href="/newsletters" title="">Subscribe</a></li>
+                        <li class="leaf"><a href="/advertise" title="">Advertise</a></li>
+                        <li class="leaf"><a href="/talkin039-cloud/our-staff" title="">Contact</a></li>
+                        <li class="leaf"><a href="http://www.linkedin.com/groups/TalkinCloud-3702166" title=""><img alt="" title="" src="/site-files/talkincloud.com/files/uploads/2012/10/linkedin.png" /></a></li>
+                        <li class="leaf"><a href="http://twitter.com/talkin_cloud" title=""><img alt="" title="" src="/site-files/talkincloud.com/files/uploads/2012/09/twitter.png" /></a></li>
+                        <li class="leaf"><a href="http://www.facebook.com/pages/TalkinCloud/304925546185807" title=""><img alt="" title="" src="/site-files/talkincloud.com/files/uploads/2012/09/facebook.png" /></a></li>
+                        <li class="leaf"><a href="/rss.xml" title=""><img alt="" title="" src="/site-files/talkincloud.com/files/uploads/2012/09/rss.png" /></a></li>
+                        <li class="leaf last"><a href="http://www.youtube.com/user/TalkinCloud" title=""><img alt="" title="" src="/site-files/talkincloud.com/files/uploads/2012/09/youtube.png" /></a></li>
+                        </ul>    </div>
+                        </div>
+                        <!-- /block.tpl.php -->
+                        <!-- block.tpl.php -->
+                        <div id="block-block-91" class="block block-block ">
+                        <div class="block-content">
+                        <style>
+
+                        div.geshifilter-title { margin: 0.5em 0.4em -0.5em; }
+
+                    </style>    </div>
+                    </div>
+                    <!-- /block.tpl.php -->
+                    </div>
+                    <div class="pm-nav-menu">
+                        <!-- block.tpl.php -->
+                        <div id="block-nice_menus-1" class="block block-nice_menus ">
+                        <div class="block-content">
+                        <ul class="nice-menu nice-menu-down" id="nice-menu-1"><li class="menu-10334 menuparent menu-path-taxonomy-term-26161 first  odd "><a href="/infocenters" title="" data-ad-target="infocenters" aria-haspopup="true">InfoCenters</a><ul><li class="menu-800821 menu-path-mspmentornet-infocenters-cloud-services first  odd  last "><a href="http://mspmentor.net/infocenters/cloud-services" title="">Cloud Services</a></li>
+                    </ul>
+                    </li>
+                    <li class="menu-168794 menuparent menu-path-node-8481 even "><a href="/latest-updates" title="" data-ad-target="latest-updates" aria-haspopup="true">Latest Updates</a><ul><li class="menu-168899 menu-path-node-8341 first  odd "><a href="/blog/talkin-cloud-blog" title="">Guest Bloggers</a></li>
+                    <li class="menu-170280 menu-path-taxonomy-term-26171 even "><a href="/channel-cafe" title="">Channel Cafe</a></li>
+                    <li class="menu-170276 menu-path-media-all-video odd "><a href="/media/all/video" title="">FastChat Videos</a></li>
+                    <li class="menu-170278 menu-path-node-7544 even "><a href="/newsletters" title="">Newsletters</a></li>
+                        <li class="menu-170277 menu-path-media-all-gallery odd "><a href="/media/all/gallery" title="">Slide Shows</a></li>
+                    <li class="menu-170279 menu-path-formsthevarguycom-webcastscodeTLKWEB even  last "><a href="http://forms.thevarguy.com/webcasts?code=TLKWEB" title="">Webcasts</a></li>
+                        </ul>
+                        </li>
+                        <li class="menu-168797 menuparent menu-path-taxonomy-term-26221 odd "><a href="/cloud-services" title="" data-ad-target="cloud-services" aria-haspopup="true">Cloud Services</a><ul><li class="menu-168869 menu-path-taxonomy-term-7491 first  odd "><a href="/cloud-computing-slas" title="">Cloud SLAs</a></li>
+                    <li class="menu-168905 menu-path-taxonomy-term-7460 even "><a href="/iaas" title="">IaaS</a></li>
+                        <li class="menu-168920 menu-path-taxonomy-term-7459 odd "><a href="/paas" title="">PaaS</a></li>
+                        <li class="menu-168926 menu-path-taxonomy-term-7456 even "><a href="/private-cloud" title="">Private Cloud</a></li>
+                    <li class="menu-168929 menu-path-taxonomy-term-7457 odd "><a href="/public-cloud" title="">Public Cloud</a></li>
+                    <li class="menu-168935 menu-path-taxonomy-term-7458 even  last "><a href="/saas-software-service" title="">SaaS (Software as a Service)</a></li>
+                    </ul>
+                    </li>
+                    <li class="menu-168800 menuparent menu-path-taxonomy-term-26181 even "><a href="/cloud-markets" title="" data-ad-target="cloud-markets" aria-haspopup="true">Cloud Markets</a><ul><li class="menu-168896 menu-path-taxonomy-term-7468 first  odd "><a href="/enterprise-cloud-services" title="">Enterprise</a></li>
+                        <li class="menu-168863 menu-path-taxonomy-term-7475 even "><a href="/cloud-computing-security" title="">Cloud Security</a></li>
+                    <li class="menu-168884 menu-path-taxonomy-term-7501 odd "><a href="/cloud-services-providers" title="">Cloud Services Providers</a></li>
+                    <li class="menu-168887 menu-path-taxonomy-term-7496 even "><a href="/cloud-software-developers-and-isvs" title="">Cloud Applications</a></li>
+                    <li class="menu-168890 menu-path-taxonomy-term-7477 odd "><a href="/cloud-storage" title="">Cloud Storage</a></li>
+                    <li class="menu-168914 menu-path-taxonomy-term-7467 even "><a href="/medium-business-and-mid-market-technology-software" title="">Mid-size Business</a></li>
+                    <li class="menu-168938 menu-path-taxonomy-term-7466 odd  last "><a href="/small-and-midsize-business-smb-cloud-computing" title="">Small Business</a></li>
+                    </ul>
+                    </li>
+                    <li class="menu-168803 menuparent menu-path-taxonomy-term-26211 odd "><a href="/cloud-companies" title="" data-ad-target="cloud-companies" aria-haspopup="true">Cloud Companies</a><ul><li class="menu-783811 menu-path-node-46991 first  odd "><a href="/our-sponsors/carbonite" title="">Carbonite</a></li>
+                        <li class="menu-168917 menu-path-talkincloudcom-our-sponsors-our-sponsors even  last "><a href="http://talkincloud.com/our-sponsors/our-sponsors" title="">View All Sponsors</a></li>
+                    </ul>
+                    </li>
+                    <li class="menu-168806 menuparent menu-path-taxonomy-term-26191 even "><a href="/community" title="" data-ad-target="community" aria-haspopup="true">Community</a><ul><li class="menu-170317 menu-path-taxonomy-term-26171 first  odd "><a href="/channel-cafe" title="">Channel Cafe</a></li>
+                    <li class="menu-170323 menu-path-facebookcom-pages-TalkinCloud-304925546185807 even "><a href="http://facebook.com/pages/TalkinCloud/304925546185807" title="">Facebook</a></li>
+                        <li class="menu-170324 menu-path-linkedincom-groups-TalkinCloud-3702166 odd "><a href="http://www.linkedin.com/groups/TalkinCloud-3702166" title="">LinkedIn</a></li>
+                        <li class="menu-170320 menu-path-node-7544 even "><a href="/newsletters" title="">Newsletters</a></li>
+                        <li class="menu-170321 menu-path-twittercom-talkin_cloud odd "><a href="http://twitter.com/talkin_cloud" title="">Twitter</a></li>
+                        <li class="menu-170322 menu-path-youtubecom-user-TalkinCloud even "><a href="http://www.youtube.com/user/TalkinCloud" title="">YouTube</a></li>
+                        <li class="menu-685151 menu-path-formsthevarguycom-webcasts odd "><a href="http://forms.thevarguy.com/webcasts" title="">Upcoming Webcasts</a></li>
+                    <li class="menu-685161 menu-path-taxonomy-term-27421 even  last "><a href="/channel-expert-hour/demand-channel-expert-hour" title="">On Demand Webcasts</a></li>
+                    </ul>
+                    </li>
+                    <li class="menu-168809 menuparent menu-path-node-7545 odd "><a href="/talkin-cloud-resource-center/resource-center" title="" data-ad-target="lists-research" aria-haspopup="true">Lists/Research</a><ul><li class="menu-168947 menu-path-node-35481 first  odd "><a href="/tc100" title="">Talkin’ Cloud 100</a></li>
+                    <li class="menu-168950 menu-path-node-7545 even "><a href="/talkin-cloud-resource-center/resource-center" title="">Resource Center</a></li>
+                    <li class="menu-170326 menu-path-mspmentornet-top501 odd "><a href="http://mspmentor.net/top501" title="">MSP501</a></li>
+                        <li class="menu-170327 menu-path-mspmentornet-mspmentor-250-2014 even "><a href="http://mspmentor.net/mspmentor-250/2014" title="">Top 250 MSP Experts 2014</a></li>
+                    <li class="menu-751121 menu-path-thevarguycom-information-technology-events-and-conferences-120514-top-channel-partner-events-2015-technology-conferences odd  last "><a href="http://thevarguy.com/information-technology-events-and-conferences/120514/top-channel-partner-events-2015-technology-conferences" title="">Top Channel Partner Events 2015</a></li>
+                    </ul>
+                    </li>
+                    <li class="menu-801701 menu-path-node-35481 even  last "><a href="/tc100" title="">TC 100</a></li>
+                    </ul>
+                    </div>
+                    </div>
+                    <!-- /block.tpl.php -->
+                    </div>
+                    </div>
+                    </div>
+                    <!--// pm-hd -->
+
+                    <div class="pm-wrp clearfix">
+                        <div class="pm-wrp-pdg">
+                        <div class="pm-banner-ad pm-banner-ad-top">
+                        <!-- block.tpl.php -->
+                        <div id="block-pm_doubleclick-3" class="block block-pm_doubleclick ">
+                        <div class="block-content">
+                        <div class="advertisement">Advertisement</div><div id="gpt-728_1" data-gpt-slot="728_1" class="gpt-holder"><script type="text/javascript">if ($(window).width() >= 768 ){googletag.display('gpt-728_1');}else{$('#gpt-728_1').hide()};</script></div>    </div>
+            </div>
+            <!-- /block.tpl.php -->
+        </div>
+
+        <!--  header for profile edit pages -->
+
+
+        <div class="breadcrumb"><a href="/">Home</a> &#62; <a href="/iaas">IaaS</a> &#62; An MSP&#039;s Guide to Lambda Functions on the AWS Public Cloud</div>
+        <div class="pm-content-wrp clearfix">        <div class="pm-content">
+            <h1 class="page-title">An MSP&#039;s Guide to Lambda Functions on the AWS Public Cloud</h1>
+            <div class="pm-cont-main" id="content">
+                <div id="pm-main-pdg" class="pm-cont-pdg">
+                    <div id="node-59301" class="node node-article node-article-page page-content clearfix clearfix">
+
+
+                        <div class="content-tools">
+                            <div class="byline-date">
+                                <div class="byline">
+                                    <span class="publish-date">Dec 12, 2016</span>
+                                    <span class="author-name">
+                <a href="/author/christopher-tozzi" rel="author">Christopher Tozzi</a>              </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="intro clearfix">
+                            <div class="social-bar social-bar-top clearfix">
+                                <div class="item-list"><ul class="social-links"><li class="first"><ul class="links"><li class="forward_links first last"><a href="/penton_ur/nojs/user/register?path=node%2F59301&amp;nid=59301&amp;source=email" title="Forward this page" class="forward-page ctools-use-modal ctools-modal-register non-omniture ">EMAIL</a></li>
+                                </ul></li>
+                                    <li><div class="linkedin-button"><script type="IN/Share" data-url="http://talkincloud.com/iaas/msps-guide-lambda-functions-aws-public-cloud"></script></div></li>
+                                    <li><div class="twitter-button"><a href="http://twitter.com/share" class="twitter-share-button" data-url="http://talkincloud.com/iaas/msps-guide-lambda-functions-aws-public-cloud" data-text="An MSP's Guide to Lambda Functions on the AWS Public Cloud" data-count="none" data-via="talkin_cloud">Tweet</a></div></li>
+                                    <li><div class="googleplusone-button"><g:plusone callback="plusoneTrack" size="medium" count="false" href="http://talkincloud.com/iaas/msps-guide-lambda-functions-aws-public-cloud"></g:plusone></div></li>
+                                    <li class="last"><div class="fb-button"><fb:like href="http://talkincloud.com/iaas/msps-guide-lambda-functions-aws-public-cloud" send="false" layout="button_count" width="115" show_faces="false" action="recommend"></fb:like></div></li>
+                                </ul></div>                <div class="comments-count-preview">
+                                <a href="#comments">Comments</a> <span class="comments-count"><a href="#comments">0</a></span>        </div>
+                            </div>
+                            <div class="description clear-block">
+
+                                <div class="summary"><p>AWS Lambda functions are emerging as one of the most popular instances on Amazon&#39;s public cloud platform.</p>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                        <div class="content clear-block with-node-region">
+                            <div class="pm-node-region">
+                                <div class="inline-related-content"><div class="inline-related-header content-type">Related Media</div><div class="related-content-image article">  <a href="/iaas/where-watch-aws-reinvent-2016-keynotes-and-breakout-sessions" class="imageLink"><img alt="" src="//talkincloud.com/site-files/talkincloud.com/files/imagecache/thumb_img/uploads/2016/12/thinkstockphotos-522799298.jpg" title="" height="101" width="180" class="imagecache imagecache-thumb_img imagecache-default imagecache-thumb_img_default" /><span class="thumb-icon"></span></a><a href="/iaas/where-watch-aws-reinvent-2016-keynotes-and-breakout-sessions">Where to Watch AWS re:Invent 2016 Keynotes and Breakout Sessions</a></div><div class="related-content-links">  <ul>    <li><a href="/iaas/aws-heads-north-launches-central-canada-cloud-region">AWS Heads North, Launches Central Canada Cloud Region</a><span class="content-type"></span></li>    <li><a href="/public-cloud/salesforce-shares-initial-plans-aws-partnership-starting-canada">Salesforce Shares Initial Plans for AWS Partnership, Starting with Canada</a><span class="content-type"></span></li>  </ul></div></div>              <!-- block.tpl.php -->
+                                <div id="block-pm_doubleclick-1" class="block block-pm_doubleclick ">
+                                    <div class="block-content">
+                                        <div class="advertisement">Advertisement</div><div id="gpt-180_1" data-gpt-slot="180_1" class="gpt-holder"><script type="text/javascript">googletag.display('gpt-180_1');</script></div>    </div>
+                                </div>
+                                <!-- /block.tpl.php -->
+                            </div>
+
+
+                            <div class="node-body article-body"><p><strong>Brought to you by MSPmentor</strong></p>                              <p>AWS Lambda functions are emerging as one of the most popular instances on Amazon&#39;s public cloud platform. Here&#39;s a primer on what Lambda functions are, and how they can help MSPs.</p>                              <p>To understand why Lambda is valuable, you first have to understand how people traditionally use the public cloud. Normally, to run an app on AWS or another public cloud platform, you would have to pay for a virtual server, then provision it and install your app on it. In order to ensure that your app is available whenever users want to access it, you would need to have the virtual server running non-stop. That means you would also be paying for the virtual server continuously.</p>                              <p>That&#39;s fine if people are using your app at maximum capacity twenty-four hours a day. But what if you only need the app occasionally? What if demand for the service fluctuates widely and unpredictably? Under these circumstances, keeping a virtual server running all day and night is inefficient. It requires paying all of the time for cloud hosting resources that are only being used some of the time.</p>                              <h3>Introduction to Lambda</h3>                              <p>Lambda functions solve that problem. With Lambda, you can upload code to the AWS cloud to perform a certain task. You can then run that code whenever you need it to do some work for you.</p>                              <p>The neat thing is that you only pay AWS for Lambda code when you are actually using it. When your code is sitting idle, it doesn&#39;t cost you any money. (You have to pay separately for persistent storage to store the data generated by Lambda functions, but you&#39;d be doing that with a virtual server, too.) This is Lambda&#39;s big selling-point. It solves the problem of having to pay for server capacity in the public cloud that you don&#39;t need.</p>                              <p>Lambda also offers the benefit of letting you run code without provisioning an entire server. You don&#39;t have to install an operating system and configure a virtual server to run your Lambda code. Instead, you just upload the code itself, and AWS handles the rest.</p>                              <h3>Lambda and MSPs</h3>                              <p>How can Lambda help MSPs? The most obvious benefit is that it can reduce the hosting costs associated with cloud-based services MSPs offer their customers. For example, if you provide a backup and recovery service for your customers, but you only back up their data once per day, you don&#39;t need a backup service running constantly. In this case, using Lambda functions instead of a dedicated virtual server to do the backups would be more efficient.</p>                              <p>Lambda functions can also be handy as a way to offload compute-intensive tasks from your own servers to the cloud in a cost-efficient way. For instance, if you maintain a software repository and rebuild your apps every day or week, you could take advantage of Lambda functions to help recompile the code. Since compilers put a heavy strain on servers, and code builds are likely to be the most resource-hungry operation you perform, offloading this task to the AWS cloud with Lambda functions will allow you to run leaner on-premise servers.</p>                              <p>If you haven&#39;t yet heard of Lambda functions, then, it may be time to take a close look. They can do a lot to make your work as an MSP less costly and more efficient.</p>                              </div>                                </div>
+                        <div class="social-bar social-bar-btm clearfix">
+                            <div class="item-list"><ul class="interactions"><li class="first-item first"><!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+                                <html><body><span class="print_html"><a href="/penton_ur/nojs/user/register?nid=59301&amp;source=print" title="Display a printer-friendly version of this page." class="print-page ctools-use-modal ctools-modal-register" onclick="" rel="">Print</a></span></body></html>
+                            </li>
+                                <li><a href="http://wrightsmedia.com/sites/penton/it-developer/" rel="nofollow" class="reprint_html">reprints</a></li>
+                                <li class="last-item last"><a href="/user" rel="nofollow">Favorite</a></li>
+                            </ul></div>              <div class="item-list"><ul class="social-links"><li class="first"><ul class="links"><li class="forward_links first last"><a href="/penton_ur/nojs/user/register?path=node%2F59301&amp;nid=59301&amp;source=email" title="Forward this page" class="forward-page ctools-use-modal ctools-modal-register non-omniture ">EMAIL</a></li>
+                        </ul></li>
+                            <li><div class="linkedin-button"><script type="IN/Share" data-url="http://talkincloud.com/iaas/msps-guide-lambda-functions-aws-public-cloud"></script></div></li>
+                            <li><div class="twitter-button"><a href="http://twitter.com/share" class="twitter-share-button" data-url="http://talkincloud.com/iaas/msps-guide-lambda-functions-aws-public-cloud" data-text="An MSP's Guide to Lambda Functions on the AWS Public Cloud" data-count="none" data-via="talkin_cloud">Tweet</a></div></li>
+                            <li><div class="googleplusone-button"><g:plusone callback="plusoneTrack" size="medium" count="false" href="http://talkincloud.com/iaas/msps-guide-lambda-functions-aws-public-cloud"></g:plusone></div></li>
+                            <li class="last"><div class="fb-button"><fb:like href="http://talkincloud.com/iaas/msps-guide-lambda-functions-aws-public-cloud" send="false" layout="button_count" width="115" show_faces="false" action="recommend"></fb:like></div></li>
+                        </ul></div>          </div>
+
+                    </div>
+                    <div id="comments" class="comment-wrapper"> <!-- $classes variable not available, using "comment-wrapper" instead in case we need a class (which we don't at this time) -->
+                        <h4>
+                            Discuss this Article <span class="comments-count">0</span>
+                        </h4>
+
+                        <!-- box.tpl.php -->
+                        <div class="box">
+                            <h5 class="block-title">Post new comment</h5>
+                            <div class="block-content">
+                                <div class="content"><form action="/comment/reply/59301"  accept-charset="UTF-8" method="post" id="comment-form" class="single-submission">
+                                    <div><div class="form-item" id="edit-name-wrapper">
+                                        <label for="edit-name">Name: </label>
+                                        <input type="text" maxlength="35" name="name" id="edit-name" size="30" value="Anonymous" class="form-text" />
+                                        <div class="description"><a href="/penton_ur/nojs/login" class="ctools-use-modal ctools-modal-log_in" title="Please Log In">Sign In</a> or <a href="/penton_ur/nojs/user/register?source=comment&nid=59301" class="ctools-use-modal ctools-modal-register" title="Sign Up for a Free Membership">register</a> to use your Talkin' Cloud ID</div>
+                                    </div>
+                                        <div class="form-item" id="edit-mail-wrapper">
+                                            <label for="edit-mail">Email: </label>
+                                            <input type="text" maxlength="64" name="mail" id="edit-mail" size="30" value="" class="form-text" />
+                                        </div>
+                                        <div class="form-item" id="edit-comment-wrapper">
+                                            <label for="edit-comment">Your comment: <span class="form-required" title="This field is required.">*</span></label>
+                                            <textarea cols="60" rows="15" name="comment" id="edit-comment"  class="form-textarea resizable required"></textarea>
+                                        </div>
+                                        <input type="hidden" name="form_build_id" id="form-V2xlHDHA7oKFFHNXmd_3mGfci0oncVkDkTmYnY18K4w" value="form-V2xlHDHA7oKFFHNXmd_3mGfci0oncVkDkTmYnY18K4w"  />
+                                        <input type="hidden" name="form_id" id="edit-comment-form" value="comment_form"  />
+                                        <div id="comments-form-messages"></div><input type="submit" name="op" id="edit-submit" value="Submit comment"  class="form-submit" />
+                                        <input type="hidden" name="mollom[contentId]" id="edit-mollom-contentId" value=""  class="mollom-content-id" />
+                                        <input type="hidden" name="mollom[captchaId]" id="edit-mollom-captchaId" value=""  class="mollom-captcha-id" />
+                                        <div style="display: none;"><div class="form-item" id="edit-mollom-homepage-wrapper">
+                                            <input type="text" maxlength="128" name="mollom[homepage]" id="edit-mollom-homepage" size="60" value="" autocomplete="off" class="form-text" />
+                                        </div>
+                                        </div>
+                                    </div></form>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- / box.tpl.php -->      </div>
+                    <div class="related-articles-block block">
+                        <!-- block.tpl.php -->
+                        <div id="block-pm_doubleclick-19" class="block block-pm_doubleclick ">
+                            <div class="block-content">
+                                <div class="advertisement">Advertisement</div><div id="gpt-inarticlevideo_1" data-gpt-slot="inarticlevideo_1" class="gpt-holder"><script type="text/javascript">googletag.display('gpt-inarticlevideo_1');</script></div>    </div>
+                        </div>
+                        <!-- /block.tpl.php -->
+                    </div>
+                </div>
+            </div>
+            <!--// pm-cont-main -->
+        </div>
+            <!--// pm-content -->
+            <div class="pm-sidebar">
+                <div class="pm-cont-pdg">
+                    <!-- block.tpl.php -->
+                    <div id="block-configurable_sidebar-1" class="block block-configurable_sidebar ">
+                        <div class="block-content">
+                            <!-- block-nodeblock.tpl.php -->
+                            <div id="block-nodeblock-8751" class="block block-nodeblock block-penton_custom block-highlight">
+                                <h5 class="block-title">
+                                    Upcoming Webcasts &amp; Training       </h5>
+                                <div class="block-content">
+                                    <div class="node-body block-body"><p><span style="font-size:12px"><strong>November 30: </strong><a href="http://mspmentor.net/msp-mentor/differentiator-cloud-world?code=um_BLOCK" target="_blank">Turn Billing and Quote-to-Cash into a Differentiator in the Cloud World</a></span></p>
+
+                                        <p><span style="font-size:12px"><strong>December 8: </strong><a href="http://talkincloud.com/talkin-cloud/defense-against-ransomware?code=um_BLOCK" target="_blank">The Ultimate Defense Against Ransomware: Education, Detection and Prevention</a></span></p>
+
+                                        <p><span style="font-size:12px"><strong>December 13: </strong><a href="http://thevarguy.com/var-guy/have-you-been-hit-ransomware-yet?code=um_BLOCK" target="_blank">How to Effectively Combat and Defeat Ransomware</a></span></p>
+
+                                        <p><span style="font-size:12px"><strong>Watch Now: </strong><a href="http://mspmentor.net/msp-mentor/protect-ransomware-attacks?code=um_BLOCK" target="_blank">How to Help Your Customers Protect Themselves from Ransomware Attacks</a></span></p>
+                                    </div>      </div>
+                            </div>
+                            <!-- /block-nodeblock.tpl.php -->
+                            <!-- block.tpl.php -->
+                            <div id="block-pm_doubleclick-rectangle1" class="block block-pm_doubleclick ">
+                                <div class="block-content">
+                                    <div class="advertisement">Advertisement</div><div id="gpt-300_1" data-gpt-slot="300_1" class="gpt-holder"><script type="text/javascript">googletag.display('gpt-300_1');</script></div>    </div>
+                            </div>
+                            <!-- /block.tpl.php -->
+                            <!-- block.tpl.php -->
+                            <div id="block-pm_doubleclick-4" class="block block-pm_doubleclick ">
+                                <div class="block-content">
+                                    <div class="advertisement">Advertisement</div><div id="gpt-300_2" data-gpt-slot="300_2" class="gpt-holder"><script type="text/javascript">googletag.display('gpt-300_2');</script></div>    </div>
+                            </div>
+                            <!-- /block.tpl.php -->
+                            <!-- block.tpl.php -->
+                            <div id="block-pm_doubleclick-14" class="block block-pm_doubleclick ">
+                                <div class="block-content">
+                                    <div class="advertisement">Advertisement</div><div id="gpt-300_3" data-gpt-slot="300_3" class="gpt-holder"><script type="text/javascript">googletag.display('gpt-300_3');</script></div>    </div>
+                            </div>
+                            <!-- /block.tpl.php -->
+                            <!-- block.tpl.php -->
+                            <div id="block-pm_doubleclick-15" class="block block-pm_doubleclick ">
+                                <div class="block-content">
+                                    <div class="advertisement">Advertisement</div><div id="gpt-300_4" data-gpt-slot="300_4" class="gpt-holder"><script type="text/javascript">googletag.display('gpt-300_4');</script></div>    </div>
+                            </div>
+                            <!-- /block.tpl.php -->
+                            <!-- block.tpl.php -->
+                            <div id="block-quicktabs-11" class="block block-quicktabs facResQuicktabs">
+                                <div class="block-content">
+                                    <div id="quicktabs-11" class="quicktabs_wrapper quicktabs-style-nostyle"><ul class="quicktabs_tabs quicktabs-style-nostyle"><li class="qtab-0 active first"><a href="/iaas/msps-guide-lambda-functions-aws-public-cloud?quicktabs_11=0#quicktabs-11" id="quicktabs-tab-11-0" class="qt_tab active">Recent Comments</a></li><li class="qtab-1 last"><a href="/iaas/msps-guide-lambda-functions-aws-public-cloud?quicktabs_11=1#quicktabs-11" id="quicktabs-tab-11-1" class="qt_tab active">Most Commented</a></li></ul><div id="quicktabs_container_11" class="quicktabs_main quicktabs-style-nostyle"><div id="quicktabs_tabpage_11_0" class="quicktabs_tabpage">
+                                        <!--views-view.tpl.php-->
+                                        <div class="view view-comments-recent-penton view view-comments-recent-penton view-id-comments_recent_penton view-display-id-default view-dom-id-1">
+                                            <!-- views-view-list.tpl.php -->
+
+                                            <ul>
+                                                <li class="views-row views-row-1 views-row-odd views-row-first"><!-- views-view-fields.tpl.php -->
+                                                    <span class="cid">
+	<a href="/cloud-computing-management/three-things-i-wish-i-could-tell-my-20-year-old-self#comment-231121">good thought, so impressive</a>
+      </span>
+                                                    <span class="timestamp">
+	<span class="publish-date">Posted <em>1 day 1 hour</em> ago by maliknitin040</span>
+      </span>
+                                                    <!--/ views-view-fields.tpl.php -->
+                                                </li>
+                                                <li class="views-row views-row-2 views-row-even"><!-- views-view-fields.tpl.php -->
+                                                    <span class="cid">
+	<a href="/lexmark-launches-saas-version-of-print-release-solution#comment-231081">Yes, this is definitely a sign of things to come and with similar vendor-independent solutions, MPS providers...</a>
+      </span>
+                                                    <span class="timestamp">
+	<span class="publish-date">Posted <em>3 days 20 hours</em> ago by Craig Parrish</span>
+      </span>
+                                                    <!--/ views-view-fields.tpl.php -->
+                                                </li>
+                                                <li class="views-row views-row-3 views-row-odd"><!-- views-view-fields.tpl.php -->
+                                                    <span class="cid">
+	<a href="/cloud-computing-management/20-cloud-monitoring-and-management-tools-which-are-best#comment-231071">How about OTRD5? Has anyone tried that?</a>
+      </span>
+                                                    <span class="timestamp">
+	<span class="publish-date">Posted <em>4 days 22 hours</em> ago by Andre Tang</span>
+      </span>
+                                                    <!--/ views-view-fields.tpl.php -->
+                                                </li>
+                                                <li class="views-row views-row-4 views-row-even"><!-- views-view-fields.tpl.php -->
+                                                    <span class="cid">
+	<a href="/cloud-computing-mergers-and-acquisitions/intermedia-ceo-says-madison-dearborn-acquisition-wont-chang#comment-231051">Here's what they changed, they fired all support staff.  I've been holding for 25 minutes.  They used to...</a>
+      </span>
+                                                    <span class="timestamp">
+	<span class="publish-date">Posted <em>5 days 10 hours</em> ago by Anonymous</span>
+      </span>
+                                                    <!--/ views-view-fields.tpl.php -->
+                                                </li>
+                                                <li class="views-row views-row-5 views-row-odd views-row-last"><!-- views-view-fields.tpl.php -->
+                                                    <span class="cid">
+	<a href="/talkin039-cloud/our-staff#comment-231021">Nice informative post. Thanks.</a>
+      </span>
+                                                    <span class="timestamp">
+	<span class="publish-date">Posted <em>1 week 6 days</em> ago by aghasohail</span>
+      </span>
+                                                    <!--/ views-view-fields.tpl.php -->
+                                                </li>
+                                            </ul>
+                                            <!-- /views-view-list.tpl.php --></div>
+
+                                        <!-- / views-view.tpl.php--></div><div id="quicktabs_tabpage_11_1" class="quicktabs_tabpage quicktabs-hide"><!-- block.tpl.php -->
+                                        <div id="block-views-Most_Commented-block_1" class="block block-views block-highlight pointer ">
+                                            <div class="block-content">
+
+                                                <!--views-view.tpl.php-->
+                                                <div class="view view-Most-Commented view view-Most-Commented view-id-Most_Commented view-display-id-block_1 pm-carusel view-dom-id-1">
+
+
+                                                    <!-- views-view-list.tpl.php -->
+
+                                                    <ul>
+                                                        <li class="views-row views-row-1 views-row-odd views-row-first"><!-- views-view-fields.tpl.php -->
+                                                            <span class="title">
+	<a href="/cloud-companies/01282015/ibm-layoffs-2015-heres-what-you-need-know">IBM Layoffs 2015: Here&#039;s What You Need To Know</a><span class="gated">&nbsp;</span>
+      </span>
+                                                            <span class="comment-count">
+	<a href="/cloud-companies/01282015/ibm-layoffs-2015-heres-what-you-need-know#comments">34</a>
+      </span>
+                                                            <!--/ views-view-fields.tpl.php -->
+                                                        </li>
+                                                        <li class="views-row views-row-2 views-row-even"><!-- views-view-fields.tpl.php -->
+                                                            <span class="title">
+	<a href="/talkin039-cloud/our-staff">Our Staff &amp; Mission</a>
+      </span>
+                                                            <span class="comment-count">
+	<a href="/talkin039-cloud/our-staff#comments">15</a>
+      </span>
+                                                            <!--/ views-view-fields.tpl.php -->
+                                                        </li>
+                                                        <li class="views-row views-row-3 views-row-odd"><!-- views-view-fields.tpl.php -->
+                                                            <span class="title">
+	<a href="/cloud-computing-management/20-cloud-monitoring-and-management-tools-which-are-best">20 Cloud Monitoring and Management Tools: Which Are The Best?</a>
+      </span>
+                                                            <span class="comment-count">
+	<a href="/cloud-computing-management/20-cloud-monitoring-and-management-tools-which-are-best#comments">11</a>
+      </span>
+                                                            <!--/ views-view-fields.tpl.php -->
+                                                        </li>
+                                                        <li class="views-row views-row-4 views-row-even"><!-- views-view-fields.tpl.php -->
+                                                            <span class="title">
+	<a href="/saas-software-service/keeping-score-google-apps-vs-microsoft-office-365-business-govt">Keeping Score: Google Apps vs. Microsoft Office 365 in Business, Gov&#039;t</a>
+      </span>
+                                                            <span class="comment-count">
+	<a href="/saas-software-service/keeping-score-google-apps-vs-microsoft-office-365-business-govt#comments">8</a>
+      </span>
+                                                            <!--/ views-view-fields.tpl.php -->
+                                                        </li>
+                                                        <li class="views-row views-row-5 views-row-odd"><!-- views-view-fields.tpl.php -->
+                                                            <span class="title">
+	<a href="/rpath-uses-vmworld-to-launch-cloud-app-engine-new-channel-strategy">rPath Launches Cloud App Engine, Channel Strategy at VMworld</a>
+      </span>
+                                                            <span class="comment-count">
+	<a href="/rpath-uses-vmworld-to-launch-cloud-app-engine-new-channel-strategy#comments">8</a>
+      </span>
+                                                            <!--/ views-view-fields.tpl.php -->
+                                                        </li>
+                                                        <li class="views-row views-row-6 views-row-even"><!-- views-view-fields.tpl.php -->
+                                                            <span class="title">
+	<a href="/symform-revamps-partner-program-adds-unlimited-cloud-storage">Symform Launches Partner Program, Adds Unlimited Cloud Storage</a>
+      </span>
+                                                            <span class="comment-count">
+	<a href="/symform-revamps-partner-program-adds-unlimited-cloud-storage#comments">8</a>
+      </span>
+                                                            <!--/ views-view-fields.tpl.php -->
+                                                        </li>
+                                                        <li class="views-row views-row-7 views-row-odd views-row-last"><!-- views-view-fields.tpl.php -->
+                                                            <span class="title">
+	<a href="/cloud-computing-security/01152015/are-some-organizations-leaving-it-security-software-shelf">Are Some Organizations Leaving IT Security Software &#039;On the Shelf&#039;?</a>
+      </span>
+                                                            <span class="comment-count">
+	<a href="/cloud-computing-security/01152015/are-some-organizations-leaving-it-security-software-shelf#comments">7</a>
+      </span>
+                                                            <!--/ views-view-fields.tpl.php -->
+                                                        </li>
+                                                    </ul>
+                                                    <!-- /views-view-list.tpl.php --></div>
+
+                                                <!-- / views-view.tpl.php-->    </div>
+                                        </div>
+                                        <!-- /block.tpl.php -->
+                                    </div></div></div>    </div>
+                            </div>
+                            <!-- /block.tpl.php -->
+                            <!-- block.tpl.php -->
+                            <div id="block-pm_doubleclick-16" class="block block-pm_doubleclick ">
+                                <div class="block-content">
+                                    <div class="advertisement">Advertisement</div><div id="gpt-300_5" data-gpt-slot="300_5" class="gpt-holder"><script type="text/javascript">googletag.display('gpt-300_5');</script></div>    </div>
+                            </div>
+                            <!-- /block.tpl.php -->
+                            <!-- block.tpl.php -->
+                            <div id="block-penton_features_articles-featured_authors" class="block block-penton_features_articles block-penton_custom block-highlight">
+                                <h5 class="block-title">
+                                    Featured Authors    </h5>
+                                <div class="block-content">
+                                    <div class="featured-authors">
+                                        <div class="avatar">
+                                            <a href="/author/nicole-henderson"><img alt="Nicole Henderson" src="//talkincloud.com/site-files/talkincloud.com/files/imagecache/profile_picture_block/uploads/2015/06/meee.jpg" title="Nicole Henderson" height="70" width="61" attributes="" /></a>    </div>
+                                        <h6 class="title">
+                                            <a href="/iaas/where-watch-aws-reinvent-2016-keynotes-and-breakout-sessions">Where to Watch AWS re:Invent 2016 Keynotes and Breakout Sessions</a>    </h6>
+                                        <div class="author-name">
+                                            by <a href="/author/nicole-henderson" class="title">Nicole Henderson</a>    </div>
+                                        <div class="meta">
+                                            Published on Dec. 9, 2016            	<br />in <a href="/iaas">IaaS</a>          </div>
+                                    </div>
+
+                                    <div class="featured-authors">
+                                        <div class="avatar">
+                                            <a href="/author/dan-kobialka"><img alt="Dan Kobialka" src="//talkincloud.com/site-files/talkincloud.com/files/imagecache/profile_picture_block/uploads/2014/04/dan-kobialka.jpg" title="Dan Kobialka" height="70" width="61" attributes="" /></a>    </div>
+                                        <h6 class="title">
+                                            <a href="/cloud-computing-research/most-orgs-lack-adequate-resources-hybrid-it-study-shows">Most Orgs. Lack Adequate Resources for Hybrid IT, Study Shows</a>    </h6>
+                                        <div class="author-name">
+                                            by <a href="/author/dan-kobialka" class="title">Dan Kobialka</a>    </div>
+                                        <div class="meta">
+                                            Published on Apr. 6, 2016            	<br />in <a href="/cloud-computing-research">Cloud Computing Research</a>          </div>
+                                    </div>
+
+                                    <div class="featured-authors">
+                                        <div class="avatar">
+                                            <a href="/author/christopher-tozzi"><img alt="Christopher Tozzi" src="//talkincloud.com/site-files/talkincloud.com/files/imagecache/profile_picture_block/uploads/2012/09/tozzi.jpg" title="Christopher Tozzi" height="70" width="61" attributes="" /></a>    </div>
+                                        <h6 class="title">
+                                            <a href="/iaas/msps-guide-lambda-functions-aws-public-cloud" class="active">An MSP&#039;s Guide to Lambda Functions on the AWS Public Cloud</a>    </h6>
+                                        <div class="author-name">
+                                            by <a href="/author/christopher-tozzi" class="title">Christopher Tozzi</a>    </div>
+                                        <div class="meta">
+                                            Published 5 min 16 sec ago            	<br />in <a href="/iaas">IaaS</a>          </div>
+                                    </div>
+
+                                    <div class="featured-authors">
+                                        <div class="avatar">
+                                            <a href="/author/michael-cusanelli"><img alt="Michael Cusanelli" src="//talkincloud.com/site-files/talkincloud.com/files/imagecache/profile_picture_block/uploads/2014/12/cusanelli-michael-final.jpg" title="Michael Cusanelli" height="70" width="61" attributes="" /></a>    </div>
+                                        <h6 class="title">
+                                            <a href="/cloud-computing/fortinet-acquires-accelops-expand-security-fabric-strategy">Fortinet Acquires AccelOps to Expand Security Fabric Strategy</a>    </h6>
+                                        <div class="author-name">
+                                            by <a href="/author/michael-cusanelli" class="title">Michael Cusanelli</a>    </div>
+                                        <div class="meta">
+                                            Published on Jun. 8, 2016            	<br />in <a href="/cloud-computing">Cloud Computing</a>          </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /block.tpl.php -->
+                            <!-- block.tpl.php -->
+                            <div id="block-penton_custom-social_media" class="block block-penton_custom block-highlight ">
+                                <h5 class="block-title">
+                                    Connect With Us    </h5>
+                                <div class="block-content">
+                                    <ul class="pm-socialmedia"><li><a href="http://twitter.com/talkin_cloud" class="ir-twitter">Twitter</a></li><li><a href="http://www.facebook.com/pages/TalkinCloud/304925546185807" class="ir-facebook">Facebook</a></li><li><a href="http://plus.google.com/104130427423795370447" class="ir-google">Google+</a></li><li><a href="http://www.youtube.com/user/TalkinCloud" class="ir-youtube">YouTube</a></li><li><a href="http://www.linkedin.com/groups?mostPopular=&amp;gid=3702166&amp;trk=myg_ugrp_ovr" class="ir-linkedin">LinkedIn</a></li><li><a href="/rss.xml" class="ir-rss">RSS</a></li></ul>    </div>
+                            </div>
+                            <!-- /block.tpl.php -->
+                            <!-- block-nodeblock.tpl.php -->
+                            <div id="block-nodeblock-9221" class="block block-nodeblock block-penton_custom block-highlight">
+                                <h5 class="block-title">
+                                    Guest Bloggers      </h5>
+                                <div class="block-content">
+                                    <div class="node-body block-body"><p>
+                                        <style type="text/css">.pm-sidebar li.views-row div.title img {float:right; position:relative; top:-5px; height:30px; border:0px;}
+                                        .pm-sidebar li.views-row, .pm-sidebar li.views-row-last  {padding-bottom:0px;}
+                                        </style>
+                                    </p>
+
+                                        <div class="title views-row">&nbsp;</div>
+
+                                        <ul>
+                                            <li class="views-row">
+                                                <div class="title"><a href="/blogger/carbonite-guest-blog" target="_blank"><img alt="" src="http://talkincloud.com/site-files/talkincloud.com/files/uploads/2015/07/carbonite%20twitter%20logo.jpeg" style="width: 50px; height: 50px;" />Carbonite Guest Blog</a></div>
+                                            </li>
+                                            <li class="views-row">
+                                                <div class="title"><a href="/blogger/carbonite-guest-blog" target="_blank"><img alt="" src="/site-files/talkincloud.com/files/uploads/2016/02/Screen%20Shot%202016-03-06%20at%206.29.53%20PM.png" style="width: 50px; height: 56px;" /></a><a href="/blogger/vmware-guest-blog">VMware</a></div>
+                                            </li>
+                                        </ul>
+                                    </div>      </div>
+                            </div>
+                            <!-- /block-nodeblock.tpl.php -->
+                        </div>
+                    </div>
+                    <!-- /block.tpl.php -->
+                </div>
+            </div><!--// pm-sidebar -->
+        </div>
+        <!--// pm-content-wrp -->
+
+        <div class="pm-banner-ad pm-banner-ad-btm">
+            <!-- block.tpl.php -->
+            <div id="block-pm_doubleclick-boombox1" class="block block-pm_doubleclick ">
+                <div class="block-content">
+                    <div class="advertisement">Advertisement</div><div id="gpt-728_2" data-gpt-slot="728_2" class="gpt-holder"><script type="text/javascript">if ($(window).width() >= 768 ){googletag.display('gpt-728_2');}else{$('#gpt-728_2').hide()};</script></div>    </div>
+            </div>
+            <!-- /block.tpl.php -->
+        </div>
+    </div>
+    <!--// pm-wrp-pdg -->
+</div>
+<!--// pm-wrp -->
+<div class="pm-ft">
+    <div class="pm-cont-pdg">
+        <div class="pm-ft-pdg">
+            <!-- block.tpl.php -->
+            <div id="block-menu-menu-main-footer-nav" class="block block-menu ">
+                <h5 class="block-title">
+                    TalkinCloud.com    </h5>
+                <div class="block-content">
+                    <ul class="menu"><li class="leaf first"><a href="/infocenters" title="">InfoCenters</a></li>
+                        <li class="leaf"><a href="/latest-updates" title="">Latest Updates</a></li>
+                        <li class="leaf"><a href="/cloud-services" title="">Cloud Services</a></li>
+                        <li class="leaf"><a href="/cloud-markets" title="">Cloud Markets</a></li>
+                        <li class="leaf"><a href="/cloud-companies" title="">Cloud Companies</a></li>
+                        <li class="leaf"><a href="/community" title="">Community</a></li>
+                        <li class="leaf last"><a href="/lists-research" title="">Lists &amp; Research</a></li>
+                    </ul>    </div>
+            </div>
+            <!-- /block.tpl.php -->
+            <!-- block.tpl.php -->
+            <div id="block-panels_mini-footer_columns" class="block block-panels_mini ">
+                <div class="block-content">
+                    <div class="panel-flexible panels-flexible-2 clear-block" id="mini-panel-footer_columns">
+                        <div class="panel-flexible-inside panels-flexible-2-inside">
+                            <div class="panels-flexible-region panels-flexible-region-2-footer_site_features panels-flexible-region-first">
+                                <div class="inside panels-flexible-region-inside panels-flexible-region-2-footer_site_features-inside panels-flexible-region-inside-first">
+                                    <div class="panel-pane pane-block pane-menu-menu-site-features footer-features" >
+
+                                        <h5 class="pane-title">Site Features</h5>
+
+
+                                        <div class="pane-content">
+                                            <ul class="menu"><li class="leaf first"><a href="/media" title="">Multimedia</a></li>
+                                                <li class="leaf"><a href="/rss.xml" title="">RSS</a></li>
+                                                <li class="leaf"><a href="/sitemap" title="">Sitemap</a></li>
+                                                <li class="leaf"><a href="/site-archive" title="">Site Archive</a></li>
+                                                <li class="leaf"><a href="/newsletters" title="">Newsletters</a></li>
+                                                <li class="leaf last"><a href="http://talkincloud.com/device/mobile" title="">View Mobile Site</a></li>
+                                            </ul>  </div>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panels-flexible-region panels-flexible-region-2-center">
+                                <div class="inside panels-flexible-region-inside panels-flexible-region-2-center-inside">
+                                    <div class="panel-pane pane-block pane-menu-menu-footer footer-corporate" >
+
+                                        <h5 class="pane-title">Talkin&#039; Cloud Corporate</h5>
+
+
+                                        <div class="pane-content">
+                                            <ul class="menu"><li class="leaf first"><a href="http://www.penton.com/privacy-policy/" title="">Privacy Policy</a></li>
+                                                <li class="leaf last"><a href="http://www.penton.com/terms-of-service/" title="">Terms of Service</a></li>
+                                            </ul>  </div>
+
+
+                                    </div>
+                                    <div class="panel-region-separator"></div><div class="panel-pane pane-block pane-penton-custom-follow-us" >
+
+                                    <h5 class="pane-title">Follow Us</h5>
+
+
+                                    <div class="pane-content">
+                                        <div class="item-list"><ul class="pm-socialmedia"><li class="first"><a href="http://twitter.com/talkin_cloud" class="ir-twitter">Twitter</a></li>
+                                            <li><a href="http://www.facebook.com/pages/TalkinCloud/304925546185807" class="ir-facebook">Facebook</a></li>
+                                            <li><a href="http://plus.google.com/104130427423795370447" class="ir-google">Google+</a></li>
+                                            <li><a href="http://www.youtube.com/user/TalkinCloud" class="ir-youtube">YouTube</a></li>
+                                            <li><a href="http://www.linkedin.com/groups?mostPopular=&amp;gid=3702166&amp;trk=myg_ugrp_ovr" class="ir-linkedin">LinkedIn</a></li>
+                                            <li class="last"><a href="/rss.xml" class="ir-rss">RSS</a></li>
+                                        </ul></div>  </div>
+
+
+                                </div>
+                                </div>
+                            </div>
+                            <div class="panels-flexible-region panels-flexible-region-2-footer_search panels-flexible-region-last">
+                                <div class="inside panels-flexible-region-inside panels-flexible-region-2-footer_search-inside panels-flexible-region-inside-last">
+                                    <div class="panel-pane pane-block pane-search-0 block-search" >
+
+                                        <h5 class="pane-title">Search TalkinCloud.com</h5>
+
+
+                                        <div class="pane-content">
+                                            <form action="/iaas/msps-guide-lambda-functions-aws-public-cloud"  accept-charset="UTF-8" method="post" id="search-block-form">
+                                                <div><div id="search" class="container-inline">
+                                                    <div class="form-item" id="edit-search-block-form-1-wrapper">
+                                                        <label for="edit-search-block-form-1">Search: </label>
+                                                        <input type="text" maxlength="128" name="search_block_form" id="edit-search-block-form-1" size="15" value="" title="Enter the terms you wish to search for." class="form-text  apachesolr-autocomplete unprocessed" />
+                                                    </div>
+                                                    <input type="image" name="op" id="edit-submit-2" value="Go!"  src="/sites/all/themes/pisces_core/images/search-icon.gif" class="form-submit" />
+                                                    <input type="hidden" name="form_build_id" id="form-xd6M5PCVqleFx13BwEwrzo20F6AW-cUlvFjLljWJAhw" value="form-xd6M5PCVqleFx13BwEwrzo20F6AW-cUlvFjLljWJAhw"  />
+                                                    <input type="hidden" name="form_id" id="edit-search-block-form" value="search_block_form"  />
+                                                </div>
+
+                                                </div></form>
+                                        </div>
+
+
+                                    </div>
+                                    <div class="panel-region-separator"></div><div class="panel-pane pane-block pane-block-11 footer-subscribe" >
+
+
+
+                                    <div class="pane-content">
+                                        <p><a href="/">PISCES</a></p>
+                                    </div>
+
+
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /block.tpl.php -->
+            <!-- block.tpl.php -->
+            <div id="block-aggregator-feed-1" class="block block-aggregator &nbsp;aggregator-1 ">
+                <h5 class="block-title">
+                    MSP Mentor    </h5>
+                <div class="block-content">
+                    <div class="item-list"><ul><li class="first"><a href="http://feedproxy.google.com/~r/MspMentor/~3/9XBCLGeTJJw/where-csp-headed-2017">Where CSP is Headed in 2017</a>
+                    </li>
+                        <li><a href="http://feedproxy.google.com/~r/MspMentor/~3/k8Bk2f2yhOE/backup-disaster-recovery-assessment-tool-msps">The Backup &amp; Disaster Recovery Assessment Tool for MSPs</a>
+                        </li>
+                        <li><a href="http://feedproxy.google.com/~r/MspMentor/~3/HcgR8uiPcuc/experts-warn-powershell-security-threat">Experts Warn of PowerShell Security Threat</a>
+                        </li>
+                        <li><a href="http://feedproxy.google.com/~r/MspMentor/~3/HQ3yMozwrWE/if-i-were-launching-msp-now-felipe-isaza">If I Were Launching an MSP Now | Felipe Isaza</a>
+                        </li>
+                        <li class="last"><a href="http://feedproxy.google.com/~r/MspMentor/~3/NDXdZxszrpI/five-customer-acquisition-strategies-msps">Five Customer Acquisition Strategies for MSPs</a>
+                        </li>
+                    </ul></div><div class="more-link"><a href="/aggregator/sources/1" title="View this feed&#039;s recent news.">more</a></div>      <a href="http://www.mspmentor.net/" class="agglink"><p>Visit mspmentor.net ></p></a>
+                </div>
+            </div>
+            <!-- /block.tpl.php -->
+            <!-- block.tpl.php -->
+            <div id="block-aggregator-feed-2" class="block block-aggregator &nbsp;aggregator-2 ">
+                <h5 class="block-title">
+                    The VAR Guy    </h5>
+                <div class="block-content">
+                    <div class="item-list"><ul><li class="first"><a href="http://feedproxy.google.com/~r/TheVarGuy/~3/vPSUt-hs1nY/selling-it-solutions-private-sector-capitol-hill-battle">Is Selling IT Solutions to the Private Sector an Up-(Capitol)-Hill Battle?</a>
+                    </li>
+                        <li><a href="http://feedproxy.google.com/~r/TheVarGuy/~3/RjjfmS2rA7w/2017-year-service-evolution">2017: The Year of As-A-Service Evolution</a>
+                        </li>
+                        <li><a href="http://feedproxy.google.com/~r/TheVarGuy/~3/4nGYYYaGGgk/latest-ovum-report-shows-businesses-eager-invest-digital-transformation">Latest Ovum Report Shows Businesses Eager to Invest in Digital Transformation</a>
+                        </li>
+                        <li><a href="http://feedproxy.google.com/~r/TheVarGuy/~3/93w17XY69Ck/how-partners-can-reduce-support-costs-unified-cloud-">How Partners Can Reduce Support Costs with a Unified Cloud-based Phone Solution</a>
+                        </li>
+                        <li class="last"><a href="http://feedproxy.google.com/~r/TheVarGuy/~3/0RyHbtBnvAo/microsoft-adds-new-azure-cloud-training-partners">Microsoft Adds New Azure Cloud Training for Partners</a>
+                        </li>
+                    </ul></div><div class="more-link"><a href="/aggregator/sources/2" title="View this feed&#039;s recent news.">more</a></div>      <a href="http://www.thevarguy.com/" class="agglink">Visit thevarguy.com ></a>
+                </div>
+            </div>
+            <!-- /block.tpl.php -->
+            <!-- block-nodeblock.tpl.php -->
+            <div id="block-nodeblock-8157" class="block block-nodeblock pm-superblock-default">
+                <div class="block-content">
+                    <div class="node-body block-body"><div style="text-align:center;">
+                        <div style="margin-top:10px;">
+                            <a href="http://thevarguy.com" target="_blank"><img src="/sites/all/themes/talkincloud/images/varguy_tweets_header.gif" /></a><br />
+                            &nbsp;</div>
+                        <div style="margin-top:10px;">
+                            <a href="http://mspmentor.net" target="_blank"><img src="/sites/all/themes/talkincloud/images/mspmentor_tweet_header.gif" /></a><br />
+                            &nbsp;</div>
+                    </div>
+                    </div>      </div>
+            </div>
+            <!-- /block-nodeblock.tpl.php -->
+            <!-- block.tpl.php -->
+            <div id="block-block-81" class="block block-block ">
+                <div class="block-content">
+                    <script type="text/javascript">
+                        var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+                        document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js'type='text/javascript'%3E%3C/script%3E"));
+                    </script><script type="text/javascript">
+                    try{
+                        var pageTracker = _gat._getTracker("UA-1290969-11");
+                        pageTracker._trackPageview();
+                    } catch(err) {}</script>
+
+                    <!-- Style tag in Block 81 Google Analytics to hide unwanted block title in Comments block -->
+                    <style type="text/css">
+                        #block-quicktabs-11 h5.block-title {display:none;}
+                    </style>    </div>
+            </div>
+            <!-- /block.tpl.php -->
+            <!-- block.tpl.php -->
+            <div id="block-pm_doubleclick-17" class="block block-pm_doubleclick ">
+                <div class="block-content">
+                    <div class="advertisement"></div><div id="gpt-peelback_1" data-gpt-slot="peelback_1" class="gpt-holder"><script type="text/javascript">googletag.display('gpt-peelback_1');</script></div>    </div>
+            </div>
+            <!-- /block.tpl.php -->
+            <!-- block.tpl.php -->
+            <div id="block-block-101" class="block block-block ">
+                <div class="block-content">
+                    <style type="text/css">
+                        .pm-hd .pm-nav-menu ul.nice-menu li a {padding:0 1.24em}</style>
+                </div>
+            </div>
+            <!-- /block.tpl.php -->
+            <!-- block.tpl.php -->
+            <div id="block-pm_doubleclick-18" class="block block-pm_doubleclick ">
+                <div class="block-content">
+                    <div class="advertisement">Advertisement</div><div id="gpt-floor" data-gpt-slot="floor" class="gpt-holder"><script type="text/javascript">googletag.display('gpt-floor');</script></div>    </div>
+            </div>
+            <!-- /block.tpl.php -->
+            <script>
+                (function() {
+                    var d=document,h=d.getElementsByTagName('head')[0],s=d.createElement('script'),sc = 'https:' == document.location.protocol ? 'https://' : 'http://';
+                    s.type='text/javascript';
+                    s.async=true;
+                    s.src=sc+'s.dpmsrv.com/dpm_8effee409c625e1a2d8f5033631840e6ce1dcb64.min.js';
+                    h.appendChild(s);
+                })();
+            </script><script type="text/javascript">
+            <!--//--><![CDATA[//><!--
+            jQuery.extend(Drupal.settings, {"CToolsAJAX":{"scripts":{"\/sites\/all\/modules\/contrib\/jquery_update\/replace\/jquery\/1.3\/jquery.min.js":true,"\/misc\/drupal.js":true,"\/misc\/progress.js":true,"\/sites\/all\/modules\/custom\/penton_newsletter_import\/js\/penton_newsletter_import.js":true,"\/sites\/all\/modules\/contrib\/jquery_plugin\/jquery.cookie.min.js":true,"\/sites\/all\/modules\/custom\/penton_omniture\/demandbase_call.js":true,"\/sites\/all\/modules\/contrib\/apachesolr_autocomplete\/apachesolr_autocomplete.js":true,"\/sites\/all\/modules\/contrib\/apachesolr_autocomplete\/jquery-autocomplete\/jquery.autocomplete.js":true,"\/sites\/all\/libraries\/colorbox\/colorbox\/jquery.colorbox-min.js":true,"\/sites\/all\/modules\/contrib\/colorbox\/js\/colorbox.js":true,"\/sites\/all\/modules\/contrib\/fivestar\/js\/fivestar.js":true,"\/sites\/all\/modules\/contrib\/og\/og.js":true,"\/sites\/all\/modules\/contrib\/panels\/js\/panels.js":true,"\/sites\/all\/modules\/contrib\/user_relationships\/user_relationships_ui\/user_relationships_ui.js":true,"\/sites\/all\/modules\/custom\/penton_follow_user\/js\/penton_follow_user.js":true,"\/sites\/all\/modules\/custom\/penton_custom\/colorbox_penton_style.js":true,"\/sites\/all\/modules\/custom\/pm_doubleclick\/pm-doubleclick.js":true,"\/sites\/all\/modules\/custom\/pm_doubleclick\/roadblock.js":true,"\/sites\/all\/modules\/custom\/recently_viewed\/node.history.js":true,"\/sites\/all\/modules\/custom\/recently_viewed\/recently-viewed.js":true,"\/sites\/all\/modules\/custom\/ubercart\/contrib\/modulename\/modulename.js":true,"\/sites\/all\/modules\/custom\/ubercart\/contrib\/modulename\/jquery.form.js":true,"\/sites\/all\/modules\/custom\/ubercart\/uc_file\/uc_file.js":true,"\/sites\/all\/modules\/custom\/ubercart\/uc_roles\/uc_roles.js":true,"\/sites\/all\/libraries\/jquery_plugins\/js-url\/js-url.min.js":true,"\/sites\/all\/modules\/custom\/penton_registration\/js\/simple-registration.js":true,"\/sites\/all\/modules\/custom\/penton_registration\/js\/inline-validate.js":true,"\/sites\/all\/modules\/custom\/penton_registration\/js\/registration_settings.js":true,"\/sites\/all\/modules\/custom\/penton_registration\/js\/startup-actions.js":true,"\/sites\/all\/modules\/custom\/penton_registration\/js\/newsletter-flyover-trigger.js":true,"\/JQUERY_UPDATE_REPLACE_PATH\/jquery.form.js":true,"\/sites\/all\/modules\/contrib\/ctools\/js\/ajax-responder.js":true,"\/sites\/all\/modules\/custom\/penton_registration\/js\/penton_registration_modal.js":true,"\/sites\/all\/modules\/custom\/penton_custom\/js\/single-submittion.js":true,"\/sites\/all\/modules\/custom\/penton_user_profile\/super_cookie.js":true,"\/sites\/all\/modules\/custom\/penton_user_profile\/user_profile.js":true,"\/modules\/comment\/comment.js":true,"\/sites\/all\/modules\/contrib\/mollom\/mollom.js":true,"\/misc\/textarea.js":true,"\/sites\/all\/modules\/contrib\/google_analytics\/googleanalytics.js":true,"\/sites\/all\/modules\/contrib\/quicktabs\/js\/quicktabs.js":true,"\/sites\/all\/modules\/custom\/penton_custom\/penton_custom.js":true,"\/sites\/all\/modules\/contrib\/ajax\/jquery\/jquery.a_form.packed.js":true,"\/sites\/all\/modules\/contrib\/ajax\/ajax.js":true}}});
+            //--><!]]>
+        </script>
+        </div>
+    </div>
+</div>
+
+<div class="pm-ft-message">
+    <div class="pm-cont-pdg">
+        <div class="pm-ft-pdg">
+            <div class='copyright'>Copyright &copy;&nbsp;2016&nbsp;<a href="http://penton.com/">Penton</a></div><div class="powered-by"><img src="/sites/all/modules/custom/penton_custom/images/powered_by_penton_360_white.png"></div>        </div>
+    </div>
+</div>
+
+</div>
+<!--// pm-pg-->
+<div id="fb-root"></div>
+<script type="text/javascript" src="//api.demandbase.com/api/v2/ip.json?token=b155ec5d50b5dcb41662f36b4d10a6f7702c87e6&callback=dbase_parse"></script>
+<!-- SiteCatalyst code version: H.13 Copyright 1997-2009 Omniture, Inc. More info available at http://www.omniture.com -->
+<script type="text/javascript" language="JavaScript" src="/sites/all/modules/custom/penton_omniture/s_code.js?r=1.26?6"></script>
+<script type="text/javascript" language="JavaScript"><!--
+s.pageName="article:An MSP039s Guide to Lambda Functions on the AWS Public Cloud";
+s.channel="iaas";
+s.pageType="article";
+s.prop1="An MSP039s Guide to Lambda Functions on the AWS Public Cloud";
+s.prop6="article";
+s.list1="IaaS";
+s.prop10="Dec 12, 2016";
+s.prop12="p";
+s.prop41="author";
+s.eVar9="Christopher Tozzi";
+s.eVar27="best_practices";
+s.eVar72="45bad00c-5894-4963-8d35-8281f2a87cde";
+/************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+var s_code=s.t();if(s_code)document.write(s_code)//--></script>
+<script language="JavaScript" type="text/javascript"><!--
+if(navigator.appVersion.indexOf('MSIE')>=0)document.write(unescape('%3C')+'\!-'+'-')
+//--></script><noscript><a href="http://www.omniture.com" title="Web Analytics"><img src="http://metrics.pisces-penton.com/b/ss/pentondev/1/H.21--NS/0/3866178/9258521"
+                                                                                     height="1" width="1" border="0" alt="" /></a></noscript><!--/DO NOT REMOVE/-->
+<!-- End SiteCatalyst code version: H.13 -->
+
+<div id="user_relationships_popup_form" class="user_relationships_ui_popup_form"></div>
+<img src="http://d.adroll.com/ipixel/IXZC4QKE6BDSVNBBOX54JQ/3BQ2N447KNEODAIZTDTY2B?ar_ed_visitor=corporate" style="position: absolute;width:1px;height:1px;left:-9999px;"/>
+
+<iframe id="DivShim" src="/sites/all/modules/custom/pm_doubleclick/blankIframe.html" scrolling="no" frameborder="0" style="height: 0;"></iframe>
+<div id="roadblockbackground" style="height: 0;"></div>
+<div id="roadblockcontainer" class="ad640x480 transparent" style="height: 0; overflow: hidden;">
+    <div id="roadblock">
+        <p id="closeRB" class="close">Sponsored Introduction <span id="showCount"><a href="javascript:void(0);" onclick="clickAndHide();return false;">Continue on to <span id="roadblockSiteName"></span></a> (or wait <span id="rc"></span> seconds) <a class="xButton" href="#">&times;</a></span></p>
+        <div id="gpt-interstitial" class="introstitialAd
+      ">
+            <script type="text/javascript">
+                <!--//--><![CDATA[//><!--
+                var cookieEnabled = (navigator.cookieEnabled) ? true : false;
+                if (typeof navigator.cookieEnabled == "undefined" && !cookieEnabled) {
+                    document.cookie = "testcookie"
+                    cookieEnabled = (document.cookie.indexOf("testcookie") != -1) ? true : false;
+                }
+                if (cookieEnabled != null) {
+                    if (cookieEnabled) {
+                        function setCookie(name, value, expires, path, domain, secure) {
+                            var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+                            document.cookie = curCookie;
+                        }
+                        var one_day = 1000 * 60 * 60 * roadblock.roadblockdisplay,
+                            nextday = 0,
+                            index = document.cookie.indexOf('intro');
+                        if (one_day != 0) {
+                            nextday = new Date();
+                            nextday.setTime(nextday.getTime() + one_day);
+                        }
+                        if (index == -1) {
+                            setCookie('intro', 1, nextday, '/');
+                            $('#gpt-' + roadblock.roadblockposition).addClass('processed adunit');
+                            googletag.display('gpt-interstitial');
+                        }
+                    }
+                }
+                //--><!]]>
+            </script>
+        </div>
+    </div>
+</div>
+<div id="gpt-pm-oop"><script type="text/javascript">googletag.display('gpt-pm-oop');</script></div>
+<div id="gpt-pm-oop-skin"><script type="text/javascript">googletag.display('gpt-pm-oop-skin');</script></div><script type="text/javascript" src="/sites/all/modules/contrib/swftools/onepixelout/onepixelout.js?6"></script>
+<script type="text/javascript" src="/sites/all/modules/custom/pm_doubleclick/navigation-ads.js?6"></script>
+<script type="text/javascript">
+    <!--//--><![CDATA[//><!--
+    jQuery.extend(Drupal.settings, {"chartbeat":{"uid":53678,"domain":"talkincloud.com","useCanonical":true,"noCookies":false,"sections":"IaaS","title":"An MSP's Guide to Lambda Functions on the AWS Public Cloud","authors":"Christopher Tozzi"}});
+    //--><!]]>
+</script>
+<script type="text/javascript">
+    <!--//--><![CDATA[//><!--
+    adroll_adv_id = "VLH7HVC6ZNEIDEKM72ATRL"; adroll_pix_id = "2ITXTLLMW5EXHKWNE3UNNJ"; (function () {var _onload = function(){if (document.readyState && !/loaded|complete/.test(document.readyState)){setTimeout(_onload, 10);return}if (!window.__adroll_loaded){__adroll_loaded=true;setTimeout(_onload, 50);return}var scr = document.createElement("script");var host = (("https:" == document.location.protocol) ? "https://s.adroll.com" : "http://a.adroll.com");scr.setAttribute('async', 'true');scr.type = "text/javascript";scr.src = host + "/j/roundtrip.js";((document.getElementsByTagName('head') || [null])[0] || document.getElementsByTagName('script')[0].parentNode).appendChild(scr);};if (window.addEventListener) {window.addEventListener('load', _onload, false);}else {window.attachEvent('onload', _onload)}}());
+    //--><!]]>
+</script>
+<script type="text/javascript">
+    <!--//--><![CDATA[//><!--
+    var _sf_async_config=Drupal.settings.chartbeat;
+    if(0) {
+        _sf_async_config.type = 'article';
+    }
+    (function(){
+        function loadChartbeat() {
+            window._sf_endpt=(new Date()).getTime();
+            var e = document.createElement('script');
+            e.setAttribute('language', 'javascript');
+            e.setAttribute('type', 'text/javascript');
+            e.setAttribute('src', '//static.chartbeat.com/js/chartbeat.js');
+            document.body.appendChild(e);
+        }
+        var oldonload = window.onload;
+        window.onload = (typeof window.onload != 'function') ?
+            loadChartbeat : function() { oldonload(); loadChartbeat(); };
+    })();
+    //--><!]]>
+</script>
+<script type="text/javascript">
+    <!--//--><![CDATA[//><!--
+    jQuery.extend(Drupal.settings, {"CToolsAJAX":{"scripts":{"\/sites\/all\/modules\/contrib\/jquery_update\/replace\/jquery\/1.3\/jquery.min.js":true,"\/misc\/drupal.js":true,"\/misc\/progress.js":true,"\/sites\/all\/modules\/custom\/penton_newsletter_import\/js\/penton_newsletter_import.js":true,"\/sites\/all\/modules\/contrib\/jquery_plugin\/jquery.cookie.min.js":true,"\/sites\/all\/modules\/custom\/penton_omniture\/demandbase_call.js":true,"\/sites\/all\/modules\/contrib\/apachesolr_autocomplete\/apachesolr_autocomplete.js":true,"\/sites\/all\/modules\/contrib\/apachesolr_autocomplete\/jquery-autocomplete\/jquery.autocomplete.js":true,"\/sites\/all\/libraries\/colorbox\/colorbox\/jquery.colorbox-min.js":true,"\/sites\/all\/modules\/contrib\/colorbox\/js\/colorbox.js":true,"\/sites\/all\/modules\/contrib\/fivestar\/js\/fivestar.js":true,"\/sites\/all\/modules\/contrib\/og\/og.js":true,"\/sites\/all\/modules\/contrib\/panels\/js\/panels.js":true,"\/sites\/all\/modules\/contrib\/user_relationships\/user_relationships_ui\/user_relationships_ui.js":true,"\/sites\/all\/modules\/custom\/penton_follow_user\/js\/penton_follow_user.js":true,"\/sites\/all\/modules\/custom\/penton_custom\/colorbox_penton_style.js":true,"\/sites\/all\/modules\/custom\/pm_doubleclick\/pm-doubleclick.js":true,"\/sites\/all\/modules\/custom\/pm_doubleclick\/roadblock.js":true,"\/sites\/all\/modules\/custom\/recently_viewed\/node.history.js":true,"\/sites\/all\/modules\/custom\/recently_viewed\/recently-viewed.js":true,"\/sites\/all\/modules\/custom\/ubercart\/contrib\/modulename\/modulename.js":true,"\/sites\/all\/modules\/custom\/ubercart\/contrib\/modulename\/jquery.form.js":true,"\/sites\/all\/modules\/custom\/ubercart\/uc_file\/uc_file.js":true,"\/sites\/all\/modules\/custom\/ubercart\/uc_roles\/uc_roles.js":true,"\/sites\/all\/libraries\/jquery_plugins\/js-url\/js-url.min.js":true,"\/sites\/all\/modules\/custom\/penton_registration\/js\/simple-registration.js":true,"\/sites\/all\/modules\/custom\/penton_registration\/js\/inline-validate.js":true,"\/sites\/all\/modules\/custom\/penton_registration\/js\/registration_settings.js":true,"\/sites\/all\/modules\/custom\/penton_registration\/js\/startup-actions.js":true,"\/sites\/all\/modules\/custom\/penton_registration\/js\/newsletter-flyover-trigger.js":true,"\/JQUERY_UPDATE_REPLACE_PATH\/jquery.form.js":true,"\/sites\/all\/modules\/contrib\/ctools\/js\/ajax-responder.js":true,"\/sites\/all\/modules\/custom\/penton_registration\/js\/penton_registration_modal.js":true,"\/sites\/all\/modules\/custom\/penton_custom\/js\/single-submittion.js":true,"\/sites\/all\/modules\/custom\/penton_user_profile\/super_cookie.js":true,"\/sites\/all\/modules\/custom\/penton_user_profile\/user_profile.js":true,"\/modules\/comment\/comment.js":true,"\/sites\/all\/modules\/contrib\/mollom\/mollom.js":true,"\/misc\/textarea.js":true,"\/sites\/all\/modules\/contrib\/google_analytics\/googleanalytics.js":true,"\/sites\/all\/modules\/contrib\/quicktabs\/js\/quicktabs.js":true,"\/sites\/all\/modules\/custom\/penton_custom\/penton_custom.js":true,"\/sites\/all\/modules\/contrib\/ajax\/jquery\/jquery.a_form.packed.js":true,"\/sites\/all\/modules\/contrib\/ajax\/ajax.js":true,"\/sites\/all\/modules\/contrib\/swftools\/onepixelout\/onepixelout.js":true,"\/sites\/all\/modules\/custom\/pm_doubleclick\/navigation-ads.js":true},"css":{"\/modules\/aggregator\/aggregator.css":true,"\/modules\/node\/node.css":true,"\/modules\/system\/defaults.css":true,"\/modules\/system\/system.css":true,"\/modules\/system\/system-menus.css":true,"\/modules\/poll\/poll.css":true,"\/sites\/all\/modules\/contrib\/apachesolr_autocomplete\/apachesolr_autocomplete.css":true,"\/sites\/all\/modules\/contrib\/apachesolr_autocomplete\/jquery-autocomplete\/jquery.autocomplete.css":true,"\/sites\/all\/modules\/contrib\/cck\/theme\/content-module.css":true,"\/sites\/all\/modules\/contrib\/ckeditor\/ckeditor.css":true,"\/sites\/all\/modules\/contrib\/ctools\/css\/ctools.css":true,"\/sites\/all\/modules\/contrib\/date\/date.css":true,"\/sites\/all\/modules\/contrib\/date\/date_popup\/themes\/datepicker.css":true,"\/sites\/all\/modules\/contrib\/date\/date_popup\/themes\/jquery.timeentry.css":true,"\/sites\/all\/modules\/contrib\/filefield\/filefield.css":true,"\/sites\/all\/modules\/contrib\/fivestar\/css\/fivestar.css":true,"\/sites\/all\/modules\/contrib\/mollom\/mollom.css":true,"\/sites\/all\/modules\/contrib\/nice_menus\/nice_menus.css":true,"\/sites\/all\/modules\/contrib\/nice_menus\/nice_menus_default.css":true,"\/sites\/all\/modules\/contrib\/og\/theme\/og.css":true,"\/sites\/all\/modules\/contrib\/panels\/css\/panels.css":true,"\/sites\/all\/modules\/contrib\/user_relationships\/user_relationships_ui\/user_relationships_ui.css":true,"\/sites\/all\/modules\/custom\/geshifilter\/geshifilter.css":true,"\/sites\/all\/modules\/custom\/logintoboggan\/logintoboggan.css":true,"\/sites\/all\/modules\/custom\/penton_blog\/theme\/penton-blog.css":true,"\/sites\/all\/modules\/custom\/penton_follow_user\/theme\/penton_follow_user.css":true,"\/sites\/all\/modules\/custom\/penton_custom\/colorbox_penton_style.css":true,"\/sites\/all\/modules\/custom\/pm_doubleclick\/pm-doubleclick.css":true,"\/sites\/all\/modules\/custom\/pm_doubleclick\/navigation-ads.css":true,"\/sites\/all\/modules\/custom\/ubercart\/uc_attribute\/uc_attribute.css":true,"\/sites\/all\/modules\/custom\/ubercart\/uc_file\/uc_file.css":true,"\/sites\/all\/modules\/custom\/ubercart\/uc_order\/uc_order.css":true,"\/sites\/all\/modules\/custom\/ubercart\/uc_product\/uc_product.css":true,"\/sites\/all\/modules\/custom\/ubercart\/uc_roles\/uc_roles.css":true,"\/sites\/all\/modules\/custom\/ubercart\/uc_store\/uc_store.css":true,"\/sites\/all\/modules\/features\/penton_features_gated_content\/theme\/css\/gated-content.css":true,"\/sites\/all\/libraries\/chosen\/chosen.min.css":true,"\/sites\/all\/modules\/custom\/penton_registration\/css\/simple-registration.css":true,"\/sites\/all\/modules\/custom\/penton_registration\/css\/simple-registration-mobile.css":true,"\/sites\/all\/modules\/contrib\/ctools\/css\/modal.css":true,"\/sites\/all\/modules\/contrib\/cck\/modules\/fieldgroup\/fieldgroup.css":true,"\/sites\/all\/modules\/contrib\/views\/css\/views.css":true,"\/sites\/all\/modules\/custom\/penton_custom\/penton_custom.css":true,"\/sites\/all\/modules\/contrib\/forward\/forward.css":true,"\/sites\/all\/modules\/contrib\/print\/css\/printlinks.css":true,"\/modules\/comment\/comment.css":true,"\/sites\/all\/modules\/custom\/imagefield_zip\/imagefield_zip.css":true,"\/sites\/all\/modules\/contrib\/quicktabs\/css\/quicktabs.css":true,"\/sites\/all\/modules\/contrib\/panels\/plugins\/layouts\/flexible\/flexible.css":true,"\/site-files\/talkincloud.com\/files\/ctools\/css\/19a2b72cdd0fc15bf64ed261883b423d_0.css":true,"\/sites\/all\/themes\/pisces_core\/css\/penton-apachesolr.css":true,"\/sites\/all\/themes\/pisces_core\/css\/layout.css":true,"\/sites\/all\/themes\/pisces_core\/css\/navigation.css":true,"\/sites\/all\/themes\/pisces_core\/stylesheets\/pisces-desktop.css":true,"\/sites\/all\/themes\/pisces_core\/css\/pisces-core.css":true,"\/sites\/all\/themes\/pisces_core\/css\/blocks.css":true,"\/sites\/all\/themes\/pisces_core\/css\/user.css":true,"\/sites\/all\/themes\/pisces_core\/css\/style.css":true,"\/sites\/all\/themes\/pisces_core\/css\/add2home.css":true,"\/site-files\/talkincloud.com\/files\/less\/583e37f716b964.40129228\/sites\/all\/themes\/talkincloud\/css\/subtheme-vars.css":true,"\/sites\/all\/themes\/talkincloud\/css\/subtheme.css":true,"\/sites\/all\/themes\/pisces_core\/css\/print.css":true}}});
+    //--><!]]>
+</script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"9ea50e154b","applicationID":"3055008","transactionName":"NVJRYkMDWxVXBkRfXgwYclVFC1oIGQtfUlQ9R1JRVD1DD1MS","queueTime":0,"applicationTime":2425,"atts":"GRVSFAsZSBs=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+
+</html>

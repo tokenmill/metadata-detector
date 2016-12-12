@@ -26,6 +26,7 @@
     [:.time-bar] [:span.time] [:time]
     [:* :div.articletext-holder :div.channel-date-container.sport :span]
     [:div#content :span.prdata]
+    [:div.byline-date :span.publish-date]
     })
 
 (def title-selectors

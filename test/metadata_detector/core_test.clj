@@ -287,4 +287,9 @@
   (testing "itbusinessnet.com"
     (is (= {:title       "FileFacets Announces $4 Million in Series A Funding"
             :date        "November 29, 2016"}
-           (get-byline "en/itbusinessnet" "http://www.itbusinessnet.com/article/FileFacets-Announces-4-Million-in-Series-A-Funding-4715928")))))
+           (get-byline "en/itbusinessnet" "http://www.itbusinessnet.com/article/FileFacets-Announces-4-Million-in-Series-A-Funding-4715928"))))
+
+  (testing "talkincloud.com"
+    (is (= {:title       "An MSP's Guide to Lambda Functions on the AWS Public Cloud"
+            :date        "Dec 12, 2016"}
+           (get-byline "en/talkincloud" "http://talkincloud.com/iaas/msps-guide-lambda-functions-aws-public-cloud")))))
