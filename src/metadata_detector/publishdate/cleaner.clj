@@ -1,4 +1,4 @@
-(ns metadata-detector.postprocess
+(ns metadata-detector.publishdate.cleaner
   (:require [clojure.string :as s]))
 
 (def date-cleaners

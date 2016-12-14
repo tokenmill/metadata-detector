@@ -1,11 +1,8 @@
 (ns metadata-detector.core
   (:require [clojure.string :as s]
             [net.cgrand.enlive-html :as e]
-            [metadata-detector.utils :refer [remove-tags]]
-            [metadata-detector.title :refer [detect-title]]
-            [metadata-detector.date :refer [detect-publish-date]]
-            [metadata-detector.path :as path]
-            [metadata-detector.htmlmeta :as m])
+            [metadata-detector.title.title :refer [detect-title]]
+            [metadata-detector.publishdate.date :refer [detect-publish-date]])
   (:import (java.net URL)
            (lt.tokenmill.metadatadetector DocumentMetadata))
   (:gen-class

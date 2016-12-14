@@ -1,4 +1,4 @@
-(ns metadata-detector.path
+(ns metadata-detector.publishdate.selectors
   (:require [net.cgrand.enlive-html :as e]))
 
 (def date-attr-selectors
@@ -28,8 +28,3 @@
     [:div#content :span.prdata]
     [:div.byline-date :span.publish-date]
     })
-
-(def title-selectors
-  #{[[:h1 (e/attr-contains :class "-title")]]
-    [[:h1 (e/attr-contains :class "Headline")]]
-    [:div.leftcolumn :h1]})

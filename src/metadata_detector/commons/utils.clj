@@ -1,4 +1,4 @@
-(ns metadata-detector.utils
+(ns metadata-detector.commons.utils
   (:require [net.cgrand.enlive-html :as e]
             [clojure.string :as s]))
 

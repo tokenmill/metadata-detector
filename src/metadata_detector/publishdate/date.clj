@@ -1,14 +1,14 @@
-(ns metadata-detector.date
+(ns metadata-detector.publishdate.date
   (:require [clojure.string :as s]
             [net.cgrand.enlive-html :as e]
-            [metadata-detector.path :as path]
-            [metadata-detector.htmlmeta :as m]
-            [metadata-detector.postprocess :refer [clean-date]]
-            [metadata-detector.utils :refer [remove-tags remove-content non-blank best-candidate]]))
+            [metadata-detector.publishdate.cleaner :refer [clean-date]]
+            [metadata-detector.publishdate.selectors :as selectors]
+            [metadata-detector.commons.utils :refer [remove-tags remove-content non-blank best-candidate]]
+            [metadata-detector.commons.htmlmeta :as m]))
 
 (defn retrieve-attributes
-  [page selectors]
-  (->> selectors
+  [page]
+  (->> selectors/date-attr-selectors
        (mapcat
          (fn [[selector attributes]]
            (mapcat
@@ -26,7 +26,7 @@
 (defn retrieve-date-area [page]
   (-> page
       remove-tags
-      (e/select path/date-content-selectors)
+      (e/select selectors/date-content-selectors)
       remove-content
       non-blank
       best-candidate
@@ -44,16 +44,16 @@
 
 (defn with-regexes
   [page]
-  (s/replace (->> (pr-str page)
-                  (re-find #".com/archive/\d{4}/\d{2}\\\">.*</a>"))
-             #".*\\\">|</a>" ""))
+  (when-let [matched (->> (pr-str page)
+                  (re-find #".com/archive/\d{4}/\d{2}\\\">.*</a>"))]
+    (s/replace matched #".*\\\">|</a>" "")))
 
 (defn detect-publish-date
   "Extract article date. Check multiple sources:
   url, metadata, html structure, text"
   ^String [url page]
   (or (m/extract-tag page "date")
-      (retrieve-attributes page path/date-attr-selectors)
+      (retrieve-attributes page)
       (retrieve-date-area page)
       (detect-url-date url)
       (with-regexes page)))
