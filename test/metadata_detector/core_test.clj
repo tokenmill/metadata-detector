@@ -317,4 +317,9 @@
   (testing "i-hls.com"
     (is (= {:title "Assessing Autonomous Vessels Anti-Collision Mechanism"
             :date  "2016-12-07T19:00:39+00:00"}
-           (get-byline "en/i-hls" "http://i-hls.com/2016/12/assessing-autonomous-vessels-anti-collision-mechanism/")))))
+           (get-byline "en/i-hls" "http://i-hls.com/2016/12/assessing-autonomous-vessels-anti-collision-mechanism/"))))
+
+  (testing "bostinno.streetwise.co"
+    (is (= {:title "Carbonite Founders Amass $8.2M for Stealthy Cloud Storage Startup"
+            :date  "2016-12-07 14:23:40"}
+           (get-byline "en/bostinno.streetwise" "http://bostinno.streetwise.co/2016/12/06/aws-s3-competitor-carbonite-founders-raise-6-2m-for-bluearchive/")))))

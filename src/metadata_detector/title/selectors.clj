@@ -4,4 +4,5 @@
 (def title-selectors
   #{[[:h1 (e/attr-contains :class "-title")]]
     [[:h1 (e/attr-contains :class "Headline")]]
+    [:header :h1.post__title]
     [:div.leftcolumn :h1]})
