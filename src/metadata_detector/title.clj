@@ -9,6 +9,7 @@
   [
    #"\s+\|.*"                                               ;Title | Host.com
    #"\s+\-\s+\w+\.\w+$"                                     ; Title - Host.com
+   #"\u00A0"
    ])
 
 (defn- clean-string [^String string cleaners]
@@ -44,6 +45,6 @@
 (defn detect-title
   "Extract article title"
   [url page]
-  (or (extract-title-tag page)
-      (retrieve-title-area page)
+  (or (retrieve-title-area page)
+      (extract-title-tag page)
       (extract-head-title page)))

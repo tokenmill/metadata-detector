@@ -1,0 +1,1168 @@
+
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" dir="ltr" lang="en" prefix="og: http://ogp.me/ns#" itemscope itemtype="http://schema.org/Article"><![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8" dir="ltr" lang="en" prefix="og: http://ogp.me/ns#" itemscope itemtype="http://schema.org/Article"><![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" dir="ltr" lang="en" prefix="og: http://ogp.me/ns#" itemscope itemtype="http://schema.org/Article"><![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js gt-ie8" dir="ltr" lang="en" prefix="og: http://ogp.me/ns#" itemscope itemtype="http://schema.org/Article"><!--<![endif]-->
+<head>
+    <meta charset="utf-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" >
+    <title>NexentaEdge DevOps goes gratis for Docker persistent storage</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" >
+    <meta name="description" content="Nexenta Systems touts a free 'container-converged' Docker persistent storage platform to help development teams get started with containers." >
+    <meta name="robots" content="noodp" >
+    <meta name="news_keywords" content="Docker persistent storage, Nexenta Systems, storage containers, NexentaEdge DevOps, Docker applications, scale-out storage, Docker Compose, Docker Swarm" >
+    <link rel="canonical" href="http://searchstorage.techtarget.com/news/450404544/NexentaEdge-DevOps-goes-gratis-for-Docker-persistent-storage" />
+    <meta name="publicationDate" content="12/13/2016" >
+    <meta property="og:title" content="NexentaEdge DevOps goes gratis for Docker persistent storage" >
+    <meta property="og:site_name" content="SearchStorage" >
+    <meta property="og:url" content="http://searchstorage.techtarget.com/news/450404544/NexentaEdge-DevOps-goes-gratis-for-Docker-persistent-storage" >
+    <meta property="og:description" content="Nexenta Systems touts a free 'container-converged' Docker persistent storage platform to help development teams get started with containers." >
+    <meta property="fb:app_id" content="870327132989388" >
+    <meta property="og:type" content="article" >
+    <meta property="og:locale" content="en_US" >
+    <meta property="article:publisher" content="https://www.facebook.com/Search-Storage/10150115721885374" >
+    <meta itemprop="name" content="NexentaEdge DevOps goes gratis for Docker persistent storage" >
+    <meta itemprop="description" content="Nexenta Systems touts a free 'container-converged' Docker persistent storage platform to help development teams get started with containers." >
+    <meta name="twitter:card" content="summary_large_image" >
+    <meta name="twitter:site" content="@searchstoragett" >
+    <meta name="twitter:title" content="NexentaEdge DevOps goes gratis for Docker persistent storage" >
+    <meta name="twitter:description" content="Nexenta Systems touts a free 'container-converged' Docker persistent storage platform to help development teams get started with containers." >
+    <meta property="og:image" content="http://cdn.ttgtmedia.com/ITKE/images/logos/TTlogo-379x201.png" >
+    <meta itemprop="image" content="http://cdn.ttgtmedia.com/ITKE/images/logos/TTlogo-379x201.png" >
+    <meta content="http://cdn.ttgtmedia.com/visuals/searchStorage/primary_storage_hardware/storage_article_008.jpg" property="og:image" >
+    <meta content="http://cdn.ttgtmedia.com/visuals/searchStorage/primary_storage_hardware/storage_article_008.jpg" itemprop="image" >
+    <meta content="http://cdn.ttgtmedia.com/visuals/searchStorage/primary_storage_hardware/storage_article_008.jpg" name="twitter:image" >
+    <meta content="@GkTTStorage" name="twitter:creator" >
+    <link rel="alternate" type="application/rss+xml" title="WhatIs.com: Enterprise IT news roundup" href="http://whatis.techtarget.com/rss/Enterprise-IT-news-roundup.xml" />
+    <link rel="alternate" type="application/rss+xml" title="SearchStorage: ContentSyndication" href="http://searchstorage.techtarget.com/rss/ContentSyndication.xml" />
+    <link rel="alternate" type="application/rss+xml" title="SearchStorage: News and trends in the storage industry" href="http://searchstorage.techtarget.com/rss/News-and-trends-in-the-storage-industry.xml" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script><script src="http://fast.fonts.net/jsapi/124d48dd-e515-4302-8bfb-1d5c1e3da916.js"></script><link rel="stylesheet" href="http://cdn.ttgtmedia.com/rms/ux/responsive/css/libs/normalize.css"><link rel="stylesheet" href="http://cdn.ttgtmedia.com/rms/ux/responsive/css/libs/icomoon.css"><link rel="stylesheet" href="http://cdn.ttgtmedia.com/rms/ux/responsive/css/libs/jquery.jscrollpane.css"><link rel="stylesheet" href="http://cdn.ttgtmedia.com/rms/ux/responsive/css/libs/jquery-ui-1.10.3.custom.min.css"><link rel="stylesheet" href="http://cdn.ttgtmedia.com/rms/ux/responsive/css/libs/responsive-carousel.css"><link rel="stylesheet" href="http://cdn.ttgtmedia.com/rms/ux/responsive/css/libs/responsive-carousel.slide.css"><link rel="stylesheet" href="http://cdn.ttgtmedia.com/rms/ux/responsive/css/libs/mediaelementplayer.min.css"><link rel="stylesheet" href="http://cdn.ttgtmedia.com/rms/ux/responsive/css/v8-legacy.css"><link rel="stylesheet" href="http://cdn.ttgtmedia.com/rms/ux/responsive/css/main.css?v=6.60"><!--[if IE 9]>
+    <link rel="stylesheet" href="http://cdn.ttgtmedia.com/rms/ux/responsive/css/main_2.css?v=6.60"><link rel="stylesheet" href="http://cdn.ttgtmedia.com/rms/ux/responsive/css/main_3.css?v=6.60"><![endif]-->
+    <script src="http://cdn.ttgtmedia.com/rms/ux/responsive/js/responsive.min.js?v=6.60"></script><script src="http://cdn.optimizely.com/js/148927072.js"></script><script>
+    TT("page", {"clusterName":["DTVIRT","SVirt"],"parentTopicName":"Topics","parentTopicId":"298392","regHost":"http://users.techtarget.com","adScheme":"1","gaSiteAcct":"UA-19046353-19","lang":"en","ga":true,"timestamp":"2016-12-14 07:03:06","adId":"450404544","regTopicName":"Server Virtualization/Storage for Virtualized Environments","siteName":"searchStorage","regTopicId":"1358067","topicName":"Storage and Virtualization","pubDate":"20161213","adAbbr":"sstr","siteType":"editorial","uaid":"UA-19046353-19","topical":true,"gaPageTrackUrl":"/page/etpk_Topics-298392/ptpk_Storage and Virtualization-316366/true/NEWS/content/cid_450404544/date_20161213/mem_0/rtpk_Server Virtualization%Storage for Virtualized Environments-1358067/idx_0","pageIndex":0,"topicIds":["316366","298763","4500254785"],"siteId":5,"atHost":"http://go.techtarget.com","appCode":"0","topicId":"316366","clusterId":["2240034514","2240031157"],"homeAdId":"2240013174","zone":"NEWS"});
+</script>
+
+    <!-- Begin Chartbeat -->
+    <script>var _sf_startpt=(new Date()).getTime();</script><!-- End Chartbeat -->
+
+    <script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"VwcDVVZACwIDU1lS"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o||e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(t,e,n){function r(t){try{c.console&&console.log(t)}catch(e){}}var o,i=t("ee"),a=t(15),c={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(c.console=!0,o.indexOf("dev")!==-1&&(c.dev=!0),o.indexOf("nr_dev")!==-1&&(c.nrDev=!0))}catch(s){}c.nrDev&&i.on("internal-error",function(t){r(t.stack)}),c.dev&&i.on("fn-err",function(t,e,n){r(n.stack)}),c.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(c,function(t,e){return t}).join(", ")))},{}],2:[function(t,e,n){function r(t,e,n,r,o){try{d?d-=1:i("err",[o||new UncaughtException(t,e,n)])}catch(c){try{i("ierr",[c,(new Date).getTime(),!0])}catch(s){}}return"function"==typeof f&&f.apply(this,a(arguments))}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function o(t){i("err",[t,(new Date).getTime()])}var i=t("handle"),a=t(16),c=t("ee"),s=t("loader"),f=window.onerror,u=!1,d=0;s.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(l){"stack"in l&&(t(8),t(7),"addEventListener"in window&&t(5),s.xhrWrappable&&t(9),u=!0)}c.on("fn-start",function(t,e,n){u&&(d+=1)}),c.on("fn-err",function(t,e,n){u&&(this.thrown=!0,o(n))}),c.on("fn-end",function(){u&&!this.thrown&&d>0&&(d-=1)}),c.on("internal-error",function(t){i("ierr",[t,(new Date).getTime(),!0])})},{}],3:[function(t,e,n){t("loader").features.ins=!0},{}],4:[function(t,e,n){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var o=t("ee"),i=t("handle"),a=t(8),c=t(7),s="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",l="resource",p="-start",h="-end",m="fn"+p,w="fn"+h,v="bstTimer",y="pushState";t("loader").features.stn=!0,t(6);var g=NREUM.o.EV;o.on(m,function(t,e){var n=t[0];n instanceof g&&(this.bstStart=Date.now())}),o.on(w,function(t,e){var n=t[0];n instanceof g&&i("bst",[n,e,this.bstStart,Date.now()])}),a.on(m,function(t,e,n){this.bstStart=Date.now(),this.bstType=n}),a.on(w,function(t,e){i(v,[e,this.bstStart,Date.now(),this.bstType])}),c.on(m,function(){this.bstStart=Date.now()}),c.on(w,function(t,e){i(v,[e,this.bstStart,Date.now(),"requestAnimationFrame"])}),o.on(y+p,function(t){this.time=Date.now(),this.startPath=location.pathname+location.hash}),o.on(y+h,function(t){i("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+s]?window.performance[f](u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["c"+s]()},!1):window.performance[f]("webkit"+u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["webkitC"+s]()},!1)),document[f]("scroll",r,!1),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],5:[function(t,e,n){function r(t){for(var e=t;e&&!e.hasOwnProperty(u);)e=Object.getPrototypeOf(e);e&&o(e)}function o(t){c.inPlace(t,[u,d],"-",i)}function i(t,e){return t[1]}var a=t("ee").get("events"),c=t(17)(a,!0),s=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";e.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,e){var n=t[1],r=s(n,"nr@wrapped",function(){function t(){if("function"==typeof n.handleEvent)return n.handleEvent.apply(n,arguments)}var e={object:t,"function":n}[typeof n];return e?c(e,"fn-",null,e.name||"anonymous"):n});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],6:[function(t,e,n){var r=t("ee").get("history"),o=t(17)(r);e.exports=r,o.inPlace(window.history,["pushState","replaceState"],"-")},{}],7:[function(t,e,n){var r=t("ee").get("raf"),o=t(17)(r),i="equestAnimationFrame";e.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],8:[function(t,e,n){function r(t,e,n){t[0]=a(t[0],"fn-",null,n)}function o(t,e,n){this.method=n,this.timerDuration="number"==typeof t[1]?t[1]:0,t[0]=a(t[0],"fn-",this,n)}var i=t("ee").get("timer"),a=t(17)(i),c="setTimeout",s="setInterval",f="clearTimeout",u="-start",d="-";e.exports=i,a.inPlace(window,[c,"setImmediate"],c+d),a.inPlace(window,[s],s+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(s+u,r),i.on(c+u,o)},{}],9:[function(t,e,n){function r(t,e){d.inPlace(e,["onreadystatechange"],"fn-",c)}function o(){var t=this,e=u.context(t);t.readyState>3&&!e.resolved&&(e.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,w,"fn-",c)}function i(t){v.push(t),h&&(g=-g,b.data=g)}function a(){for(var t=0;t<v.length;t++)r([],v[t]);v.length&&(v=[])}function c(t,e){return e}function s(t,e){for(var n in t)e[n]=t[n];return e}t(5);var f=t("ee"),u=f.get("xhr"),d=t(17)(u),l=NREUM.o,p=l.XHR,h=l.MO,m="readystatechange",w=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],v=[];e.exports=u;var y=window.XMLHttpRequest=function(t){var e=new p(t);try{u.emit("new-xhr",[e],e),e.addEventListener(m,o,!1)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}return e};if(s(p,y),y.prototype=p.prototype,d.inPlace(y.prototype,["open","send"],"-xhr-",c),u.on("send-xhr-start",function(t,e){r(t,e),i(e)}),u.on("open-xhr-start",r),h){var g=1,b=document.createTextNode(g);new h(a).observe(b,{characterData:!0})}else f.on("fn-end",function(t){t[0]&&t[0].type===m||a()})},{}],10:[function(t,e,n){function r(t){var e=this.params,n=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<d;r++)t.removeEventListener(u[r],this.listener,!1);if(!e.aborted){if(n.duration=(new Date).getTime()-this.startTime,4===t.readyState){e.status=t.status;var i=o(t,this.lastSize);if(i&&(n.rxSize=i),this.sameOrigin){var a=t.getResponseHeader("X-NewRelic-App-Data");a&&(e.cat=a.split(", ").pop())}}else e.status=0;n.cbTime=this.cbTime,f.emit("xhr-done",[t],t),c("xhr",[e,n,this.startTime])}}}function o(t,e){var n=t.responseType;if("json"===n&&null!==e)return e;var r="arraybuffer"===n||"blob"===n||"json"===n?t.response:t.responseText;return h(r)}function i(t,e){var n=s(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}var a=t("loader");if(a.xhrWrappable){var c=t("handle"),s=t(11),f=t("ee"),u=["load","error","abort","timeout"],d=u.length,l=t("id"),p=t(14),h=t(13),m=window.XMLHttpRequest;a.features.xhr=!0,t(9),f.on("new-xhr",function(t){var e=this;e.totalCbs=0,e.called=0,e.cbTime=0,e.end=r,e.ended=!1,e.xhrGuids={},e.lastSize=null,p&&(p>34||p<10)||window.opera||t.addEventListener("progress",function(t){e.lastSize=t.loaded},!1)}),f.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),f.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),f.on("send-xhr-start",function(t,e){var n=this.metrics,r=t[0],o=this;if(n&&r){var i=h(r);i&&(n.txSize=i)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof e.onload))&&o.end(e)}catch(n){try{f.emit("internal-error",[n])}catch(r){}}};for(var a=0;a<d;a++)e.addEventListener(u[a],this.listener,!1)}),f.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),f.on("xhr-load-added",function(t,e){var n=""+l(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),f.on("xhr-load-removed",function(t,e){var n=""+l(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),f.on("addEventListener-end",function(t,e){e instanceof m&&"load"===t[0]&&f.emit("xhr-load-added",[t[1],t[2]],e)}),f.on("removeEventListener-end",function(t,e){e instanceof m&&"load"===t[0]&&f.emit("xhr-load-removed",[t[1],t[2]],e)}),f.on("fn-start",function(t,e,n){e instanceof m&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),f.on("fn-end",function(t,e){this.xhrCbStart&&f.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{}],11:[function(t,e,n){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!e.protocol||":"===e.protocol||e.protocol===n.protocol,a=e.hostname===document.domain&&e.port===n.port;return r.sameOrigin=i&&(!e.hostname||a),r}},{}],12:[function(t,e,n){function r(){}function o(t,e,n){return function(){return i(t,[(new Date).getTime()].concat(c(arguments)),e?null:this,n),e?void 0:this}}var i=t("handle"),a=t(15),c=t(16),s=t("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var u=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit"],d="api-",l=d+"ixn-";a(u,function(t,e){f[e]=o(d+e,!0,"api")}),f.addPageAction=o(d+"addPageAction",!0),f.setCurrentRouteName=o(d+"routeName",!0),e.exports=newrelic,f.interaction=function(){return(new r).get()};var p=r.prototype={createTracer:function(t,e){var n={},r=this,o="function"==typeof e;return i(l+"tracer",[Date.now(),t,n],r),function(){if(s.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return e.apply(this,arguments)}finally{s.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){p[e]=o(l+e)}),newrelic.noticeError=function(t){"string"==typeof t&&(t=new Error(t)),i("err",[t,(new Date).getTime()])}},{}],13:[function(t,e,n){e.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(e){return}}}},{}],14:[function(t,e,n){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),e.exports=r},{}],15:[function(t,e,n){function r(t,e){var n=[],r="",i=0;for(r in t)o.call(t,r)&&(n[i]=e(r,t[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],16:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(o<0?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=r},{}],17:[function(t,e,n){function r(t){return!(t&&t instanceof Function&&t.apply&&!t[a])}var o=t("ee"),i=t(16),a="nr@original",c=Object.prototype.hasOwnProperty,s=!1;e.exports=function(t,e){function n(t,e,n,o){function nrWrapper(){var r,a,c,s;try{a=this,r=i(arguments),c="function"==typeof n?n(r,a):n||{}}catch(f){l([f,"",[r,a,o],c])}u(e+"start",[r,a,o],c);try{return s=t.apply(a,r)}catch(d){throw u(e+"err",[r,a,d],c),d}finally{u(e+"end",[r,a,s],c)}}return r(t)?t:(e||(e=""),nrWrapper[a]=t,d(t,nrWrapper),nrWrapper)}function f(t,e,o,i){o||(o="");var a,c,s,f="-"===o.charAt(0);for(s=0;s<e.length;s++)c=e[s],a=t[c],r(a)||(t[c]=n(a,f?c+o:o,i,c))}function u(n,r,o){if(!s||e){var i=s;s=!0;try{t.emit(n,r,o)}catch(a){l([a,n,r,o])}s=i}}function d(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){l([r])}for(var o in t)c.call(t,o)&&(e[o]=t[o]);return e}function l(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=o),n.inPlace=f,n.flag=a,n}},{}],ee:[function(t,e,n){function r(){}function o(t){function e(t){return t&&t instanceof r?t:t?s(t,c,i):i()}function n(n,r,o){if(!l.aborted){t&&t(n,r,o);for(var i=e(o),a=h(n),c=a.length,s=0;s<c;s++)a[s].apply(i,r);var f=u[y[n]];return f&&f.push([g,n,r,i]),i}}function p(t,e){v[t]=h(t).concat(e)}function h(t){return v[t]||[]}function m(t){return d[t]=d[t]||o(n)}function w(t,e){f(t,function(t,n){e=e||"feature",y[n]=e,e in u||(u[e]=[])})}var v={},y={},g={on:p,emit:n,get:m,listeners:h,context:e,buffer:w,abort:a,aborted:!1};return g}function i(){return new r}function a(){(u.api||u.feature)&&(l.aborted=!0,u=l.backlog={})}var c="nr@context",s=t("gos"),f=t(15),u={},d={},l=e.exports=o();l.backlog=u},{}],gos:[function(t,e,n){function r(t,e,n){if(o.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[e]=r,r}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){o.buffer([t],r),o.emit(t,e,n)}var o=t("ee").get("handle");e.exports=r,r.ee=o},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!b++){var t=g.info=NREUM.info,e=d.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return f.abort();s(v,function(e,n){t[e]||(t[e]=n)}),c("mark",["onload",a()],null,"api");var n=d.createElement("script");n.src="https://"+t.agent,e.parentNode.insertBefore(n,e)}}function o(){"complete"===d.readyState&&i()}function i(){c("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var c=t("handle"),s=t(15),f=t("ee"),u=window,d=u.document,l="addEventListener",p="attachEvent",h=u.XMLHttpRequest,m=h&&h.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:h,REQ:u.Request,EV:u.Event,PR:u.Promise,MO:u.MutationObserver},t(12);var w=""+location,v={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-998.min.js"},y=h&&m&&m[l]&&!/CriOS/.test(navigator.userAgent),g=e.exports={offset:a(),origin:w,features:{},xhrWrappable:y};d[l]?(d[l]("DOMContentLoaded",i,!1),u[l]("load",r,!1)):(d[p]("onreadystatechange",o),u[p]("onload",r)),c("mark",["firstbyte",a()],null,"api");var b=0},{}]},{},["loader",2,10,4,3]);</script><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="144×144" href="/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="114×114" href="/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="72×72" href="/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" href="/apple-touch-icon-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="144×144" href="/apple-touch-icon-144x144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114×114" href="/apple-touch-icon-114x114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72×72" href="/apple-touch-icon-72x72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="/apple-touch-icon-precomposed.png">
+
+</head>
+<body id="news">
+<!-- Begin Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PWWZSH" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-PWWZSH');</script><!-- End Google Tag Manager -->
+<div id="site-container" class="site-container">
+    <div><div><!-- PinnedNavBarController, generated at 07:03:06 Wed Dec 14, 2016, by vappma24.techtarget.com -->
+        <!-- AdsController, generated at 07:03:06 Wed Dec 14, 2016, by vappma24.techtarget.com -->
+        <div id="interstitial" class="ad ad-ist"><script>GPT.display('interstitial')</script></div><div class="ad-wrapper header-leaderboard ad-mobile">
+            <!-- AdsController, generated at 07:03:06 Wed Dec 14, 2016, by vappma24.techtarget.com -->
+            <div id="mobile-lb" class="ad ad-mb"><script>GPT.display('mobile-lb')</script></div></div>
+
+        <header class="header" id="page-header">
+            <button class="nav-toggle"><i class="icon" data-icon="9"></i></button>
+            <a href="http://searchstorage.techtarget.com" class="header-logo mobile-link">
+                <span class="header-logo-mobile">SearchStorage</span>
+            </a>
+            <a href="http://www.techtarget.com/network" class="header-logo desktop-link">
+                <img src="http://cdn.ttgtmedia.com/rms/ux/responsive/img/nav_logo.png" alt="TechTarget" class="header-logo-desktop replace_2x">
+                <img src="http://cdn.ttgtmedia.com/rms/ux/responsive/img/nav_logo.png" alt="TechTarget" class="header-logo-small replace_2x">
+            </a>
+
+            <button class="header-search-toggle"><i class="icon" data-icon="g"></i></button>
+            <form action="http://www.techtarget.com/search/query" method="get" class="header-search">
+                <label for="header-search-input" class="visuallyhidden">Search the TechTarget Network</label>
+                <input class="header-search-input" id="header-search-input" type="text" name="q" placeholder="Search the TechTarget Network">
+            </form>
+
+            <nav class="nav" id="page-nav">
+                <a href="http://users.techtarget.com/registration/searchStorage/LoginRegister.page" class="nav-join-pro"><span>Sign-up now. Start my free, unlimited access.</span></a>
+                <div class="ad-wrapper nav-pro-callout">
+                    <!-- AdsController, generated at 07:03:06 Wed Dec 14, 2016, by vappma24.techtarget.com -->
+                    <div id="promo-1" class="ad ad-pr"><script>GPT.display('promo-1')</script></div></div>
+
+                <div class="nav-user">
+                    <a href="http://users.techtarget.com/registration/searchStorage/LoginRegister.page" class="nav-user-login"><span class="nav-user-action">Login</span></a>
+                </div>
+                <script>TT(["context","lib/jquery"],function(c,$){var u=c.getUser();if(u.loggedIn){$('div.nav-user').children("a:first")
+                    .before('<span class="nav-user-name">'+u.displayName+'</span>')
+                    .attr("href", "http://users.techtarget.com/registration/searchStorage/Logout.page?fromURL=" + window.location.href).children("span.nav-user-action:first").text('Logout');
+                    $('.nav-join-pro').removeAttr('href');$('a.nav-join-pro span').hide();}else{$('div.nav-user').children("a:first").attr("href", "http://users.techtarget.com/registration/searchStorage/LoginRegister.page?fromURL="+window.location.href);
+                    $('a.nav-join-pro').attr("href", "http://users.techtarget.com/registration/searchStorage/LoginRegister.page?fromURL="+window.location.href);}});
+                </script>
+                <ul class="nav-list">
+                    <li class="nav-list-item nav-list-item-searchsites">
+                        <div class="nav-list-item-header searchstorage">
+                            <a href="http://searchstorage.techtarget.com">
+						<span class="nav-list-item-header-title">
+							<span class="logo-search">Search</span><span class="logo-1">Storage</span></span>
+                            </a>
+                            <i class="icon icon-arrow-down" data-icon="5"></i>
+                        </div>
+                        <div class="nav-list-sublist nav-list-item-dropdown">
+                            <ul class="nav-list-item-jscroll">
+                                <li class="nav-list-sublist-item"><a href="http://searchsolidstatestorage.techtarget.com">SearchSolidStateStorage</a></li>
+                                <li class="nav-list-sublist-item"><a href="http://searchconvergedinfrastructure.techtarget.com">SearchConvergedInfrastructure</a></li>
+                                <li class="nav-list-sublist-item"><a href="http://searchcloudstorage.techtarget.com">SearchCloudStorage</a></li>
+                                <li class="nav-list-sublist-item"><a href="http://searchdisasterrecovery.techtarget.com">SearchDisasterRecovery</a></li>
+                                <li class="nav-list-sublist-item"><a href="http://searchdatabackup.techtarget.com">SearchDataBackup</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-list-item nav-list-item-topics">
+                        <div class="nav-list-item-header">
+                            <span class="nav-list-item-header-type">Topic</span>
+                            <span class="nav-list-item-header-title">
+					<a href="http://searchstorage.techtarget.com/resources/Storage-and-Virtualization">
+						Storage and Virtualization</a>
+					</span>
+                            <i class="icon icon-arrow-down" data-icon="5"></i>
+                            <i class="icon icon-navigation-detail" data-icon="A"></i>
+                        </div>
+                        <div class="nav-list-item-dropdown">
+                            <div class="nav-list-item-jscroll">
+                                <div class="nav-list-child-topics" id="child-topic-0543cd4fb27e1210VgnVCM1000000d01c80aRCRD">
+                                    <div class="nav-list-sublist-header nav-list-sublist-header-topics">
+                                        <a href="http://searchstorage.techtarget.com/resources">
+								<span class="nav-list-sublist-header-topics-title">
+									Topics</span>
+                                        </a>
+                                        <span class="view-all">View All<i class="icon" data-icon="6"></i></span>
+                                    </div>
+                                    <ul class="nav-list-sublist">
+                                        <li class="nav-list-sublist-item"><a href="http://searchcloudstorage.techtarget.com/resources">
+                                            Cloud Storage</a></li>
+                                        <li class="nav-list-sublist-item"><a href="http://searchstorage.techtarget.com/resources/Data-Backup">
+                                            Data Backup</a></li>
+                                        <li class="nav-list-sublist-item"><a href="http://searchstorage.techtarget.com/resources/Data-Protection">
+                                            Data Protection</a></li>
+                                        <li class="nav-list-sublist-item"><a href="http://searchstorage.techtarget.com/resources/Data-Storage-Management">
+                                            Data Storage Management</a></li>
+                                        <li class="nav-list-sublist-item"><a href="http://searchstorage.techtarget.com/resources/NAS-network-attached-storage">
+                                            NAS (network attached storage)</a></li>
+                                        <li class="nav-list-sublist-item"><a href="http://searchstorage.techtarget.com/resources/Object-storage">
+                                            Object storage</a></li>
+                                        <li class="nav-list-sublist-item"><a href="http://searchstorage.techtarget.com/resources/Primary-Storage-or-Storage-Hardware">
+                                            Primary Storage or Storage Hardware</a></li>
+                                        <li class="nav-list-sublist-item"><a href="http://searchstorage.techtarget.com/resources/SAN-storage-area-network">
+                                            SAN (storage area network)</a></li>
+                                        <li class="nav-list-sublist-item"><a href="http://searchstorage.techtarget.com/resources/Storage-Strategy">
+                                            Storage Strategy</a></li>
+                                        <li class="nav-list-sublist-item"><a href="http://searchstorage.techtarget.com/resources/Topics-Archives">
+                                            Topics Archives</a></li>
+                                    </ul>
+                                </div>
+                                <div class="nav-list-parent-topics">
+                                    <div class="nav-list-sublist-header nav-list-sublist-header-gray">Please select a category</div>
+                                    <ul class="nav-list-sublist">
+                                        <li class="nav-list-sublist-item">
+                                            Topics</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    <li class="nav-list-item nav-list-item-sections">
+                        <div class="nav-list-item-header">
+                            <span class="nav-list-item-header-type">Section</span>
+                            <span class="nav-list-item-header-title">
+									<a href="http://searchstorage.techtarget.com/info/news">News</a>
+								</span>
+                            <i class="icon icon-arrow-down" data-icon="5"></i>
+                            <i class="icon icon-navigation-arrow" data-icon="B"></i>
+                        </div>
+                        <div class="nav-list-sublist nav-list-item-dropdown">
+                            <ul class="nav-list-item-jscroll">
+                                <li class="nav-list-sublist-item"><a href="http://searchstorage.techtarget.com/info/news">News</a></li>
+                                <li class="nav-list-sublist-item"><a href="http://searchstorage.techtarget.com/info/getstarted">Get Started</a></li>
+                                <li class="nav-list-sublist-item"><a href="http://searchstorage.techtarget.com/info/evaluate">Evaluate</a></li>
+                                <li class="nav-list-sublist-item"><a href="http://searchstorage.techtarget.com/info/manage">Manage</a></li>
+                                <li class="nav-list-sublist-item"><a href="http://searchstorage.techtarget.com/info/problemsolve">Problem Solve</a></li>
+                                <li class="nav-list-sublist-item sponsored"><a href="http://searchstorage.techtarget.com/sponsored_communities">Sponsored Communities</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="nav-social">
+                    <li class="nav-social-item" title="Follow searchStorage on Google+" id="navBarGooglePlus"><a href="https://plus.google.com/u/0/106000202575757202315" target="_blank"><i class="icon" data-icon="s"></i></a></li><li class="nav-social-item" title="Like searchStorage on Facebook" id="navBarFacebook"><a href="https://www.facebook.com/Search-Storage/10150115721885374" target="_blank"><i class="icon" data-icon="u"></i></a></li><li class="nav-social-item" title="Follow @searchstoragett on Twitter" id="navBarTwitter"><a href="https://twitter.com/searchstoragett" target="_blank"><i class="icon" data-icon="c"></i></a></li><li class="nav-social-item" title="Follow searchStorage on LinkedIn" id="navBarLinkedIn"><a href="http://www.linkedin.com/company/3007485?trk=tyah" target="_blank"><i class="icon" data-icon="o"></i></a></li></ul>
+            </nav>
+        </header>
+
+        <div class="ad-wrapper header-leaderboard ad-desktop">
+            <!-- AdsController, generated at 07:03:06 Wed Dec 14, 2016, by vappma24.techtarget.com -->
+            <div id="leaderboard" class="ad ad-lb"><script>GPT.display('leaderboard')</script></div></div>
+    </div>
+    </div><div id="main-content" class="main-content">
+    <article id="content-columns" class="content-columns">
+        <div><div><!-- ContentItemController, generated at 05:00:54 Wed Dec 14, 2016, by vappma24.techtarget.com -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <div class="main-article-hero-image" >
+                <div class="imageWithCredit">
+                    <img src="http://cdn.ttgtmedia.com/visuals/searchStorage/primary_storage_hardware/storage_article_008.jpg" class="swap"
+                         data-credit="GP - Fotolia"
+                         data-img320="http://cdn.ttgtmedia.com/visuals/searchStorage/primary_storage_hardware/storage_article_008.jpg"
+                         data-img960="http://cdn.ttgtmedia.com/visuals/searchStorage/primary_storage_hardware/storage_article_008.jpg">
+                    <p>GP - Fotolia</p>
+                </div>
+            </div>
+
+
+
+
+
+
+
+            <header id="editorial-content-header" class="main-article-header">
+                <h1 class="main-article-title">NexentaEdge DevOps goes gratis for Docker persistent storage</h1>
+
+                <ul class="main-article-share-counts">
+                    <li class="main-article-share-count main-article-comment-count" title="Add/view comments">
+                        <i class="icon" data-icon="z"></i> <span></span> </li>
+
+                    <li class="main-article-share-count inline-social-icons inline cboxElement" title="Share this" href="#social-icons-desktop">
+                        <i class="icon" data-icon="f"></i>
+                        <span></span>
+                    </li>
+                </ul>
+
+                <div class="ad-wrapper page-header-ad ad-desktop">
+                    <!-- AdsController, generated at 05:00:54 Wed Dec 14, 2016, by vappma24.techtarget.com -->
+                    <div id="mu-top" class="ad ad-mu"><script>GPT.display('mu-top')</script></div></div>
+
+                <div class="main-article-author">
+                    <div class="image-resize">
+                        <img src="http://cdn.ttgtmedia.com/rms/onlineImages/kranz_garry.jpg"/>
+                    </div>
+                    <div class="main-article-author-info">
+                        <div class="main-article-author-byline">
+                            by<br><a href="http://www.techtarget.com/contributor/Garry-Kranz">Garry Kranz</a>
+                        </div>
+                        <div class="main-article-author-title">Staff Writer</div>
+                    </div>
+                    <div class="main-article-author-contact">
+                        <a href="https://twitter.com/GkTTStorage">
+                            <i class="icon" data-icon="c"></i>
+                        </a>
+                        <a href="https://plus.google.com/u/2/102483135964145669268/posts">
+                            <i class="icon" data-icon="s"></i>
+                        </a>
+                        <a href="http://www.linkedin.com/in/garrykranz">
+                            <i class="icon" data-icon="o"></i>
+                        </a>
+                        <a href="mailto:gkranz@techtarget.com">
+                            <i class="icon" data-icon="n"></i>
+                        </a>
+                    </div>
+                    <script type="text/javascript">
+                        var authorBlock = document.getElementsByClassName('main-article-author-info')[0];
+                        var innerHtml = '<span>Published: </span><a href="http://searchstorage.techtarget.com/archive/2016/12">13 Dec 2016</a>';
+                        var authorDateDiv = document.createElement('div');
+                        authorDateDiv.className = 'main-article-author-date';
+                        authorDateDiv.innerHTML = innerHtml;
+                        authorBlock.appendChild(authorDateDiv);
+                    </script>
+                </div>
+                <h2 class="main-article-subtitle">NexentaEdge DevOps integrates Docker persistent storage from up to three Linux servers and 16 TB of raw storage with NexentaEdge data and storage services.</h2>
+            </header>
+        </div><div><!-- RefineryController, generated at 18:46:41 Tue Dec 13, 2016, by vappma24.techtarget.com -->
+            <section class="refinery-wrapper" id="refinery">
+
+                <div class="refinery-content closed">
+
+                    <header class="refinery-header">
+                        <h3>This Article Covers</h3><h2><a href="http://searchstorage.techtarget.com/resources/Storage-and-Virtualization">
+                        Storage and Virtualization<i class="icon" data-icon="0"></i>
+                    </a>
+                    </h2>
+                        <div class="refinery-topics-wrapper">
+                            <h3>RELATED TOPICS</h3>
+                            <ul class="refinery-topics">
+                                <li><a href="http://searchcloudstorage.techtarget.com/resources">Cloud Storage</a></li>
+                                <li><a href="http://searchstorage.techtarget.com/resources/Data-Backup">Data Backup</a></li>
+                                <li><a href="http://searchstorage.techtarget.com/resources/Data-Protection">Data Protection</a></li>
+                                <li><a href="http://searchstorage.techtarget.com/resources/Data-Storage-Management">Data Storage Management</a></li>
+                                <li><a href="http://searchstorage.techtarget.com/resources/NAS-network-attached-storage">NAS (network attached storage)</a></li>
+                                <li><a href="http://searchstorage.techtarget.com/resources/Object-storage">Object storage</a></li>
+                            </ul>
+                        </div>
+                    </header>
+
+                    <div class="refinery-body">
+
+                        <div class="refinery-articles-wrapper">
+                            <h3>Looking for something else?</h3>
+                            <ul class="refinery-articles">
+                                <li><i class="icon" data-icon="2"></i>
+                                    <a href="http://searchstorage.techtarget.com/news/450303805/Vendors-target-storage-for-containers-with-DevOps-in-mind">Vendors target storage for containers with DevOps in mind</a></li>
+                            </ul>
+                        </div>
+                        <dl class="refinery-tags">
+                        </dl>
+                    </div>
+                    <div id="refineryShowMore" class="refinery-collapse-toggle">
+                        <div class="refinery-collapse-toggle-inner show-more">+ Show More</div>
+                    </div>
+                </div>
+            </section>
+        </div><div><!-- GuideController, generated at 04:58:56 Wed Dec 14, 2016, by vappma24.techtarget.com -->
+        </div>
+        </div><div id="content-left" class="content-left">
+        <div><div class="locking-full-bar">
+            <div class="locking-left-bar">
+                <div><!-- ChaptersBarController, generated at 04:58:57 Wed Dec 14, 2016, by vappma24.techtarget.com -->
+                    <nav id="chapters-bar-menu" class="chapters-bar desktop-chapters-bar" data-required-item="section.main-article-chapter">
+                        <div class="chapters-bar-header">
+                            <i class="icon" data-icon="1"></i>Sections</div>
+                        <ul class="chapters-bar-list"></ul>
+                    </nav></div><div><!-- GuideController, generated at 04:58:59 Wed Dec 14, 2016, by vappma24.techtarget.com -->
+            </div><div><!-- SocialMediaShareBarController, generated at 04:59:48 Wed Dec 14, 2016, by vappma24.techtarget.com -->
+                <div id="rail-share-bar">
+                    <ul id="social-icons-desktop" class="share-bar-desktop">
+                        <li class="share-bar-item-desktop share-bar-title">Share this item with your network:</li>
+                        <li class="share-bar-item-desktop socialMedia-facebook" title="Share on Facebook" data-socialsite="facebook">
+                            <a href="#" target="_blank"><i class="icon" data-icon="u"></i></a>
+                            <span class="count"></span>
+                        </li>
+                        <li class="share-bar-item-desktop socialMedia-twitter" title="Share on Twitter" data-socialsite="twitter" data-account="searchstoragett" data-related="">
+                            <a href="#" target="_blank"><i class="icon" data-icon="c"></i></a>
+                            <span class="count"></span>
+                        </li>
+                        <li class="share-bar-item-desktop socialMedia-google" title="Share on Google+" data-socialsite="google">
+                            <a href="#" target="_blank"><i class="icon" data-icon="s"></i></a>
+                            <span class="count"></span>
+                        </li>
+                        <li class="share-bar-item-desktop socialMedia-linkedin" title="Share on LinkedIn" data-socialsite="linkedin">
+                            <a href="#" target="_blank"><i class="icon" data-icon="o"></i></a>
+                            <span class="count"></span>
+                        </li>
+                        <li class="share-bar-item-desktop contentTools-print" title="Print This Page">
+                            <a href="#" target="_blank"><i class="icon" data-icon="i"></i></a>
+                        </li>
+                        <li class="share-bar-item-desktop contentTools-email" title="Email a Friend">
+                            <a href="#" target="_blank"><i class="icon" data-icon="n"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div><div><!-- RelatedContentController, generated at 05:00:54 Wed Dec 14, 2016, by vappma24.techtarget.com -->
+                <aside class="related-bar desktop-related-bar" id="related-content-bar">
+                    <div class="related-bar-header">
+                        <i class="icon" data-icon="l"></i>
+                        Related Content</div>
+                    <ul class="related-bar-list">
+                        <li class="related-bar-item">
+                            <a href="http://searchstorage.techtarget.com/news/4500246458/New-scale-out-NexentaEdge-storage-supports-object-block">New scale-out NexentaEdge storage supports object, ...</a>
+                            <span>&ndash; SearchStorage</span>
+                        </li>
+                        <li class="related-bar-item">
+                            <a href="http://searchstorage.techtarget.com/news/450280255/Rancher-launches-Docker-management-with-storage-services">Rancher launches Docker management with storage ...</a>
+                            <span>&ndash; SearchStorage</span>
+                        </li>
+                        <li class="related-bar-item">
+                            <a href="http://searchconvergedinfrastructure.techtarget.com/news/4500258160/Hyper-convergence-for-Docker-data-containers-debuts">Hyper-convergence for Docker data containers debuts</a>
+                            <span>&ndash; SearchConvergedInfrastructure</span>
+                        </li>
+                    </ul>
+                </aside>
+            </div></div>
+            <aside class="resources-bar desktop-resources-bar" id="resources-bar">
+                <div><!-- VendorResourcesController, generated at 05:00:54 Wed Dec 14, 2016, by vappma24.techtarget.com -->
+                    <div class="resources-bar-header"><i class="icon" data-icon="l"></i>Sponsored News</div>
+                    <ul class="resources-bar-list sponsored-news">
+                        <li class="resources-bar-item">
+                            <a href="http://www.convergedinfrastructure.com/A-Cost-Effective-Hadoop-Cluster-for-Big-Data-Environments?asrc=SS_sstr_SN-450404544">A Cost-Effective Hadoop Cluster for Big Data Environments</a>
+                            <span>&ndash;Dell</span>
+                        </li>
+                        <li class="resources-bar-item">
+                            <a href="http://www.convergedinfrastructure.com/Performance-and-Scalability-for-High-Availability-Workloads?asrc=SS_sstr_SN-450404544">Performance and Scalability for High-Availability Workloads</a>
+                            <span>&ndash;Dell</span>
+                        </li>
+                        <li class="resources-bar-item see-more"><a href="http://searchstorage.techtarget.com/sponsored_communities">See More</a></li>
+                    </ul>
+                    <div class="resources-bar-header"><i class="icon" data-icon="l"></i>Vendor Resources</div>
+                    <ul class="resources-bar-list" id="vendorResourcesSplash">
+                        <li class="resources-bar-item">
+                            <a href="http://searchstorage.bitpipe.com/detail/RES/1410548309_335.html">Modern Infrastructure: Cloud migration confidential</a>
+                            <span>&ndash;SearchCloudComputing.com</span>
+                            <i class="icon" data-icon="x"></i>
+                        </li>
+                        <li class="resources-bar-item">
+                            <a href="http://searchstorage.bitpipe.com/detail/RES/1432058399_682.html">Modern Infrastructure – May 2015</a>
+                            <span>&ndash;SearchDataCenter.com</span>
+                            <i class="icon" data-icon="x"></i>
+                        </li>
+                    </ul>
+                </div></aside>
+        </div></div></div>
+        <div id="content-center" class="content-center">
+            <div><div><!-- EzinePromoController, generated at 07:03:06 Wed Dec 14, 2016, by vappma24.techtarget.com -->
+            </div><div><!-- ContentItemController, generated at 13:57:09 Tue Dec 13, 2016, by vappma24.techtarget.com -->
+                <div class="float-mask"></div>
+
+
+
+
+
+                <ul class="actions-bar">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <li class="actions-bar-item actions-bar-chapters"><i class="icon" data-icon="1"></i></li>
+
+
+                    <li class="actions-bar-item actions-bar-resources"><i class="icon" data-icon="2"></i></li>
+
+
+                    <li class="actions-bar-item actions-bar-share"><i class="icon" data-icon="f"></i>
+                        <ul class="share-bar-mobile">
+
+                            <li class="share-bar-item-mobile socialMedia-facebook" title="Share on Facebook" data-socialsite="facebook">
+                                <a href="#"><i class="icon" data-icon="u"></i></a><span class="count"></span>
+                            </li>
+
+
+                            <li class="share-bar-item-mobile socialMedia-twitter" title="Share on Twitter" data-socialsite="twitter" data-account="searchstoragett" data-related="cloudstoragett">
+                                <a href="#"><i class="icon" data-icon="c"></i></a><span class="count"></span>
+                            </li>
+
+
+                            <li class="share-bar-item-mobile socialMedia-google" title="Share on Google+" data-socialsite="google">
+                                <a href="#"><i class="icon" data-icon="s"></i></a><span class="count"></span>
+                            </li>
+
+
+
+                            <li class="share-bar-item-mobile socialMedia-linkedin" title="Share on LinkedIn" data-socialsite="linkedin">
+                                <a href="#"><i class="icon" data-icon="o"></i></a><span class="count"></span>
+                            </li>
+
+                            <li class="share-bar-item-mobile contentTools-email" title="Email a Friend">
+                                <a href="#"><i class="icon" data-icon="n"></i></a>
+                            </li>
+                        </ul>
+                    </li>
+
+                </ul><section id="content-body">
+                    <p>Nexenta Systems Inc. is giving away a special version of its NexentaEdge <a href="http://searchstorage.techtarget.com/news/4500246458/New-scale-out-NexentaEdge-storage-supports-object-block">block, file and object storage</a> for building Docker persistent storage containers.</p>
+                    <div class="ad-wrapper ad-embedded">
+                        <div id="halfpage" class="ad ad-hp">
+                            <script>GPT.display('halfpage')</script>
+                        </div>
+                        <div id="mu-1" class="ad ad-mu">
+                            <script>GPT.display('mu-1')</script>
+                        </div>
+                    </div>
+                    <p>It has introduced NexentaEdge DevOps for development teams that require self-service provisioning and storage management for containerized applications. The DevOps edition is a <a href="http://searchstorage.techtarget.com/news/4500246458/New-scale-out-NexentaEdge-storage-supports-object-block">separate code release</a> from its software-defined NexentaEdge platform.</p>
+                    <p>NexentaEdge DevOps integrates with Docker Compose and Docker Swarm via Docker Volume plug-ins. With DevOps, multiple application and storage containers can run on the same physical set of Linux servers, while NexentaEdge storage software runs concurrently with Docker Engine on each node.</p>
+                    <p>&quot;We call it container-converged architecture. We take storage on Linux hypervisors and <a href="https://github.com/Nexenta/edge-dev" target="_blank">connect multiple servers</a> using NexentaEdge. We're providing resilience and redundancy across the nodes. And then we provision the storage to containers using block, NFS or object interfaces,&quot; said Oscar Wahlberg, a director of product management at Nexenta, based in Santa Clara, Calif.</p>
+                    <p>Nexenta joins a growing list of vendors seeking to <a href="http://searchstorage.techtarget.com/news/450303805/Vendors-target-storage-for-containers-with-DevOps-in-mind">integrate Docker persistent storage</a> for enterprise application containers. The vendor previously supported Docker persistent storage via a back-end ClusterHQ Flocker custom API.</p>
+                    <div class="pro-features-wrapper"></div>
+                    <p>Developers use NexentaEdge DevOps to assign physical storage to <a href="http://searchstorage.techtarget.com/blog/Storage-Soup/SNIA-panel-Docker-data-center-deployments-on-rise">specific Docker applications</a>. Docker containers can be moved to -- and read from -- any Linux node. Orchestration scales linearly with Docker Swarm or Google Kubernetes as servers get added to a cluster.</p>
+                    <p>Nexenta said NexentaEdge DevOps Edition supports up to three nodes and 16 TB of raw persistent Docker storage with copy-on-write snapshots, inline deduplication and compression, and rate-limiting quality of service.</p>
+                    <p>That's a modest amount of raw capacity for a scale-out storage vendor, but it's enough for <a href="http://www.computerweekly.com/feature/Docker-storage-how-to-get-persistent-storage-in-Docker">getting started</a> with Docker persistent storage containers, said Henry Baltazar, a research director for storage at IT analyst firm 451 Research.</p>
+                    <p>&quot;It lets you get on board if you've been kicking the tires on Docker persistent storage. As processors get more and more powerful, you can move to running potentially hundreds of containers on the same server. That makes it more important to address how you control and share resources,&quot; Baltazar said.</p>
+                    <div class="join-discussion-wrapper"></div></section>
+
+
+
+
+                <section class="section next-steps" data-menu-title="Next Steps" id="next-steps">
+                    <h4 class="section-title"><i class="icon" data-icon="m"></i>Next Steps</h4>
+                    <p>How to meet the <a href="http://searchstorage.techtarget.com/ezine/Storage-magazine/Storage-in-a-container-Dealing-with-Docker-storage">challenge of Docker storage</a></p>
+                    <p>A comprehensive overview of <a href="http://searchstorage.techtarget.com/essentialguide/The-complete-rundown-on-Docker-data-storage-and-containers">Docker data storage and containers</a></p>
+                    <p>The unique <a href="http://searchstorage.techtarget.com/tip/Docker-storage-and-virtual-storage-requirements-differ">storage requirements of Docker</a> containers</p>
+                </section>
+
+
+
+
+
+
+
+
+
+                <div class="ad-wrapper ad-inline ad-mobile">
+                    <!-- AdsController, generated at 13:57:09 Tue Dec 13, 2016, by vappma24.techtarget.com -->
+                    <div id="mobile-2" class="ad ad-mb"><script>GPT.display('mobile-2')</script></div></div></div><div><!-- DigDeeperController, generated at 14:32:21 Tue Dec 13, 2016, by vappma24.techtarget.com -->
+                <section class="section dig-deeper" id="dig-deeper" data-digdeeper-reference-id="72e40d72b97f8510VgnVCM100000ef01c80aRCRD" data-menu-title="Dig Deeper">
+                    <h4 class="section-title"><i class="icon" data-icon="m"></i>Dig Deeper on Storage and Virtualization</h4>
+                    <div class="dig-deeper-nav-wrapper">
+                        <ul class="dig-deeper-nav" id="dig-deeper-tabs">
+                            <li class="dig-deeper-nav-item selected" data-filterType="all" data-page="1">
+                                <a href="#dd-tab1">
+                                    All<i class="icon" data-icon="3"></i>
+                                </a>
+                            </li>
+                            <li class="dig-deeper-nav-item" data-filterType="news_infotype" data-page="1">
+                                <a href="#dd-tab2">
+                                    News<i class="icon" data-icon="3"></i>
+                                </a>
+                            </li>
+                            <li class="dig-deeper-nav-item" data-filterType="get_started_infotype" data-page="1">
+                                <a href="#dd-tab3">
+                                    Get Started<i class="icon" data-icon="3"></i>
+                                </a>
+                            </li>
+                            <li class="dig-deeper-nav-item" data-filterType="evaluate_infotype" data-page="1">
+                                <a href="#dd-tab4">
+                                    Evaluate<i class="icon" data-icon="3"></i>
+                                </a>
+                            </li>
+                            <li class="dig-deeper-nav-item" data-filterType="manage_infotype" data-page="1">
+                                <a href="#dd-tab5">
+                                    Manage<i class="icon" data-icon="3"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="dig-deeper-tabs-content">
+                        <div id="dd-tab1">
+                            <ul class="dig-deeper-content" id="digDeeperContent_all">
+                                <li class="dig-deeper-content-item">
+                                    <h5><a href="http://searchstorage.techtarget.com/blog/Storage-Soup/Nutanix-adds-oodles-of-customers-and-red-ink">Nutanix adds oodles of customers and red ink</a></h5>
+                                    <i class="icon" data-icon="G"></i>
+                                </li>
+                                <li class="dig-deeper-content-item">
+                                    <h5><a href="http://searchstorage.techtarget.com/blog/Storage-Soup/Formation-Data-adds-cloud-replication">Formation Data adds cloud replication</a></h5>
+                                    <i class="icon" data-icon="G"></i>
+                                </li>
+                                <li class="dig-deeper-content-item">
+                                    <h5><a href="http://searchstorage.techtarget.com/blog/Storage-Soup/FalconStor-updates-FreeStor-adopts-new-pricing-model">FalconStor updates FreeStor, adopts new pricing model</a></h5>
+                                    <i class="icon" data-icon="G"></i>
+                                </li>
+                                <li class="dig-deeper-content-item">
+                                    <h5><a href="http://searchstorage.techtarget.com/blog/Storage-Soup/SNIA-panel-Docker-data-center-deployments-on-rise">SNIA panel: Docker data center deployments inch to primary storage</a></h5>
+                                    <i class="icon" data-icon="G"></i>
+                                </li>
+                            </ul>
+                            <button class="button black-button dig-deeper-load-more" id="digDeeperLoadMore_all" style="display: none;">
+                                Load More</button>
+                            <noscript>
+                                <a href="http://searchstorage.techtarget.com/resources/Storage-and-Virtualization">
+                                    <button class="button black-button dig-deeper-load-more" id="digDeeperViewAll">
+                                        View All</button>
+                                </a>
+                            </noscript>
+
+                        </div>
+                        <div id="dd-tab2">
+                            <ul class="dig-deeper-content" id="digDeeperContent_news_infotype">
+                                <li class="dig-deeper-content-item">
+                                    <h5><a href="http://searchstorage.techtarget.com/blog/Storage-Soup/Nutanix-adds-oodles-of-customers-and-red-ink">Nutanix adds oodles of customers and red ink</a></h5>
+                                    <i class="icon" data-icon="G"></i>
+                                </li>
+                                <li class="dig-deeper-content-item">
+                                    <h5><a href="http://searchstorage.techtarget.com/blog/Storage-Soup/Formation-Data-adds-cloud-replication">Formation Data adds cloud replication</a></h5>
+                                    <i class="icon" data-icon="G"></i>
+                                </li>
+                                <li class="dig-deeper-content-item">
+                                    <h5><a href="http://searchstorage.techtarget.com/blog/Storage-Soup/FalconStor-updates-FreeStor-adopts-new-pricing-model">FalconStor updates FreeStor, adopts new pricing model</a></h5>
+                                    <i class="icon" data-icon="G"></i>
+                                </li>
+                                <li class="dig-deeper-content-item">
+                                    <h5><a href="http://searchstorage.techtarget.com/blog/Storage-Soup/SNIA-panel-Docker-data-center-deployments-on-rise">SNIA panel: Docker data center deployments inch to primary storage</a></h5>
+                                    <i class="icon" data-icon="G"></i>
+                                </li>
+                            </ul>
+                            <button class="button black-button dig-deeper-load-more" id="digDeeperLoadMore_news_infotype" style="display: none;">
+                                Load More</button>
+                            <noscript>
+                                <a href="http://searchstorage.techtarget.com/info/news/Storage-and-Virtualization">
+                                    <button class="button black-button dig-deeper-load-more" id="digDeeperViewAll_news_infotype">
+                                        View All News</button>
+                                </a>
+                            </noscript>
+
+                        </div>
+                        <div id="dd-tab3">
+                            <ul class="dig-deeper-content" id="digDeeperContent_get_started_infotype">
+                                <li class="dig-deeper-content-item">
+                                    <h5><a href="http://searchstorage.techtarget.com/definition/thick-provisioning">thick provisioning</a></h5>
+                                    <i class="icon" data-icon="q"></i>
+                                </li>
+                                <li class="dig-deeper-content-item">
+                                    <h5><a href="http://searchstorage.techtarget.com/definition/Hyper-V-Virtual-Fibre-Channel">Hyper-V Virtual Fibre Channel</a></h5>
+                                    <i class="icon" data-icon="q"></i>
+                                </li>
+                                <li class="dig-deeper-content-item">
+                                    <h5><a href="http://searchstorage.techtarget.com/definition/I-O-blender-effect">I/O blender effect</a></h5>
+                                    <i class="icon" data-icon="q"></i>
+                                </li>
+                                <li class="dig-deeper-content-item">
+                                    <h5><a href="http://searchstorage.techtarget.com/definition/ODX-Offloaded-Data-Transfer">ODX (Offloaded Data Transfer)</a></h5>
+                                    <i class="icon" data-icon="q"></i>
+                                </li>
+                            </ul>
+                            <button class="button black-button dig-deeper-load-more" id="digDeeperLoadMore_get_started_infotype" style="display: none;">
+                                Load More</button>
+                            <noscript>
+                                <a href="http://searchstorage.techtarget.com/info/getstarted/Storage-and-Virtualization">
+                                    <button class="button black-button dig-deeper-load-more" id="digDeeperViewAll_get_started_infotype">
+                                        View All Get started</button>
+                                </a>
+                            </noscript>
+
+                        </div>
+                        <div id="dd-tab4">
+                            <ul class="dig-deeper-content" id="digDeeperContent_evaluate_infotype">
+                                <li class="dig-deeper-content-item">
+                                    <h5><a href="http://searchstorage.techtarget.com/report/Tools-to-manage-virtual-server-storage">Tools to manage virtual server storage</a></h5>
+                                    <i class="icon" data-icon="2"></i>
+                                </li>
+                            </ul>
+                            <noscript>
+                                <a href="http://searchstorage.techtarget.com/info/evaluate/Storage-and-Virtualization">
+                                    <button class="button black-button dig-deeper-load-more" id="digDeeperViewAll_evaluate_infotype">
+                                        View All Evaluate</button>
+                                </a>
+                            </noscript>
+
+                        </div>
+                        <div id="dd-tab5">
+                            <ul class="dig-deeper-content" id="digDeeperContent_manage_infotype">
+                                <li class="dig-deeper-content-item">
+                                    <h5><a href="http://searchstorage.techtarget.com/report/Tools-to-manage-virtual-server-storage">Tools to manage virtual server storage</a></h5>
+                                    <i class="icon" data-icon="2"></i>
+                                </li>
+                            </ul>
+                            <noscript>
+                                <a href="http://searchstorage.techtarget.com/info/manage/Storage-and-Virtualization">
+                                    <button class="button black-button dig-deeper-load-more" id="digDeeperViewAll_manage_infotype">
+                                        View All Manage</button>
+                                </a>
+                            </noscript>
+
+                        </div>
+                    </div>
+                </section>
+            </div><div><!-- ProFeaturesController, generated at 05:00:55 Wed Dec 14, 2016, by vappma24.techtarget.com -->
+                <div class="pro-features-content">
+                    <section id="embedded-pro-features">
+                        <header class="pro-features-header">
+                            <h2 class="pro">PRO+</h2>
+                            <h2 class="features">Content</h2>
+                            <p class="cta-pro-features">Find more PRO+ content and other member only offers, <a href="http://pro.techtarget.com/ProLP?Offer=PROContentBox">here.</a></p>
+                        </header>
+                        <script>TT(["context/user","lib/jquery"],function(u,$){if(u.isAuthenticated()){$('p.cta-pro-features').hide();
+                        }else{$('p.cta-pro-features').children("a:first").attr("href", "?fromURL="+window.location.href);
+                        }});
+                        </script>
+                        <div class="pro-features-body">
+                            <ul class="pro-features">
+                                <li>
+                                    <!-- Determine proper data-icon to use here based on eProduct type. -->
+                                    <i class="icon" data-icon="x"></i>
+                                    <h3>E-Zine</h3>
+                                    <p><a href="http://searchstorage.techtarget.com/ezine/Storage-magazine/Hot-data-storage-market-technologies-for-2017">Hot data storage market technologies for 2017</a></p>
+                                </li>
+                                <li>
+                                    <!-- Determine proper data-icon to use here based on eProduct type. -->
+                                    <i class="icon" data-icon="7"></i>
+                                    <h3>E-Handbook</h3>
+                                    <p><a href="http://searchstorage.techtarget.com/ehandbook/NVM-Express-NAND-flash-energize-storage-vendors">NVM Express, NAND flash energize storage vendors</a></p>
+                                </li>
+                                <li>
+                                    <!-- Determine proper data-icon to use here based on eProduct type. -->
+                                    <i class="icon" data-icon="x"></i>
+                                    <h3>E-Zine</h3>
+                                    <p><a href="http://searchstorage.techtarget.com/ezine/Storage-magazine/Everything-you-need-to-know-about-storage-snapshots">Everything you need to know about storage snapshots</a></p>
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
+                </div>
+            </div><div><!-- GuideController, generated at 04:58:55 Wed Dec 14, 2016, by vappma24.techtarget.com -->
+            </div><div><!-- DiscussionsController, generated at 05:00:55 Wed Dec 14, 2016, by vappma24.techtarget.com -->
+                <ul id="embeddedDiscussions" class="join-discussion-content carousel " data-transition="slide" data-paginate="">
+                    <li class="carousel-item">
+                        <aside id="embedded-discussions">
+                            <div class="discussion-question">
+                                <div class="image-resize">
+                                    <a href="http://www.techtarget.com/contributor/Garry-Kranz"><img class="asker-img" src="http://cdn.ttgtmedia.com/rms/onlineImages/kranz_garry.jpg"></a>
+                                </div>
+                                <p><a href="http://www.techtarget.com/contributor/Garry-Kranz"><span class="asker">Garry Kranz</span></a>&nbsp;asks:</p>
+                                <h2 class="question">How long will it take for Docker persistent storage containers to be as ubiquitous as virtual machines?</h2>
+                                <i class="icon" data-icon="Z"></i>
+                            </div>
+                            <div class="discussion-cta">
+                                <a href="#commenting" class="button blue-button">Join the Discussion</a>
+                            </div>
+                        </aside>
+                    </li>
+                </ul>
+            </div><div><!-- AskAnExpertController, generated at 07:03:06 Wed Dec 14, 2016, by vappma24.techtarget.com -->
+            </div><div><!-- HaveAQuestionForAnExpertController, generated at 07:03:07 Wed Dec 14, 2016, by vappma24.techtarget.com -->
+            </div>
+            </div></div>
+        <div id="content-right" class="content-right"></div>
+    </article>
+</div>
+    <div><div><!-- CommentingController, generated at 07:03:07 Wed Dec 14, 2016, by vappma24.techtarget.com -->
+        <section id="commenting" class="main-content comments-wrapper" data-comment-reference-id="72e40d72b97f8510VgnVCM100000ef01c80aRCRD" data-itkerepo-id="268_post_298785">
+            <div class="content-columns">
+                <div class="content-left comments-left">
+                </div>
+
+                <div class="content-center comments-center">
+                    <h4 class="section-title comments-header">
+                        <i class="icon" data-icon="m"></i>
+                        Join the conversation</h4>
+
+                    <h3 class="comments-count">
+                        <i class="icon" data-icon="z"></i>
+                        <span class="comments-count-num">1</span>&nbsp;comment</h3>
+                    <form id="loggedoutCommentsForm" class="comments-form logged-out">
+                        <textarea id="loggedoutCommentBody" class="comments-form-textarea" placeholder="Share your comment"></textarea>
+                        <fieldset class="notifications">
+                            <input data-field="" id="notifications" name="notifications" checked="checked" type="checkbox">
+                            Send me notifications when other members comment.</fieldset>
+                        <button type="submit" class="comments-form-btn submit" href="#comments-reg-login">Add My Comment</button>
+
+                        <div style="display:none;">
+                            <div id="comments-reg-login">
+                                <section id="commenting-registration">
+                                    <div class="modal-register">
+                                        <h4>Register</h4>
+                                        <input class="comments-username" type="text" placeholder="Username">
+                                        <input class="comments-email" type="text" placeholder="email@techtarget.com">
+                                        <input class="comments-password" type="password" placeholder="Password">
+                                        <input id="submit-register" class="comments-form-btn" type="submit" value="Add My Comment">
+                                    </div>
+                                    <div class="modal-divider"></div>
+                                    <div class="modal-login">
+                                        <h4>Login</h4>
+                                        <input class="comments-email" type="text" placeholder="email@techtarget.com">
+                                        <input class="comments-password" type="password" placeholder="Password">
+                                        <a class="forgot-password" href="#forgotPasswordModal">Forgot your password?</a>
+                                        <input id="submit-login" class="comments-form-btn" type="submit" value="Add My Comment">
+                                        <div style="display:none;">
+                                            <div id="forgotPasswordModal">
+                                                <section id="commenting-forgot-password">
+                                                    <div id="forgotPasswordModalHeader">
+                                                        <h4>Forgot your password?</h4>
+                                                        <div id="forgotPasswordModalMessaging">
+                                                            <span class="forgotPasswordModalIntro">No problem! Submit your e-mail address below. We'll send you an email containing your password.</span>
+                                                        </div>
+                                                    </div>
+                                                    <form action="" method="post" id="forgotPasswordModalForm" name="forgotPasswordModalForm">
+                                                        <input id="forgotPasswordModalFormMessage" name="email" tabindex="1" class="required" placeholder="email@techtarget.com">
+                                                        <button type="submit" id="forgotPasswordModalFormSubmit" class="button primaryButton">Submit</button>
+                                                    </form>
+                                                </section>
+                                            </div>
+                                        </div>
+                                        <div style="display:none;">
+                                            <div id="forgotPasswordModalConfirm">
+                                                <div id="forgotPasswordModalHeader">
+                                                    <h4>Your password has been sent to:<span class="email"></span></h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="comments-disclaimer">By submitting you agree to receive email from TechTarget and its partners. If you reside outside of the United States, you consent to having your personal data transferred to and processed in the United States. <a href="http://www.techtarget.com/html/privacy_policy.html">Privacy</a></p>
+                                </section>
+                            </div>
+                        </div>
+                        <div style="display:none;">
+                            <div id="comments-reg-create">
+                                <section id="commenting-registration">
+                                    <div class="comments-reg-create-body">
+                                        <h4>Please create a username to comment.</h4>
+                                        <input class="comments-create-username" type="text" placeholder="Create Username">
+                                        <input class="comments-form-btn" type="submit" value="Create Username and Add My Comment">
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+                    </form>
+
+                    <div id="sort">
+                        <a id="sortByOldest" class="comments-order" href='#'>Oldest&nbsp;<i class="icon" data-icon="5"></i></a>
+                        <a id="sortByNewest" class="comments-order" href='#' style="display: none;">Newest&nbsp;<i class="icon" data-icon="5"></i></a>
+                    </div>
+
+                    <div id="repoComments">
+                        <div class="comment-parent" data-sort="1481643349000">
+                            <div id="268_comment_103182" class="comment-wrapper">
+                                <div class="comment-content">
+                                    <div class="comment-user-info">
+                                        <a href="#" class="comment-expand-toggle">[-]</a>
+                                        <div class="comment-thumbnail-wrap">
+                                            <img class="comment-thumbnail" src="http://cdn.ttgtmedia.com/ITKE/uploads/avatar/420758-650796626.gif">
+                                        </div>
+                                        <span class="comment-username">Garry Kranz</span>
+                                        <span class="comment-date"> - 13 Dec 2016 10:35 AM</span>
+                                    </div>
+                                    <div class="comment-body">How long will it take for Docker persistent storage containers to be as ubiquitous as virtual machines?</div>
+                                    <input class="comments-form-btn" type="submit" value="Reply">
+                                    <form class="comments-reply-form">
+                                        <textarea class="comments-form-textarea" placeholder="Share your comment"></textarea>
+                                        <button type="submit" class="comments-form-btn submit" href="#comments-reg-login" data-comment-parent="268_comment_103182">Add My Comment</button>
+                                        <a href="#" class="cancel-reply">Cancel</a>
+                                    </form>
+                                </div>
+                                <div class="comment-share">
+                                    <ul>
+                                        <li class="comment-flag">
+                                            <a href="mailto:?subject=PLEASE REVIEW COMMENT 103182: NexentaEdge DevOps goes gratis for Docker persistent storage&amp;body=Please review a recent comment for inappropriate content.%0A%0AURL: http://searchstorage.techtarget.com/news/450404544/NexentaEdge-DevOps-goes-gratis-for-Docker-persistent-storage%0A%0AAuthor: Garry Kranz%0A%0AComment ID: 103182"><i class="icon" data-icon="t"></i> &nbsp;</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="content-right"></div>
+            </div>
+        </section></div><div><!-- GoogleAdSenseController, generated at 04:59:48 Wed Dec 14, 2016, by vappma24.techtarget.com -->
+        <div class="ad-wrapper body-pro-callout">
+            <div class="body-pro-callout-inner">
+                <!-- AdsController, generated at 04:59:48 Wed Dec 14, 2016, by vappma24.techtarget.com -->
+                <div id="promo-2" class="ad ad-pr"><script>GPT.display('promo-2')</script></div></div>
+        </div>
+        <section class="main-content ads-by-google" id="ads-by-google">
+            <h2><a href="https://www.google.com/adsense/support/bin/request.py?contact=abg_afc">-ADS BY GOOGLE</a></h2>
+            <script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+            <!-- Search Sites Responsive AFC -->
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-6050985421795229"
+                 data-ad-slot="8728364240"
+                 data-ad-format="auto"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </section>
+    </div><div><!-- NetworkCoverageController, generated at 04:59:48 Wed Dec 14, 2016, by vappma24.techtarget.com -->
+        <section class="latest-wrapper" id="network-coverage">
+            <nav class="latest-nav-wrapper">
+                <h2>Latest TechTarget <span class="latest-title">resources</span></h2>
+                <ul class="latest-nav">
+                    <li>
+                        <a href="#" class="latest-nav-item selected" data-item="1">
+                            Solid State Storage<i class="icon mobile-icon" data-icon="5"></i>
+                            <i class="icon desktop-icon" data-icon="A"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="latest-nav-item" data-item="2">
+                            ConvergedIT<i class="icon mobile-icon" data-icon="5"></i>
+                            <i class="icon desktop-icon" data-icon="A"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="latest-nav-item" data-item="3">
+                            Cloud Storage<i class="icon mobile-icon" data-icon="5"></i>
+                            <i class="icon desktop-icon" data-icon="A"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="latest-nav-item" data-item="4">
+                            Disaster Recovery<i class="icon mobile-icon" data-icon="5"></i>
+                            <i class="icon desktop-icon" data-icon="A"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="latest-nav-item" data-item="5">
+                            Data Backup<i class="icon mobile-icon" data-icon="5"></i>
+                            <i class="icon desktop-icon" data-icon="A"></i>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <span class="latest-nav-mask before-mask"></span>
+            <span class="latest-nav-mask after-mask"></span>
+            <div class="latest-body">
+                <div class="latest-content" data-item="1">
+                    <h2 class="searchsolidstatestorage">
+                        <a href="http://searchsolidstatestorage.techtarget.com">
+                            <span class="logo-search">Search</span><span class="logo-1">Solid</span><span class="logo-2">State</span><span class="logo-3">Storage</span></a>
+                    </h2>
+                    <ul>
+                        <li>
+                            <i class="icon" data-icon="2"></i>
+                            <h3><a href="http://searchsolidstatestorage.techtarget.com/feature/Whats-the-difference-between-flash-memory-and-conventional-RAM">Flash memory vs. RAM: What's the difference?</a></h3>
+                            <p>Even though vendors refer to flash memory and conventional RAM -- the main memory of your PC or server -- as solid-state memory, ...</p>
+                        </li>
+                        <li>
+                            <i class="icon" data-icon="2"></i>
+                            <h3><a href="http://searchsolidstatestorage.techtarget.com/feature/Will-the-eMMC-controller-market-keep-up-with-flash-innovation">Will the eMMC controller market keep up with flash innovation?</a></h3>
+                            <p>EMMC host controllers may have a hard time handling advances in flash memory technology, like 3D NAND and newer connection ...</p>
+                        </li>
+                        <li class="hide-for-small">
+                            <i class="icon" data-icon="2"></i>
+                            <h3><a href="http://searchsolidstatestorage.techtarget.com/feature/Small-but-mighty-eMMC-flash-storage-grows-its-enterprise-role">Small but mighty eMMC flash storage grows its enterprise role</a></h3>
+                            <p>Many common devices, like your cell phone and tablet, use eMMC flash for storage. But the internet of things will soon make eMMC ...</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="latest-content" data-item="2">
+                    <h2 class="searchconvergedit">
+                        <a href="http://searchconvergedinfrastructure.techtarget.com">
+                            <span class="logo-search">Search</span><span class="logo-1">Converged</span><span class="logo-2">Infrastructure</span></a>
+                    </h2>
+                    <ul>
+                        <li>
+                            <i class="icon" data-icon="2"></i>
+                            <h3><a href="http://searchconvergedinfrastructure.techtarget.com/news/450404486/Stratoscale-tunes-Symphony-for-AWS-hyper-converged-duet">Stratoscale tunes Symphony for AWS hyper-converged duet</a></h3>
+                            <p>Stratoscale's latest Symphony hyper-converged upgrade adds AWS S3 object storage, Kubernetes-as-a-Service and an Application ...</p>
+                        </li>
+                        <li>
+                            <i class="icon" data-icon="2"></i>
+                            <h3><a href="http://searchconvergedinfrastructure.techtarget.com/opinion/What-to-expect-from-HCI-software-vendors-in-2017">What to expect from HCI software vendors in 2017</a></h3>
+                            <p>Hyper-converged software vendors have historically worked only with specific hardware makers, but a more open market could ...</p>
+                        </li>
+                        <li class="hide-for-small">
+                            <i class="icon" data-icon="2"></i>
+                            <h3><a href="http://searchconvergedinfrastructure.techtarget.com/opinion/Whats-to-come-for-CI-HCI-products-and-vendors-in-2017">What's to come for CI, HCI products and vendors in 2017</a></h3>
+                            <p>Market consolidation and cloud integration are inevitable for many burgeoning technologies. HCI and converged products are no ...</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="latest-content" data-item="3">
+                    <h2 class="searchcloudstorage">
+                        <a href="http://searchcloudstorage.techtarget.com">
+                            <span class="logo-search">Search</span><span class="logo-1">Cloud</span><span class="logo-2">Storage</span></a>
+                    </h2>
+                    <ul>
+                        <li>
+                            <i class="icon" data-icon="2"></i>
+                            <h3><a href="http://searchcloudstorage.techtarget.com/feature/The-top-10-cloud-storage-platform-takeaways-from-2016">The top 10 cloud storage platform takeaways from 2016</a></h3>
+                            <p>We've compiled the ten most important pieces of cloud storage advice from 2016, from implementing a hybrid cloud to choosing a ...</p>
+                        </li>
+                        <li>
+                            <i class="icon" data-icon="2"></i>
+                            <h3><a href="http://searchcloudstorage.techtarget.com/feature/Public-cloud-storage-services-offer-scalability-and-performance">Public cloud storage services offer scalability and performance</a></h3>
+                            <p>Public cloud storage providers help organizations offload their physical hardware and associated costs, including power, cooling ...</p>
+                        </li>
+                        <li class="hide-for-small">
+                            <i class="icon" data-icon="2"></i>
+                            <h3><a href="http://searchcloudstorage.techtarget.com/opinion/Hyper-convergence-meets-private-cloud-platform-requirements">Hyper-convergence meets private cloud platform requirements</a></h3>
+                            <p>Infrastructure choice and integration are fundamental to capitalizing on all that a private cloud environment has to offer your ...</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="latest-content" data-item="4">
+                    <h2 class="searchdisasterrecovery">
+                        <a href="http://searchdisasterrecovery.techtarget.com">
+                            <span class="logo-search">Search</span><span class="logo-1">Disaster</span><span class="logo-2">Recovery</span></a>
+                    </h2>
+                    <ul>
+                        <li>
+                            <i class="icon" data-icon="2"></i>
+                            <h3><a href="http://searchdisasterrecovery.techtarget.com/feature/A-guide-to-a-better-cloud-disaster-recovery-plan">A guide to a better cloud disaster recovery plan</a></h3>
+                            <p>Disaster recovery as a service has fast become an ideal way for enterprises to tap the cloud to solve their disaster recovery ...</p>
+                        </li>
+                        <li>
+                            <i class="icon" data-icon="2"></i>
+                            <h3><a href="http://searchdisasterrecovery.techtarget.com/feature/Storage-pros-confident-their-business-disaster-recovery-plan-will-work">Storage pros confident their business disaster recovery plan will work</a></h3>
+                            <p>Disaster recovery is about more than the duplication of enterprise data in an emergency, it's about getting the applications, ...</p>
+                        </li>
+                        <li class="hide-for-small">
+                            <i class="icon" data-icon="2"></i>
+                            <h3><a href="http://searchdisasterrecovery.techtarget.com/ezine/Storage-magazine/Hot-data-storage-market-technologies-for-2017/Storage-pros-confident-their-business-disaster-recovery-plan-will-work">Storage pros confident their business disaster recovery plan will work</a></h3>
+                            <p></p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="latest-content" data-item="5">
+                    <h2 class="searchdatabackup">
+                        <a href="http://searchdatabackup.techtarget.com">
+                            <span class="logo-search">Search</span><span class="logo-1">Data</span><span class="logo-2">Backup</span></a>
+                    </h2>
+                    <ul>
+                        <li>
+                            <i class="icon" data-icon="2"></i>
+                            <h3><a href="http://searchdatabackup.techtarget.com/news/450404432/Veritas-turns-NetBackup-80-into-data-management-platform">Veritas turns NetBackup 8.0 into data management platform</a></h3>
+                            <p>Veritas Technologies' latest version of its NetBackup product is integrated with copy data management, Veritas Resiliency ...</p>
+                        </li>
+                        <li>
+                            <i class="icon" data-icon="2"></i>
+                            <h3><a href="http://searchdatabackup.techtarget.com/tip/Mobile-device-security-management-practices-enhance-data-protection">Mobile device security management practices enhance data protection</a></h3>
+                            <p>While mobile security is a challenge, file sync-and-share products and mobile device management software can help protect your ...</p>
+                        </li>
+                        <li class="hide-for-small">
+                            <i class="icon" data-icon="2"></i>
+                            <h3><a href="http://searchdatabackup.techtarget.com/opinion/Align-data-protection-requirements-and-compliance">Align data protection requirements and compliance</a></h3>
+                            <p>While many compliance mandates discuss the importance of data protection guidelines, not all are as prescriptive as you'd think ...</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div><div><!-- FooterLinksController, generated at 04:59:48 Wed Dec 14, 2016, by vappma24.techtarget.com -->
+        <footer id="page-footer">
+            <div class="content-left">
+                <!-- Plug in TechTarget Logo inside the anchor tag here. -->
+                <div class="column column-logo">
+                    <a href="#"></a>
+                </div>
+            </div>
+            <div class="content-center">
+                <ul class="column">
+                    <li class="footer-item footer-item-col-1 footer-item-row-1"><a href="http://searchstorage.techtarget.com/about">About Us</a></li>
+                    <li class="footer-item footer-item-col-1 footer-item-row-2"><a href="http://searchstorage.techtarget.com/about/contact">Contact Us</a></li>
+                    <li class="footer-item footer-item-col-1 footer-item-row-3"><a href="http://www.techtarget.com/html/privacy_policy.html">Privacy Policy</a></li>
+                    <li class="footer-item footer-item-col-1 footer-item-row-4"><a href="http://searchstorage.techtarget.com/about/advertising">Advertisers</a></li>
+                    <li class="footer-item footer-item-col-1 footer-item-row-5"><a href="http://searchstorage.techtarget.com/about/partners">Business Partners</a></li>
+                    <li class="footer-item footer-item-col-1 footer-item-row-6"><a href="http://www.techtarget.com/mediakit">Media Kit</a></li>
+                    <li class="footer-item footer-item-col-1 footer-item-row-7"><a href="http://www.techtarget.com">Corporate Site</a></li>
+                    <li class="footer-item footer-item-col-1 footer-item-row-8"><a href="http://searchstorage.techtarget.com/contributors">Contributors</a></li>
+                </ul>
+                <ul class="column">
+                    <li class="footer-item footer-item-col-2 footer-item-row-1"><a href="http://reprints.ygsgroup.com/m/techtarget">Reprints</a></li>
+                    <li class="footer-item footer-item-col-2 footer-item-row-2"><a href="http://searchstorage.techtarget.com/archive">Archive</a></li>
+                    <li class="footer-item footer-item-col-2 footer-item-row-3"><a href="http://searchstorage.techtarget.com/sitemap">Site Map</a></li>
+                    <li class="footer-item footer-item-col-2 footer-item-row-4"><a href="http://searchstorage.techtarget.com/answers">Answers</a></li>
+                    <li class="footer-item footer-item-col-2 footer-item-row-5"><a href="http://searchstorage.techtarget.com/eproducts">E-Products</a></li>
+                    <li class="footer-item footer-item-col-2 footer-item-row-6"><a href="http://searchstorage.techtarget.com/events">Events</a></li>
+                    <li class="footer-item footer-item-col-2 footer-item-row-7"><a href="http://searchstorage.techtarget.com/features">Features</a></li>
+                </ul>
+                <ul class="column column-mobile-hidden">
+                    <li class="footer-item footer-item-col-3 footer-item-row-1"><a href="http://searchstorage.techtarget.com/guides">Guides</a></li>
+                    <li class="footer-item footer-item-col-3 footer-item-row-2"><a href="http://searchstorage.techtarget.com/opinions">Opinions</a></li>
+                    <li class="footer-item footer-item-col-3 footer-item-row-3"><a href="http://searchstorage.techtarget.com/photostories">Photo Stories</a></li>
+                    <li class="footer-item footer-item-col-3 footer-item-row-4"><a href="http://searchstorage.techtarget.com/quizzes">Quizzes</a></li>
+                    <li class="footer-item footer-item-col-3 footer-item-row-5"><a href="http://searchstorage.techtarget.com/tips">Tips</a></li>
+                    <li class="footer-item footer-item-col-3 footer-item-row-6"><a href="http://searchstorage.techtarget.com/tutorials">Tutorials</a></li>
+                    <li class="footer-item footer-item-col-3 footer-item-row-7"><a href="http://searchstorage.techtarget.com/videos">Videos</a></li>
+                </ul>
+            </div>
+            <div class="content-right">
+                <div class="column column-legal">
+                    <p class="footer-legal">All Rights Reserved, <span>
+			<a href="http://searchstorage.techtarget.com/about/copyright">Copyright 2000 - 2016</a>, TechTarget</span>
+
+                    </p>
+
+                </div>
+            </div>
+        </footer></div>
+    </div><script src="http://cdn.ttgtmedia.com/rms/ux/responsive/js/responsive-ui.min.js?v=6.60"></script><!-- Begin Chartbeat -->
+    <script>
+        var _sf_async_config={};
+        _sf_async_config.uid = 41935;
+        _sf_async_config.domain = 'techtargetnetwork.com';
+        _sf_async_config.sections = 'sstr, sstr - Storage and Virtualization';
+        _sf_async_config.authors = 'Garry Kranz, NEWS, sstr - NEWS';
+        _sf_async_config.useCanonical = true;
+        (function(){
+            function loadChartbeat() {
+                window._sf_endpt=(new Date()).getTime();
+                var e = document.createElement('script');
+                e.setAttribute('language', 'javascript');
+                e.setAttribute('type', 'text/javascript');
+                e.setAttribute('src',
+                    (('https:' == document.location.protocol) ? 'https://a248.e.akamai.net/chartbeat.download.akamai.com/102508/' : 'http://static.chartbeat.com/') + 'js/chartbeat.js');
+                document.body.appendChild(e);
+            }
+            var oldonload = window.onload;
+            window.onload = (typeof window.onload != 'function') ?
+                loadChartbeat : function() { oldonload(); loadChartbeat(); };
+        })();
+    </script><!-- End Chartbeat -->
+    <!-- Begin DataPoint Media -->
+    <script>
+        (function() {
+            var d=document,h=d.getElementsByTagName('head')[0],s=d.createElement('script'),sc = 'https:' == document.location.protocol ? 'https://' : 'http://';
+            s.type='text/javascript';
+            s.async=true;
+            s.src=sc+'s.dpmsrv.com/dpm_b4c96d80854dd27e76d8cc9e21960eebda52e962.min.js';
+            h.appendChild(s);
+        })();
+    </script><!-- End DataPoint Media -->
+    <!-- Begin CrazyEgg -->
+    <script>setTimeout(function(){
+        var a=document.createElement("script");
+        var b=document.getElementsByTagName("script")[0];
+        a.src=document.location.protocol+"//dnn506yrbagrg.cloudfront.net/pages/scripts/0012/7034.js?"+Math.floor(new Date().getTime()/3600000);
+        a.async=true;
+        a.type="text/javascript";
+        b.parentNode.insertBefore(a,b)
+    }, 1);</script><!-- End CrazyEgg -->
+    <!-- Begin GoogleRemarketing -->
+    <script>
+        var google_conversion_id = 1070110249;
+        var google_conversion_label = "RRsgCOW4tgMQqayi_gM";
+        var google_custom_params = window.google_tag_params;
+        var google_remarketing_only = true;
+    </script>
+    <script src="http://www.googleadservices.com/pagead/conversion.js">
+    </script>
+    <noscript>
+        <div style="display:inline;">
+            <img height="1" width="1" style="border-style:none;" alt="" src="http://googleads.g.doubleclick.net/pagead/viewthroughconversion/1070110249/?value=0&label=RRsgCOW4tgMQqayi_gM&guid=ON&script=0">
+        </div>
+    </noscript>
+    <script>
+        var google_conversion_id = 1072226410;
+        var google_conversion_label = "x3P_CIql1gMQ6sCj_wM";
+        var google_custom_params = window.google_tag_params;
+        var google_remarketing_only = true;
+    </script>
+    <script src="http://www.googleadservices.com/pagead/conversion.js">
+    </script>
+    <noscript>
+        <div style="display:inline;">
+            <img height="1" width="1" style="border-style:none;" alt="" src="http://googleads.g.doubleclick.net/pagead/viewthroughconversion/1072226410/?value=0&label=x3P_CIql1gMQ6sCj_wM&guid=ON&script=0">
+        </div>
+    </noscript><!-- End GoogleRemarketing -->
+</div>
+<div id="mobile-sidebars" class="mobile-sidebars">
+</div>
+<div id="image-overlay" class="image-overlay">
+    <div class="image-overlay-img"></div>
+    <div class="image-overlay-close">Close</div>
+</div>
+
+<!--
+Component Load Times
+====================
+DefaultPageController=59 ms
+PinnedNavBarController=78 ms
+AdsController=0 ms
+EzinePromoController=4 ms
+AskAnExpertController=0 ms
+HaveAQuestionForAnExpertController=0 ms
+CommentingController=10 ms
+
+Total time=151 ms
+Request Serving Server: vappma24.techtarget.com
+-->
+
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"applicationID":"313780","applicationTime":337,"beacon":"bam.nr-data.net","queueTime":0,"licenseKey":"1068cf12f6","transactionName":"ZQMAYxdYXUBSAkFbClxJLFgXVFJfWhtQVjBAD00dSldWREBOHw==","agent":"","errorBeacon":"bam.nr-data.net"}</script></body>
+</html>

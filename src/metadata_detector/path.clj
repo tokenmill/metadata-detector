@@ -31,4 +31,5 @@
 
 (def title-selectors
   #{[[:h1 (e/attr-contains :class "-title")]]
-    [[:h1 (e/attr-contains :class "Headline")]]})
+    [[:h1 (e/attr-contains :class "Headline")]]
+    [:div.leftcolumn :h1]})

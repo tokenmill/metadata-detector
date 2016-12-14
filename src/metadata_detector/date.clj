@@ -42,11 +42,18 @@
             #"/(20\d{2}[/-]([01]\d|\w{3})[/-]?[0123]\d)/"
             url)))
 
+(defn with-regexes
+  [page]
+  (s/replace (->> (pr-str page)
+                  (re-find #".com/archive/\d{4}/\d{2}\\\">.*</a>"))
+             #".*\\\">|</a>" ""))
+
 (defn detect-publish-date
   "Extract article date. Check multiple sources:
   url, metadata, html structure, text"
-  [url page]
+  ^String [url page]
   (or (m/extract-tag page "date")
       (retrieve-attributes page path/date-attr-selectors)
       (retrieve-date-area page)
-      (detect-url-date url)))
+      (detect-url-date url)
+      (with-regexes page)))
