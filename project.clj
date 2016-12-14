@@ -1,4 +1,4 @@
-(defproject lt.tokenmill/metadata-detector "0.1.2"
+(defproject lt.tokenmill/metadata-detector "0.1.3"
   :description "Utilities to extract metadata from articles"
 
   :dependencies [[enlive "1.1.6"]]
