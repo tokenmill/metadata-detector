@@ -27,4 +27,5 @@
     [:* :div.articletext-holder :div.channel-date-container.sport :span]
     [:div#content :span.prdata]
     [:div.byline-date :span.publish-date]
+    [:div.publish-date :a]
     })
