@@ -45,7 +45,7 @@
 (defn with-regexes
   [page]
   (when-let [matched (->> (pr-str page)
-                  (re-find #".com/archive/\d{4}/\d{2}\\\">.*</a>"))]
+                  (re-find #".com/archive/\d{4}/\d+\\\">.*</a>"))]
     (s/replace matched #".*\\\">|</a>" "")))
 
 (defn detect-publish-date
