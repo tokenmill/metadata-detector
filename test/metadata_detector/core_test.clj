@@ -275,9 +275,14 @@
            (get-byline "en/thetimes" "http://www.thetimes.co.uk/tto/news/politics/article4697974.ece"))))
 
   (testing "globes.co.il"
-    (is (= {:title "Companies - P Updated - Globes English"
+    (is (= {:title "Companies - P Updated"
             :date  "14/09/2000, 13:19"}
-           (get-byline "en/globes" "http://www.thetimes.co.uk/tto/news/politics/article4697974.ece"))))
+           (get-byline "en/globes" "http://www.globes.co.il/en/article-440161"))))
+
+  (testing "globes.co.il"
+    (is (= {:title "Rhon Klinikum invests in Israeli co Inovytec"
+            :date  "16 Nov, 2016 18:32"}
+           (get-byline "en/globes.co.il" "http://www.globes.co.il/en/article-rhon-klinikum-invests-in-israeli-co-inovytec-1001160844"))))
 
   (testing "geektime.com"
     (is (= {:title "Geektime"
